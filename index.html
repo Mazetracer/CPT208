@@ -3,165 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XR Campus Tour | Process Portfolio</title>
+    <title>XR Campus Tour | Interactive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- 引入 AOS 动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfd; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
-        .hero-gradient { background: radial-gradient(circle at top right, #3b82f6, #1e3a8a); }
-        .step-line::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; overflow-x: hidden; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        /* 背景流光动画 */
+        .blob { position: absolute; width: 500px; height: 500px; background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); filter: blur(80px); border-radius: 50%; z-index: -1; opacity: 0.2; animation: move 20s infinite alternate; }
+        @keyframes move { from { transform: translate(-10%, -10%); } to { transform: translate(20%, 20%); } }
+        /* 顶部进度条 */
+        #progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(to right, #3b82f6, #8b5cf6); z-index: 100; width: 0%; }
     </style>
 </head>
-<body class="text-slate-800 antialiased">
+<body class="antialiased">
 
-    <!-- 导航栏 -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="font-bold text-lg tracking-tight">XR Campus Tour</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#concepts" class="hover:text-blue-600 transition">Concepts</a>
-                <a href="#process" class="hover:text-blue-600 transition">Process</a>
-                <a href="#reflection" class="hover:text-blue-600 transition">Reflection</a>
-                <a href="#contact" class="hover:text-blue-600 transition font-bold">Contact</a>
-            </div>
+    <div id="progress-bar"></div>
+    <div class="blob top-0 -left-20"></div>
+    <div class="blob bottom-0 -right-20" style="animation-delay: -10s; background: #ec4899; opacity: 0.1;"></div>
+
+    <!-- 极简悬浮导航 -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+        <div class="glass-card px-6 py-3 rounded-full flex gap-8 text-sm font-medium">
+            <a href="#home" class="hover:text-blue-400 transition">Home</a>
+            <a href="#concepts" class="hover:text-blue-400 transition">Concepts</a>
+            <a href="#process" class="hover:text-blue-400 transition">Process</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section (根据图5重制) -->
-    <section class="relative pt-32 pb-24 hero-gradient text-white overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">XR Campus Tour</h1>
-            <p class="max-w-2xl mx-auto text-blue-100 text-lg md:text-xl mb-10 leading-relaxed opacity-90">
-                An interactive extended reality campus guide that combines location-based technology, augmented reality, and a virtual guide to explore the university environment in an immersive way.
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <div data-aos="zoom-out" data-aos-duration="1500">
+            <span class="px-4 py-1 rounded-full border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-6 inline-block bg-blue-500/10">Next-Gen Campus Experience</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter bg-gradient-to-b from-white to-slate-500 bg-clip-text text-transparent">
+                XR Campus Tour
+            </h1>
+            <p class="max-w-2xl text-slate-400 text-lg md:text-xl mb-12 leading-relaxed">
+                Bridging reality and digital storytelling through Location-Based AR and immersive interactions.
             </p>
-            <a href="#about" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                Explore the Project
-            </a>
-        </div>
-        <!-- 装饰性光圈 -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-    </section>
-
-    <!-- About & Overview (根据图1重制) -->
-    <section id="about" class="py-24 max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 text-slate-900">About This Portfolio</h2>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    This website documents the full development process of the XR Campus Tour project. Instead of only presenting the final outcome, this portfolio focuses on the design process, research, experimentation, and iterative development.
-                </p>
-                <p class="text-slate-600 leading-relaxed">
-                    The goal is to demonstrate how the idea evolved from an initial concept into a functional XR experience.
-                </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#concepts" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)]">Start Exploring</a>
             </div>
-            <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
-                <h2 class="text-3xl font-bold mb-6 text-slate-900">Project Overview</h2>
-                <p class="text-slate-600 leading-relaxed">
-                    The project aims to enhance traditional campus visits by introducing interactive digital content. When users approach landmarks, an AR character appears to introduce the location through narration and visual interaction.
-                </p>
+        </div>
+        
+        <!-- 图片/视频演示框 (Mockup) -->
+        <div class="mt-20 w-full max-w-4xl px-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="glass-card rounded-3xl p-2 shadow-2xl overflow-hidden aspect-video relative">
+                <div class="absolute inset-0 bg-slate-800 flex items-center justify-center text-slate-600">
+                    <!-- 这里将来可以放你的项目视频或截图 -->
+                    <p>[ Insert Project Demo Video / Screenshot Here ]</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Concepts (根据图2重制) -->
-    <section id="concepts" class="py-24 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">Key Concepts</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-2xl">📍</span>
+    <!-- Bento Grid Concepts -->
+    <section id="concepts" class="py-32 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Key Concepts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Large Card -->
+            <div class="md:col-span-2 glass-card p-10 rounded-[2.5rem] flex flex-col justify-end min-h-[400px] relative overflow-hidden group" data-aos="fade-right">
+                <div class="absolute top-8 right-8 text-6xl opacity-20 group-hover:scale-110 transition">📍</div>
+                <h3 class="text-3xl font-bold mb-4">Location-Based Intelligence</h3>
+                <p class="text-slate-400 text-lg">Using GPS and geospatial data to trigger content precisely where the story happens. Every corner of the campus has a hidden narrative waiting to be unlocked.</p>
+            </div>
+            <!-- Small Card 1 -->
+            <div class="glass-card p-10 rounded-[2.5rem] flex flex-col justify-center" data-aos="fade-left">
+                <div class="text-4xl mb-6">🤖</div>
+                <h3 class="text-xl font-bold mb-2">AR Virtual Guide</h3>
+                <p class="text-slate-400 text-sm">A personalized AI guide that talks, interacts, and leads the way.</p>
+            </div>
+            <!-- Small Card 2 -->
+            <div class="glass-card p-10 rounded-[2.5rem] flex flex-col justify-center" data-aos="fade-up">
+                <div class="text-4xl mb-6">✨</div>
+                <h3 class="text-xl font-bold mb-2">Immersive Story</h3>
+                <p class="text-slate-400 text-sm">Deeply engaging narratives that transform a simple walk into an adventure.</p>
+            </div>
+            <!-- Medium Card -->
+            <div class="md:col-span-2 glass-card p-10 rounded-[2.5rem] bg-gradient-to-br from-blue-600/20 to-purple-600/20" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-4">Tech Stack</h3>
+                <div class="flex flex-wrap gap-4 text-xs font-mono">
+                    <span class="px-3 py-1 bg-white/10 rounded-lg">Unity 3D</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-lg">ARKit / ARCore</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-lg">C# Scripting</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-lg">Figma UI Design</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-lg">Geospatial API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section id="process" class="py-32 bg-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-20 text-center">Development Journey</h2>
+            <div class="space-y-24">
+                <div class="flex flex-col md:flex-row gap-12 items-start" data-aos="fade-up">
+                    <div class="text-6xl font-black text-blue-500/20 italic">01</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Research & Ideation</h3>
+                        <p class="text-slate-400">Identifying the gap in traditional tours. Why do people get lost? What makes a guide "boring"? We analyzed the synergy between physical space and digital overlay.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Location-Based</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Detects geographic position and triggers interactive XR content when users approach predefined landmarks.</p>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-2xl">🤖</span>
+                <div class="flex flex-col md:flex-row gap-12 items-start" data-aos="fade-up">
+                    <div class="text-6xl font-black text-purple-500/20 italic">02</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Prototyping Interaction</h3>
+                        <p class="text-slate-400">Experimenting with how the AR character should appear. Should it float? Should it walk beside you? We tested multiple UI layouts for better accessibility.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">AR Guide</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">A virtual character appears through AR to introduce campus locations with narration and visual cues.</p>
                 </div>
-                <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition duration-300">
-                    <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-2xl">✨</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Immersive</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Creates a story-driven tour where users explore the campus through interactive digital experiences.</p>
-                </div>
+                <!-- ... 你可以继续添加更多步骤 ... -->
             </div>
         </div>
     </section>
 
-    <!-- Design Process (根据图2、图3重制为时间线) -->
-    <section id="process" class="py-24 max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-bold mb-16 text-center">Design Process</h2>
-        <div class="relative step-line pl-12 space-y-16">
-            <!-- Step 1 -->
-            <div class="relative">
-                <div class="absolute -left-[40px] w-10 h-10 bg-blue-600 rounded-full border-4 border-white flex items-center justify-center text-white font-bold">1</div>
-                <h3 class="text-xl font-bold mb-2">Initial Concept</h3>
-                <p class="text-slate-600">The project began with the idea of improving campus tour experiences for visitors where traditional maps or human guides are unavailable.</p>
-            </div>
-            <!-- Step 2 -->
-            <div class="relative">
-                <div class="absolute -left-[40px] w-10 h-10 bg-blue-600 rounded-full border-4 border-white flex items-center justify-center text-white font-bold">2</div>
-                <h3 class="text-xl font-bold mb-2">Research</h3>
-                <p class="text-slate-600">Focused on XR technologies and existing digital tour applications to identify how spatial storytelling can enhance campus environments.</p>
-            </div>
-            <!-- Step 3 -->
-            <div class="relative">
-                <div class="absolute -left-[40px] w-10 h-10 bg-blue-600 rounded-full border-4 border-white flex items-center justify-center text-white font-bold">3</div>
-                <h3 class="text-xl font-bold mb-2">Interaction Design</h3>
-                <p class="text-slate-600">Explored interaction models: how users trigger content, how the AR guide appears, and maintaining engagement without being overwhelming.</p>
-            </div>
-            <!-- Step 4 -->
-            <div class="relative">
-                <div class="absolute -left-[40px] w-10 h-10 bg-blue-600 rounded-full border-4 border-white flex items-center justify-center text-white font-bold">4</div>
-                <h3 class="text-xl font-bold mb-2">Prototype Development</h3>
-                <p class="text-slate-600">Implemented location detection and AR visualization using XR tools, creating a basic virtual guide character.</p>
-            </div>
-            <!-- Step 5 -->
-            <div class="relative">
-                <div class="absolute -left-[40px] w-10 h-10 bg-blue-600 rounded-full border-4 border-white flex items-center justify-center text-white font-bold">5</div>
-                <h3 class="text-xl font-bold mb-2">Testing & Refinement</h3>
-                <p class="text-slate-600">Evaluated and refined trigger distances and narration flow to make the experience smoother for users.</p>
-            </div>
+    <!-- Footer -->
+    <footer id="contact" class="py-20 text-center border-t border-white/10 px-6">
+        <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+        <div class="flex justify-center gap-8 mb-12">
+            <a href="#" class="text-slate-400 hover:text-white transition">GitHub</a>
+            <a href="#" class="text-slate-400 hover:text-white transition">LinkedIn</a>
+            <a href="#" class="text-slate-400 hover:text-white transition">Email</a>
         </div>
-    </section>
-
-    <!-- Reflection (根据图4重制) -->
-    <section id="reflection" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8 italic">"Reflecting on the journey..."</h2>
-            <p class="text-lg text-slate-300 leading-relaxed mb-6">
-                Developing the XR Campus Tour project highlighted the importance of integrating physical environments with digital interaction. Designing experiences that respond to real-world locations requires careful consideration of both technical constraints and user experience.
-            </p>
-            <p class="text-blue-400 font-medium text-sm tracking-widest uppercase">Space Storytelling & Immersive Technology</p>
-        </div>
-    </section>
-
-    <!-- Contact (根据图4重制) -->
-    <footer id="contact" class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
-            <div>
-                <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
-                <div class="space-y-2 text-slate-500">
-                    <p>📧 yourname@email.com</p>
-                    <p>🔗 github.com/yourusername</p>
-                </div>
-            </div>
-            <div class="text-center md:text-right">
-                <p class="text-sm text-slate-400">© 2026 XR Campus Tour Project Portfolio</p>
-                <p class="text-xs text-slate-300 mt-2">Built with Tailwind CSS & GitHub Pages</p>
-            </div>
-        </div>
+        <p class="text-slate-500 text-sm">© 2026 Process Portfolio. Crafted for XR Excellence.</p>
     </footer>
 
+    <!-- AOS 动画脚本 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        // 顶部进度条逻辑
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+    </script>
 </body>
 </html>
