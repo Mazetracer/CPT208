@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XR Campus Tour | Full Process Portfolio</title>
+    <title>WayLens XJTLU | Full Process Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -553,6 +554,243 @@
             background: linear-gradient(90deg, var(--teal), var(--amber));
         }
 
+        .campus-showcase {
+            position: relative;
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            padding: 1.1rem;
+            border-radius: 2.2rem;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(240, 249, 245, 0.72));
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .campus-showcase::before {
+            content: "";
+            position: absolute;
+            inset: auto -6rem -7rem auto;
+            width: 16rem;
+            height: 16rem;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(44, 155, 143, 0.16), transparent 70%);
+            pointer-events: none;
+        }
+
+        .campus-visual {
+            position: relative;
+            overflow: hidden;
+            min-height: 20rem;
+            border-radius: 1.8rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background: #ddebff;
+        }
+
+        .campus-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .campus-visual::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(20, 50, 74, 0.03), rgba(20, 50, 74, 0.26));
+            pointer-events: none;
+        }
+
+        .campus-badge {
+            position: absolute;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.65rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.84);
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: 0 14px 28px rgba(16, 34, 46, 0.12);
+            color: #31424e;
+            font-size: 0.78rem;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .campus-badge.top-left {
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .campus-badge.bottom-right {
+            right: 1rem;
+            bottom: 1rem;
+        }
+
+        .campus-badge-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--amber));
+        }
+
+        .campus-copy {
+            position: relative;
+            z-index: 1;
+            padding: 0.75rem 0.5rem 0.75rem 0.2rem;
+        }
+
+        .campus-kicker {
+            display: inline-flex;
+            margin-bottom: 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(44, 155, 143, 0.16);
+            background: rgba(44, 155, 143, 0.08);
+            padding: 0.45rem 0.85rem;
+            color: #1f7d74;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .campus-stat-grid {
+            display: grid;
+            gap: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        .campus-stat {
+            border-radius: 1.3rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.75);
+            padding: 1rem 1.1rem;
+        }
+
+        .campus-stat strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+        }
+
+        .stakeholder-viz-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .viz-card {
+            border-radius: 1.8rem;
+        }
+
+        .viz-kicker {
+            display: inline-flex;
+            margin-bottom: 0.5rem;
+            color: var(--muted);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .viz-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .donut-chart {
+            position: relative;
+            width: 11.25rem;
+            aspect-ratio: 1;
+            border-radius: 999px;
+            flex-shrink: 0;
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+                0 18px 35px rgba(16, 34, 46, 0.10);
+        }
+
+        .donut-chart::after {
+            content: "";
+            position: absolute;
+            inset: 20%;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: inset 0 0 0 1px rgba(20, 32, 42, 0.05);
+        }
+
+        .donut-center {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .donut-center strong {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.5rem;
+            line-height: 1;
+            color: var(--navy);
+        }
+
+        .donut-center span {
+            margin-top: 0.35rem;
+            color: var(--muted);
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .viz-legend {
+            width: 100%;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .viz-legend li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            padding: 0.6rem 0.9rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .legend-left {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .legend-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 999px;
+        }
+
+        .legend-value {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
         .nav-link {
             position: relative;
             color: var(--muted);
@@ -749,6 +987,21 @@
                 grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
                 gap: 3rem;
             }
+
+            .campus-showcase {
+                grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+                align-items: center;
+            }
+
+            .campus-stat-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 768px) {
+            .stakeholder-viz-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
         }
     </style>
 </head>
@@ -762,7 +1015,7 @@
 
     <nav id="site-nav" class="fixed top-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 rounded-full glass px-4 py-3 transition-all duration-300 md:top-6 md:w-[calc(100%-3rem)] md:px-6">
         <div class="flex items-center justify-between gap-4">
-            <a href="#top" class="display-font text-sm font-bold tracking-[0.22em] text-slate-700 md:text-base">XR CAMPUS TOUR</a>
+            <a href="#top" class="display-font text-sm font-bold tracking-[0.22em] text-slate-700 md:text-base">WAYLENS XJTLU</a>
             <div class="hidden items-center gap-7 text-sm font-medium md:flex">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#concepts" class="nav-link">Concepts</a>
@@ -791,7 +1044,7 @@
                             </div>
 
                             <h1 class="mb-8 text-5xl font-extrabold tracking-[-0.06em] text-slate-900 sm:text-6xl md:text-7xl">
-                                XR <span class="text-gradient">Campus Tour</span>
+                                WayLens <span class="text-gradient">XJTLU</span>
                             </h1>
 
                             <p class="hero-subcopy mx-auto mb-12 text-lg font-light leading-relaxed text-slate-600 md:text-xl lg:mx-0">
@@ -857,756 +1110,868 @@
                     </div>
                 </div>
 
-        <section id="about" class="px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-6xl">
-        <div class="mb-16 text-center">
-            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">
-                Motivation & Research
-            </h2>
-            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">
-                This section explains why we chose the XJTLU Campus Tour project and how academic research and existing products informed our design direction.
-            </p>
-        </div>
+                <div class="campus-showcase" data-aos="fade-up" data-aos-delay="180">
+                    <div class="campus-visual">
+                        <img src="./Campusview.png" alt="Illustrated view of the XJTLU campus">
+                        <div class="campus-badge top-left">
+                            <span class="campus-badge-dot"></span>
+                            Campus Context
+                        </div>
+                        <div class="campus-badge bottom-right">
+                            <span class="campus-badge-dot"></span>
+                            Learning + Route + Story
+                        </div>
+                    </div>
 
-        <!-- The Why -->
-        <div class="grid gap-8 md:grid-cols-2">
-            <article class="card hover-lift rounded-[2rem] p-10 md:p-12" data-aos="fade-up">
-                <div class="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-teal-700">
-                    The Why
-                </div>
-                <h3 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">
-                    Why this project matters
-                </h3>
-                <p class="leading-relaxed text-slate-600">
-                    We chose this project because traditional campus visits often rely on guided tours and one-way lectures, which make visitors passive listeners rather than active explorers. At XJTLU, this problem is especially significant because the university’s student-centered philosophy cannot be fully understood through explanations alone. It is better experienced through direct interaction with classrooms, learning spaces, and campus culture. For new students, traditional tours may provide information but often fail to create a memorable sense of connection with the university. For external visitors, especially educators and administrators joining ILEAD activities, such visits may present the campus physically but do not always communicate the deeper educational ideas behind each space.
-                </p>
-                <p class="mt-5 leading-relaxed text-slate-600">
-                    Our project aims to transform the campus tour into a mobile, interactive, and playful experience. By combining location-based guidance, gamified check-ins, XR elements, and AI-supported interaction, the system encourages users to explore the campus independently and engage with each site more deeply. This helps visitors move beyond simply seeing buildings to understanding how XJTLU designs learning environments to support innovation, collaboration, and student autonomy.
-                </p>
-            </article>
+                    <div class="campus-copy">
+                        <div class="campus-kicker">Campus Snapshot</div>
+                        <h3 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">A campus experience shaped by place, movement, and discovery</h3>
+                        <p class="mt-5 leading-relaxed text-slate-600">
+                            The platform is designed around the real spatial character of XJTLU. Instead of treating the campus as a static background, WayLens XJTLU uses buildings, pathways, waterfront views, and learning spaces as interactive entry points for guidance and storytelling.
+                        </p>
 
-            <article class="hover-lift rounded-[2rem] border border-cyan-100 bg-gradient-to-br from-[#14324a] via-[#1d4f5d] to-[#2c9b8f] p-10 text-white shadow-[0_30px_80px_rgba(20,50,74,0.25)] md:p-12" data-aos="fade-up" data-aos-delay="120">
-                <div class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-white/80">
-                    The Gap
-                </div>
-                <h3 class="mb-6 text-3xl font-bold tracking-tight">
-                    What existing work does well and where it falls short
-                </h3>
-                <p class="leading-relaxed text-white/80">
-                    To identify opportunities for improvement, we reviewed both academic papers and commercial products related to location-based AR, campus orientation, mobile navigation, and playful exploration. The papers helped us understand educational value, technical feasibility, and design challenges, while the products showed practical patterns for route guidance, storytelling, and engagement.
-                </p>
-                <p class="mt-5 leading-relaxed text-white/80">
-                    By comparing their strengths and limitations, we identified which ideas could be adapted for XJTLU’s campus context and which issues should be avoided in our own design, especially in terms of usability, role-based content, and balancing learning with interaction.
-                </p>
-            </article>
-        </div>
-
-        <!-- Academic Research -->
-        <div class="mt-16" data-aos="fade-up">
-            <div class="mb-8 flex items-center justify-between gap-4">
-                <div>
-                    <h3 class="text-3xl font-bold tracking-tight text-slate-900">Academic Research</h3>
-                    <p class="mt-2 text-slate-600">4 papers reviewed to understand educational value, feasibility, and design risks.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-teal-600">Paper 01</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">Location-Based Augmented Reality in Education</h4>
-                    <p class="mb-4 text-sm italic text-slate-500">Kleftodimos & Evagelou (2025)</p>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Explains how location-based AR connects learning content with real-world places.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Clearly explains the educational value of location-based AR.</li>
-                            <li>• Describes triggering technologies such as GPS and indoor positioning.</li>
-                            <li>• Provides practical examples from heritage and outdoor learning.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Lacks strong empirical evidence.</li>
-                            <li>• Focuses more on technology than UX challenges.</li>
-                            <li>• Many examples are closer to heritage learning than campus navigation.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-600">Paper 02</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">Using a Location-Based AR Mobile App to Support New Students’ Orientation</h4>
-                    <p class="mb-4 text-sm italic text-slate-500">Taşyonar & Uzun (2025)</p>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Directly studies AR-supported campus orientation for new students.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Highly relevant to campus orientation.</li>
-                            <li>• Clearly explains implementation and system design.</li>
-                            <li>• Includes real student testing and empirical evidence.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Did not outperform traditional guided orientation in knowledge learning.</li>
-                            <li>• Reported technical and device compatibility issues.</li>
-                            <li>• Small sample size limits generalisability.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-coral-600">Paper 03</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">A Game-based AR Navigation System for Makerspace Education</h4>
-                    <p class="mb-4 text-sm italic text-slate-500">Chen, Hwang & Lin (2023)</p>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Shows how AR and gamification can support active exploration.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Combines AR with gamified missions and rewards.</li>
-                            <li>• Provides a clear and structured interaction flow.</li>
-                            <li>• Supports active learning through problem-solving tasks.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• May prioritise engagement over learning depth.</li>
-                            <li>• Context is limited to a library makerspace.</li>
-                            <li>• Interaction design may be too complex for general mobile users.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-600">Paper 04</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">Location-based AR in Education: A Systematic Literature Review</h4>
-                    <p class="mb-4 text-sm italic text-slate-500">Fonseca et al. (2025)</p>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Provides a broad overview of location-based AR in educational settings.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Reviews a wide range of educational use cases.</li>
-                            <li>• Demonstrates strong potential for engagement and experiential learning.</li>
-                            <li>• Identifies common trends such as field trips and outdoor learning.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Many studies still lack strong experimental evidence.</li>
-                            <li>• Limited integration into formal education.</li>
-                            <li>• Technical and usability challenges remain significant.</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <!-- Commercial Benchmarks -->
-        <div class="mt-16" data-aos="fade-up">
-            <div class="mb-8">
-                <h3 class="text-3xl font-bold tracking-tight text-slate-900">Commercial Benchmarks</h3>
-                <p class="mt-2 text-slate-600">4 products reviewed to analyse navigation, storytelling, exploration, and interaction patterns.</p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-teal-600">Product 01</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">Google Maps</h4>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> A strong reference for map-based navigation and place information.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Strong navigation and map support.</li>
-                            <li>• Familiar interface with low learning cost.</li>
-                            <li>• Integrates place-related information effectively.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Designed for navigation rather than guided learning.</li>
-                            <li>• Does not provide AR narration.</li>
-                            <li>• Does not distinguish between different user roles.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-600">Product 02</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">izi.TRAVEL</h4>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> Useful for self-paced exploration and location-based storytelling.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Supports location-based audio guidance.</li>
-                            <li>• Encourages self-paced exploration.</li>
-                            <li>• Combines route structure with storytelling.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• More audio-focused than AR-focused.</li>
-                            <li>• Has limited playful interaction.</li>
-                            <li>• Weak support for differentiated user roles.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-orange-600">Product 03</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">Pokémon GO</h4>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> Demonstrates how location-linked interaction can motivate exploration.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Demonstrates strong location-based interaction.</li>
-                            <li>• Creates a strong sense of exploration and engagement.</li>
-                            <li>• Blends AR-style interaction with everyday movement.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Designed for entertainment rather than education.</li>
-                            <li>• Lacks structured explanatory content.</li>
-                            <li>• Does not support user-specific information delivery.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="card hover-lift rounded-[2rem] p-8">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-600">Product 04</p>
-                    <h4 class="mb-3 text-xl font-bold text-slate-900">Actionbound</h4>
-                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> A useful model for mission-based exploration and active participation.</p>
-                    <div class="mb-4">
-                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Supports task-based and route-based exploration.</li>
-                            <li>• Encourages active participation.</li>
-                            <li>• Flexible for educational content design.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
-                        <ul class="space-y-2 text-sm text-slate-600">
-                            <li>• Has limited AR emphasis.</li>
-                            <li>• Depends heavily on creator setup quality.</li>
-                            <li>• May feel more like a scavenger hunt than a guided AR tour.</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <!-- Key Insights -->
-        <div class="mt-16" data-aos="fade-up">
-            <article class="card hover-lift rounded-[2rem] p-10 md:p-12">
-                <div class="mb-4 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-orange-700">
-                    Key Design Insights
-                </div>
-                <h3 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">
-                    What we learned from research
-                </h3>
-                <p class="leading-relaxed text-slate-600">
-                    Our review suggests that an effective campus tour should combine clear navigation, self-paced exploration, meaningful storytelling, and light gamification. However, it should avoid overly complex tasks, purely entertainment-driven mechanics, and one-size-fits-all information delivery. Based on these findings, our project aims to create a mobile experience that is educational, location-aware, and engaging, while also adapting content for different user groups such as new students and external visitors.
-                </p>
-            </article>
-        </div>
-        <div class="mt-16 text-center" data-aos="fade-up">
-    <h3 class="section-title text-4xl font-bold tracking-tight text-slate-900">
-        Stakeholders
-    </h3>
-    <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-        Primary and secondary user groups identified for the XJTLU Campus Tour project.
-    </p>
-</div>
-<div class="mb-12" data-aos="fade-up" data-aos-delay="500">
-                    <div class="card rounded-2xl p-8">
-                        <h3 class="mb-6 text-2xl font-bold text-slate-900">User Classification</h3>
-
-                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                            <div class="rounded-xl border-2 border-teal-200 bg-gradient-to-br from-teal-50 to-teal-100 p-6">
-                                <h4 class="mb-4 text-xl font-bold text-teal-700">Primary Users</h4>
-                                <p class="mb-3 text-slate-700">Users with high service expectations and willingness to use, representing the core target group:</p>
-                                <ul class="space-y-2 text-sm text-slate-600">
-                                    <li>• Junior students with strong demand for campus services</li>
-                                    <li>• Users prioritizing interactive experiences and mobile optimization</li>
-                                    <li>• Female users showing higher service expectations</li>
-                                    <li>• Users willing to try 3D/VR and intelligent Q&A features</li>
-                                </ul>
-                                <p class="mt-4 text-xs font-bold text-teal-600">Targeting: Service experience optimization and feature innovation</p>
+                        <div class="campus-stat-grid">
+                            <div class="campus-stat">
+                                <strong>Spatial storytelling</strong>
+                                <p class="text-sm leading-relaxed text-slate-600">Users learn through movement across meaningful campus landmarks rather than through static descriptions alone.</p>
                             </div>
-
-                            <div class="rounded-xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-amber-100 p-6">
-                                <h4 class="mb-4 text-xl font-bold text-amber-700">Secondary Users</h4>
-                                <p class="mb-3 text-slate-700">Users with neutral expectations or uncertain willingness, representing potential growth group:</p>
-                                <ul class="space-y-2 text-sm text-slate-600">
-                                    <li>• Users with neutral expectations (40%)</li>
-                                    <li>• Uncertain about future usage (16.67%)</li>
-                                    <li>• Users prioritizing content quality and basic convenience</li>
-                                    <li>• Freshmen and other grade students</li>
-                                </ul>
-                                <p class="mt-4 text-xs font-bold text-amber-600">Targeting: Content enrichment and basic experience improvement</p>
+                            <div class="campus-stat">
+                                <strong>Mobile-first navigation</strong>
+                                <p class="text-sm leading-relaxed text-slate-600">Campus routes, check-ins, and XR prompts are framed as an intuitive mobile journey.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="600">
-                    <div class="card rounded-2xl p-8">
-                        <h3 class="mb-6 text-2xl font-bold text-slate-900">User Personas</h3>
+                <section id="about" class="px-6 py-20 md:py-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">
+                                Motivation & Research
+                            </h2>
+                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">
+                                This section explains why we chose the WayLens XJTLU project and how academic research and existing products informed our design direction.
+                            </p>
+                        </div>
 
-                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-4">
-                                    <div class="h-16 w-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-2xl font-bold text-white">LM</div>
+                        <!-- The Why -->
+                        <div class="grid gap-8 md:grid-cols-2">
+                            <article class="card hover-lift rounded-[2rem] p-10 md:p-12" data-aos="fade-up">
+                                <div class="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-teal-700">
+                                    The Why
+                                </div>
+                                <h3 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">
+                                    Why this project matters
+                                </h3>
+                                <p class="leading-relaxed text-slate-600">
+                                    We chose this project because traditional campus visits often rely on guided tours and one-way lectures, which make visitors passive listeners rather than active explorers. At XJTLU, this problem is especially significant because the university’s student-centered philosophy cannot be fully understood through explanations alone. It is better experienced through direct interaction with classrooms, learning spaces, and campus culture. For new students, traditional tours may provide information but often fail to create a memorable sense of connection with the university. For external visitors, especially educators and administrators joining ILEAD activities, such visits may present the campus physically but do not always communicate the deeper educational ideas behind each space.
+                                </p>
+                                <p class="mt-5 leading-relaxed text-slate-600">
+                                    Our project aims to transform the campus tour into a mobile, interactive, and playful experience. By combining location-based guidance, gamified check-ins, XR elements, and AI-supported interaction, the system encourages users to explore the campus independently and engage with each site more deeply. This helps visitors move beyond simply seeing buildings to understanding how XJTLU designs learning environments to support innovation, collaboration, and student autonomy.
+                                </p>
+                            </article>
+
+                            <article class="hover-lift rounded-[2rem] border border-cyan-100 bg-gradient-to-br from-[#14324a] via-[#1d4f5d] to-[#2c9b8f] p-10 text-white shadow-[0_30px_80px_rgba(20,50,74,0.25)] md:p-12" data-aos="fade-up" data-aos-delay="120">
+                                <div class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-white/80">
+                                    The Gap
+                                </div>
+                                <h3 class="mb-6 text-3xl font-bold tracking-tight">
+                                    What existing work does well and where it falls short
+                                </h3>
+                                <p class="leading-relaxed text-white/80">
+                                    To identify opportunities for improvement, we reviewed both academic papers and commercial products related to location-based AR, campus orientation, mobile navigation, and playful exploration. The papers helped us understand educational value, technical feasibility, and design challenges, while the products showed practical patterns for route guidance, storytelling, and engagement.
+                                </p>
+                                <p class="mt-5 leading-relaxed text-white/80">
+                                    By comparing their strengths and limitations, we identified which ideas could be adapted for XJTLU’s campus context and which issues should be avoided in our own design, especially in terms of usability, role-based content, and balancing learning with interaction.
+                                </p>
+                            </article>
+                        </div>
+
+                        <!-- Academic Research -->
+                        <div class="mt-16" data-aos="fade-up">
+                            <div class="mb-8 flex items-center justify-between gap-4">
+                                <div>
+                                    <h3 class="text-3xl font-bold tracking-tight text-slate-900">Academic Research</h3>
+                                    <p class="mt-2 text-slate-600">4 papers reviewed to understand educational value, feasibility, and design risks.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-teal-600">Paper 01</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Location-Based Augmented Reality in Education</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Kleftodimos & Evagelou (2025)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Explains how location-based AR connects learning content with real-world places.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Clearly explains the educational value of location-based AR.</li>
+                                            <li>• Describes triggering technologies such as GPS and indoor positioning.</li>
+                                            <li>• Provides practical examples from heritage and outdoor learning.</li>
+                                        </ul>
+                                    </div>
                                     <div>
-                                        <h4 class="text-lg font-bold text-slate-900">Li Ming</h4>
-                                        <p class="text-sm text-teal-600">Junior Student | Primary User</p>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Lacks strong empirical evidence.</li>
+                                            <li>• Focuses more on technology than UX challenges.</li>
+                                            <li>• Many examples are closer to heritage learning than campus navigation.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-600">Paper 02</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Using a Location-Based AR Mobile App to Support New Students’ Orientation</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Taşyonar & Uzun (2025)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Directly studies AR-supported campus orientation for new students.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Highly relevant to campus orientation.</li>
+                                            <li>• Clearly explains implementation and system design.</li>
+                                            <li>• Includes real student testing and empirical evidence.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Did not outperform traditional guided orientation in knowledge learning.</li>
+                                            <li>• Reported technical and device compatibility issues.</li>
+                                            <li>• Small sample size limits generalisability.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-coral-600">Paper 03</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">A Game-based AR Navigation System for Makerspace Education</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Chen, Hwang & Lin (2023)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Shows how AR and gamification can support active exploration.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Combines AR with gamified missions and rewards.</li>
+                                            <li>• Provides a clear and structured interaction flow.</li>
+                                            <li>• Supports active learning through problem-solving tasks.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• May prioritise engagement over learning depth.</li>
+                                            <li>• Context is limited to a library makerspace.</li>
+                                            <li>• Interaction design may be too complex for general mobile users.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-600">Paper 04</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Location-based AR in Education: A Systematic Literature Review</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Fonseca et al. (2025)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Provides a broad overview of location-based AR in educational settings.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Reviews a wide range of educational use cases.</li>
+                                            <li>• Demonstrates strong potential for engagement and experiential learning.</li>
+                                            <li>• Identifies common trends such as field trips and outdoor learning.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Many studies still lack strong experimental evidence.</li>
+                                            <li>• Limited integration into formal education.</li>
+                                            <li>• Technical and usability challenges remain significant.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Commercial Benchmarks -->
+                        <div class="mt-16" data-aos="fade-up">
+                            <div class="mb-8">
+                                <h3 class="text-3xl font-bold tracking-tight text-slate-900">Commercial Benchmarks</h3>
+                                <p class="mt-2 text-slate-600">4 products reviewed to analyse navigation, storytelling, exploration, and interaction patterns.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-teal-600">Product 01</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Google Maps</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> A strong reference for map-based navigation and place information.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Strong navigation and map support.</li>
+                                            <li>• Familiar interface with low learning cost.</li>
+                                            <li>• Integrates place-related information effectively.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Designed for navigation rather than guided learning.</li>
+                                            <li>• Does not provide AR narration.</li>
+                                            <li>• Does not distinguish between different user roles.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-600">Product 02</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">izi.TRAVEL</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> Useful for self-paced exploration and location-based storytelling.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Supports location-based audio guidance.</li>
+                                            <li>• Encourages self-paced exploration.</li>
+                                            <li>• Combines route structure with storytelling.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• More audio-focused than AR-focused.</li>
+                                            <li>• Has limited playful interaction.</li>
+                                            <li>• Weak support for differentiated user roles.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-orange-600">Product 03</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Pokémon GO</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> Demonstrates how location-linked interaction can motivate exploration.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Demonstrates strong location-based interaction.</li>
+                                            <li>• Creates a strong sense of exploration and engagement.</li>
+                                            <li>• Blends AR-style interaction with everyday movement.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Designed for entertainment rather than education.</li>
+                                            <li>• Lacks structured explanatory content.</li>
+                                            <li>• Does not support user-specific information delivery.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-600">Product 04</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Actionbound</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> A useful model for mission-based exploration and active participation.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Supports task-based and route-based exploration.</li>
+                                            <li>• Encourages active participation.</li>
+                                            <li>• Flexible for educational content design.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Has limited AR emphasis.</li>
+                                            <li>• Depends heavily on creator setup quality.</li>
+                                            <li>• May feel more like a scavenger hunt than a guided AR tour.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Key Insights -->
+                        <div class="mt-16" data-aos="fade-up">
+                            <article class="card hover-lift rounded-[2rem] p-10 md:p-12">
+                                <div class="mb-4 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-orange-700">
+                                    Key Design Insights
+                                </div>
+                                <h3 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">
+                                    What we learned from research
+                                </h3>
+                                <p class="leading-relaxed text-slate-600">
+                                    Our review suggests that an effective campus tour should combine clear navigation, self-paced exploration, meaningful storytelling, and light gamification. However, it should avoid overly complex tasks, purely entertainment-driven mechanics, and one-size-fits-all information delivery. Based on these findings, our project aims to create a mobile experience that is educational, location-aware, and engaging, while also adapting content for different user groups such as new students and external visitors.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="mt-16 text-center" data-aos="fade-up">
+                            <h3 class="section-title text-4xl font-bold tracking-tight text-slate-900">
+                                Stakeholders
+                            </h3>
+                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+                                Primary and secondary user groups identified for the WayLens XJTLU project.
+                            </p>
+                        </div>
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="500">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">User Classification</h3>
+
+                                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                    <div class="rounded-xl border-2 border-teal-200 bg-gradient-to-br from-teal-50 to-teal-100 p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-teal-700">Primary Users</h4>
+                                        <p class="mb-3 text-slate-700">Users with high service expectations and willingness to use, representing the core target group:</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Junior students with strong demand for campus services</li>
+                                            <li>• Users prioritizing interactive experiences and mobile optimization</li>
+                                            <li>• Female users showing higher service expectations</li>
+                                            <li>• Users willing to try 3D/VR and intelligent Q&A features</li>
+                                        </ul>
+                                        <p class="mt-4 text-xs font-bold text-teal-600">Targeting: Service experience optimization and feature innovation</p>
+                                    </div>
+
+                                    <div class="rounded-xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-amber-100 p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-amber-700">Secondary Users</h4>
+                                        <p class="mb-3 text-slate-700">Users with neutral expectations or uncertain willingness, representing potential growth group:</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Users with neutral expectations (40%)</li>
+                                            <li>• Uncertain about future usage (16.67%)</li>
+                                            <li>• Users prioritizing content quality and basic convenience</li>
+                                            <li>• Freshmen and other grade students</li>
+                                        </ul>
+                                        <p class="mt-4 text-xs font-bold text-amber-600">Targeting: Content enrichment and basic experience improvement</p>
                                     </div>
                                 </div>
-                                <div class="space-y-3 text-sm text-slate-600">
-                                    <p><span class="font-bold text-slate-800">Characteristics:</span> Tech-savvy, frequently uses campus services, values interactive experience</p>
-                                    <p><span class="font-bold text-slate-800">Needs:</span> 3D/VR campus tour, intelligent Q&A, mobile optimization</p>
-                                    <p><span class="font-bold text-slate-800">Pain Points:</span> Current service lacks interactivity, mobile experience needs improvement</p>
-                                </div>
                             </div>
+                        </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-4">
-                                    <div class="h-16 w-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-2xl font-bold text-white">WF</div>
-                                    <div>
-                                        <h4 class="text-lg font-bold text-slate-900">Wang Fang</h4>
-                                        <p class="text-sm text-amber-600">Junior Student | Primary User</p>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">User Personas</h3>
+
+                                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                                        <div class="mb-4 flex items-center gap-4">
+                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-2xl font-bold text-white">LM</div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-slate-900">Li Ming</h4>
+                                                <p class="text-sm text-teal-600">Junior Student | Primary User</p>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-3 text-sm text-slate-600">
+                                            <p><span class="font-bold text-slate-800">Characteristics:</span> Tech-savvy, frequently uses campus services, values interactive experience</p>
+                                            <p><span class="font-bold text-slate-800">Needs:</span> 3D/VR campus tour, intelligent Q&A, mobile optimization</p>
+                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Current service lacks interactivity, mobile experience needs improvement</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                                        <div class="mb-4 flex items-center gap-4">
+                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-2xl font-bold text-white">WF</div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-slate-900">Wang Fang</h4>
+                                                <p class="text-sm text-amber-600">Junior Student | Primary User</p>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-3 text-sm text-slate-600">
+                                            <p><span class="font-bold text-slate-800">Characteristics:</span> High service expectations, prefers high-quality content and interactive services</p>
+                                            <p><span class="font-bold text-slate-800">Needs:</span> Rich content, accurate information, engaging interactions</p>
+                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Content quality needs improvement, service stickiness is low</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                                        <div class="mb-4 flex items-center gap-4">
+                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-2xl font-bold text-white">CJ</div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-slate-900">Chen Jing</h4>
+                                                <p class="text-sm text-sky-600">Freshman | Secondary User</p>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-3 text-sm text-slate-600">
+                                            <p><span class="font-bold text-slate-800">Characteristics:</span> New to campus, uncertain about service value, needs guidance</p>
+                                            <p><span class="font-bold text-slate-800">Needs:</span> Campus facilities introduction, life services guide, academic resources</p>
+                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Not familiar with campus, unclear about service benefits</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                                        <div class="mb-4 flex items-center gap-4">
+                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-2xl font-bold text-white">ZW</div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-slate-900">Zhang Wei</h4>
+                                                <p class="text-sm text-orange-600">Sophomore Student | Secondary User</p>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-3 text-sm text-slate-600">
+                                            <p><span class="font-bold text-slate-800">Characteristics:</span> Neutral expectations, prioritizes fast loading and simple content</p>
+                                            <p><span class="font-bold text-slate-800">Needs:</span> Quick access to information, efficient navigation, basic convenience</p>
+                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Uncertain about future usage, needs clearer value proposition</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="space-y-3 text-sm text-slate-600">
-                                    <p><span class="font-bold text-slate-800">Characteristics:</span> High service expectations, prefers high-quality content and interactive services</p>
-                                    <p><span class="font-bold text-slate-800">Needs:</span> Rich content, accurate information, engaging interactions</p>
-                                    <p><span class="font-bold text-slate-800">Pain Points:</span> Content quality needs improvement, service stickiness is low</p>
-                                </div>
                             </div>
+                        </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-4">
-                                    <div class="h-16 w-16 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-2xl font-bold text-white">CJ</div>
+
+
+                    </div>
+                </section>
+
+
+                <section id="concepts" class="px-6 py-20 md:py-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Key Concepts</h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                            <article class="feature-card concept-dark hover-lift relative overflow-hidden rounded-[2.4rem] p-10 text-white md:col-span-2 md:p-12" data-aos="fade-right">
+                                <div class="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-white/10"></div>
+                                <div class="absolute -bottom-6 -right-4 text-[9rem] opacity-10">📍</div>
+                                <h3 class="mb-4 text-2xl font-bold">Location-Based Interaction</h3>
+                                <p class="max-w-md text-lg leading-relaxed text-slate-200">The application detects the user's geographic position and triggers interactive XR content when the user approaches predefined campus landmarks.</p>
+                            </article>
+
+                            <article class="card feature-card hover-lift flex flex-col justify-center rounded-[2.4rem] bg-gradient-to-br from-white to-[#eefaf8] p-10 text-center" data-aos="fade-left">
+                                <span class="mb-6 text-5xl">🤖</span>
+                                <h3 class="mb-2 text-xl font-bold text-slate-900">AR Guide</h3>
+                                <p class="text-sm leading-relaxed text-slate-500">A virtual guide character appears to introduce campus locations.</p>
+                            </article>
+
+                            <article class="feature-card hover-lift rounded-[2.4rem] border border-orange-100 bg-gradient-to-r from-[#fff7e8] via-[#fffdfa] to-[#fff0ea] p-10 md:col-span-3 md:p-12" data-aos="fade-up">
+                                <div class="flex items-start gap-6 md:items-center md:gap-8">
+                                    <span class="mt-1 text-5xl md:mt-0">✨</span>
                                     <div>
-                                        <h4 class="text-lg font-bold text-slate-900">Chen Jing</h4>
-                                        <p class="text-sm text-sky-600">Freshman | Secondary User</p>
+                                        <h3 class="mb-2 text-xl font-bold text-slate-900">Immersive Exploration</h3>
+                                        <p class="leading-relaxed text-slate-600">Transforming a simple walk into an engaging story-driven tour.</p>
                                     </div>
                                 </div>
-                                <div class="space-y-3 text-sm text-slate-600">
-                                    <p><span class="font-bold text-slate-800">Characteristics:</span> New to campus, uncertain about service value, needs guidance</p>
-                                    <p><span class="font-bold text-slate-800">Needs:</span> Campus facilities introduction, life services guide, academic resources</p>
-                                    <p><span class="font-bold text-slate-800">Pain Points:</span> Not familiar with campus, unclear about service benefits</p>
-                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="process" class="px-6 py-24 md:py-32">
+                    <div class="mx-auto max-w-5xl">
+                        <div class="mb-20 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900 md:text-5xl" data-aos="fade-up">Design Process</h2>
+                        </div>
+
+                        <div class="timeline-wrap space-y-8 md:space-y-10">
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white text-xl font-bold text-slate-900 ring-1 ring-slate-200">01</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Initial Concept</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">The project began with the idea of improving the campus tour experience for visitors and new students. Traditional tours often rely on static maps or human guides, which may not always be available.</p>
+                                </article>
                             </div>
 
-                            <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                <div class="mb-4 flex items-center gap-4">
-                                    <div class="h-16 w-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-2xl font-bold text-white">ZW</div>
-                                    <div>
-                                        <h4 class="text-lg font-bold text-slate-900">Zhang Wei</h4>
-                                        <p class="text-sm text-orange-600">Sophomore Student | Secondary User</p>
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eefaf8] text-xl font-bold text-slate-900 ring-1 ring-slate-200">02</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Research</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">Research focused on extended reality technologies, location-based interaction systems, and existing digital tour applications. The goal was to identify how XR could enhance spatial storytelling.</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff5ea] text-xl font-bold text-slate-900 ring-1 ring-slate-200">03</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Interaction Design</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">Different interaction models were explored, including how users trigger content, how the AR guide appears, and how information should be presented to maintain engagement without overwhelming users.</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eef3ff] text-xl font-bold text-slate-900 ring-1 ring-slate-200">04</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Prototype Development</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">A prototype was developed using XR development tools. The system implemented location detection, AR visualization, and a basic virtual guide character that introduces selected landmarks.</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff1eb] text-xl font-bold text-slate-900 ring-1 ring-slate-200">05</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Testing and Refinement</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">The prototype was evaluated and refined by adjusting trigger distances, improving guide narration, and optimizing interaction flow to make the experience smoother for users.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="stakeholders" class="px-6 py-20 md:py-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Stakeholders Analysis</h2>
+                            <p class="mt-6 text-lg text-slate-600" data-aos="fade-up" data-aos-delay="100">User group research analysis based on 30 valid questionnaires</p>
+                        </div>
+
+                        <div class="stakeholder-viz-grid" data-aos="fade-up" data-aos-delay="80">
+                            <article class="card viz-card p-6">
+                                <span class="viz-kicker">Quick View 01</span>
+                                <h3 class="mb-5 text-2xl font-bold text-slate-900">Usage Status</h3>
+                                <div class="viz-layout">
+                                    <div class="donut-chart" style="background: conic-gradient(#94a3b8 0 86.67%, #14b8a6 86.67% 100%);">
+                                        <div class="donut-center">
+                                            <strong>13.33%</strong>
+                                            <span>used</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="space-y-3 text-sm text-slate-600">
-                                    <p><span class="font-bold text-slate-800">Characteristics:</span> Neutral expectations, prioritizes fast loading and simple content</p>
-                                    <p><span class="font-bold text-slate-800">Needs:</span> Quick access to information, efficient navigation, basic convenience</p>
-                                    <p><span class="font-bold text-slate-800">Pain Points:</span> Uncertain about future usage, needs clearer value proposition</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-    </div>
-</section>
-
-
-        <section id="concepts" class="px-6 py-20 md:py-24">
-            <div class="mx-auto max-w-6xl">
-                <div class="mb-16 text-center">
-                    <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Key Concepts</h2>
-                </div>
-
-                <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-                    <article class="feature-card concept-dark hover-lift relative overflow-hidden rounded-[2.4rem] p-10 text-white md:col-span-2 md:p-12" data-aos="fade-right">
-                        <div class="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-white/10"></div>
-                        <div class="absolute -bottom-6 -right-4 text-[9rem] opacity-10">📍</div>
-                        <h3 class="mb-4 text-2xl font-bold">Location-Based Interaction</h3>
-                        <p class="max-w-md text-lg leading-relaxed text-slate-200">The application detects the user's geographic position and triggers interactive XR content when the user approaches predefined campus landmarks.</p>
-                    </article>
-
-                    <article class="card feature-card hover-lift flex flex-col justify-center rounded-[2.4rem] bg-gradient-to-br from-white to-[#eefaf8] p-10 text-center" data-aos="fade-left">
-                        <span class="mb-6 text-5xl">🤖</span>
-                        <h3 class="mb-2 text-xl font-bold text-slate-900">AR Guide</h3>
-                        <p class="text-sm leading-relaxed text-slate-500">A virtual guide character appears to introduce campus locations.</p>
-                    </article>
-
-                    <article class="feature-card hover-lift rounded-[2.4rem] border border-orange-100 bg-gradient-to-r from-[#fff7e8] via-[#fffdfa] to-[#fff0ea] p-10 md:col-span-3 md:p-12" data-aos="fade-up">
-                        <div class="flex items-start gap-6 md:items-center md:gap-8">
-                            <span class="mt-1 text-5xl md:mt-0">✨</span>
-                            <div>
-                                <h3 class="mb-2 text-xl font-bold text-slate-900">Immersive Exploration</h3>
-                                <p class="leading-relaxed text-slate-600">Transforming a simple walk into an engaging story-driven tour.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="process" class="px-6 py-24 md:py-32">
-            <div class="mx-auto max-w-5xl">
-                <div class="mb-20 text-center">
-                    <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900 md:text-5xl" data-aos="fade-up">Design Process</h2>
-                </div>
-
-                <div class="timeline-wrap space-y-8 md:space-y-10">
-                    <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                        <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white text-xl font-bold text-slate-900 ring-1 ring-slate-200">01</div>
-                        <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                            <h3 class="mb-4 text-2xl font-bold text-slate-900">Initial Concept</h3>
-                            <p class="text-lg leading-relaxed text-slate-600">The project began with the idea of improving the campus tour experience for visitors and new students. Traditional tours often rely on static maps or human guides, which may not always be available.</p>
-                        </article>
-                    </div>
-
-                    <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                        <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eefaf8] text-xl font-bold text-slate-900 ring-1 ring-slate-200">02</div>
-                        <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                            <h3 class="mb-4 text-2xl font-bold text-slate-900">Research</h3>
-                            <p class="text-lg leading-relaxed text-slate-600">Research focused on extended reality technologies, location-based interaction systems, and existing digital tour applications. The goal was to identify how XR could enhance spatial storytelling.</p>
-                        </article>
-                    </div>
-
-                    <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                        <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff5ea] text-xl font-bold text-slate-900 ring-1 ring-slate-200">03</div>
-                        <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                            <h3 class="mb-4 text-2xl font-bold text-slate-900">Interaction Design</h3>
-                            <p class="text-lg leading-relaxed text-slate-600">Different interaction models were explored, including how users trigger content, how the AR guide appears, and how information should be presented to maintain engagement without overwhelming users.</p>
-                        </article>
-                    </div>
-
-                    <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                        <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eef3ff] text-xl font-bold text-slate-900 ring-1 ring-slate-200">04</div>
-                        <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                            <h3 class="mb-4 text-2xl font-bold text-slate-900">Prototype Development</h3>
-                            <p class="text-lg leading-relaxed text-slate-600">A prototype was developed using XR development tools. The system implemented location detection, AR visualization, and a basic virtual guide character that introduces selected landmarks.</p>
-                        </article>
-                    </div>
-
-                    <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                        <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff1eb] text-xl font-bold text-slate-900 ring-1 ring-slate-200">05</div>
-                        <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                            <h3 class="mb-4 text-2xl font-bold text-slate-900">Testing and Refinement</h3>
-                            <p class="text-lg leading-relaxed text-slate-600">The prototype was evaluated and refined by adjusting trigger distances, improving guide narration, and optimizing interaction flow to make the experience smoother for users.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="stakeholders" class="px-6 py-20 md:py-24">
-            <div class="mx-auto max-w-6xl">
-                <div class="mb-16 text-center">
-                    <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Stakeholders Analysis</h2>
-                    <p class="mt-6 text-lg text-slate-600" data-aos="fade-up" data-aos-delay="100">User group research analysis based on 30 valid questionnaires</p>
-                </div>
-
-                <div class="mb-12" data-aos="fade-up">
-                    <div class="card rounded-2xl p-8">
-                        <h3 class="mb-6 text-2xl font-bold text-slate-900">Core Dimensions of User Group Segmentation</h3>
-                        <p class="mb-4 text-lg text-slate-600">User group modules can be segmented based on following two core dimensions, which serve as foundation for dividing core groups, potential groups, and blank groups:</p>
-                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                            <div class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 p-6">
-                                <h4 class="mb-2 text-lg font-bold text-teal-700">Demographic Characteristics</h4>
-                                <p class="text-slate-600">Grade, Gender, Age</p>
-                            </div>
-                            <div class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 p-6">
-                                <h4 class="mb-2 text-lg font-bold text-amber-700">Service Usage Behavior</h4>
-                                <p class="text-slate-600">Whether Used, Usage Frequency</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-12" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card rounded-2xl p-8">
-                        <h3 class="mb-6 text-2xl font-bold text-slate-900">Service Usage Behavior Group Data</h3>
-
-                        <div class="mb-8">
-                            <h4 class="mb-4 text-xl font-bold text-slate-800">Usage Status Distribution</h4>
-                            <div class="mb-4 overflow-hidden rounded-xl bg-slate-50">
-                                <div class="flex h-8">
-                                    <div class="flex items-center justify-center bg-slate-400 text-white" style="width: 86.67%">Not Used 86.67%</div>
-                                    <div class="flex items-center justify-center bg-teal-500 text-white" style="width: 13.33%">Used 13.33%</div>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                <div class="rounded-xl border border-teal-200 bg-teal-50 p-5">
-                                    <h5 class="mb-3 font-bold text-teal-700">Needs of Users Who Have Used</h5>
-                                    <ul class="space-y-1 text-sm text-slate-600">
-                                        <li>• Increase Service Time (42.86%)</li>
-                                        <li>• Enhance Interactivity (100%)</li>
-                                        <li>• Optimize Mobile Experience (75%)</li>
-                                    </ul>
-                                    <p class="mt-2 text-xs font-bold text-teal-600">Focus: Service Experience and Convenience</p>
-                                </div>
-                                <div class="rounded-xl border border-amber-200 bg-amber-50 p-5">
-                                    <h5 class="mb-3 font-bold text-amber-700">Needs of Users Who Haven't Used</h5>
-                                    <ul class="space-y-1 text-sm text-slate-600">
-                                        <li>• Enrich Explanation Content (85.71%)</li>
-                                        <li>• Optimize Mobile Experience (80%)</li>
-                                    </ul>
-                                    <p class="mt-2 text-xs font-bold text-amber-600">Focus: Content Quality and Basic Convenience</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="mb-4 text-xl font-bold text-slate-800">Usage Frequency Distribution (Users Who Have Used)</h4>
-                            <div class="mb-4 overflow-hidden rounded-xl bg-slate-50">
-                                <div class="flex h-8">
-                                    <div class="flex items-center justify-center bg-red-400 text-white" style="width: 50%">Once Only 50%</div>
-                                    <div class="flex items-center justify-center bg-amber-400 text-white" style="width: 25%">Once a Week 25%</div>
-                                    <div class="flex items-center justify-center bg-teal-400 text-white" style="width: 25%">Once a Semester 25%</div>
-                                </div>
-                            </div>
-                            <p class="text-slate-600">Regardless of service needs, user usage frequency is concentrated in low-frequency/single-use, with no medium-to-high frequency user groups, indicating extremely low service stickiness.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-12" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card rounded-2xl p-8">
-                        <h3 class="mb-6 text-2xl font-bold text-slate-900">Common and Personalized Preferences Across Groups</h3>
-
-                        <div class="mb-8">
-                            <h4 class="mb-4 text-xl font-bold text-slate-800">Common Preferences Across All Groups</h4>
-                            <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
-                                <div class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 p-5">
-                                    <h5 class="mb-2 font-bold text-teal-700">Technology Form</h5>
-                                    <p class="text-2xl font-bold text-teal-600">60%</p>
-                                    <p class="text-sm text-slate-600">Prefer 3D/VR panoramic tours or real photos</p>
-                                </div>
-                                <div class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 p-5">
-                                    <h5 class="mb-2 font-bold text-amber-700">Experience Needs</h5>
-                                    <p class="text-2xl font-bold text-amber-600">50%</p>
-                                    <p class="text-sm text-slate-600">Prioritize "Fast Loading + Simple Content"</p>
-                                </div>
-                                <div class="rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 p-5">
-                                    <h5 class="mb-2 font-bold text-orange-700">Service Importance</h5>
-                                    <p class="text-2xl font-bold text-orange-600">4.0</p>
-                                    <p class="text-sm text-slate-600">Information Accuracy is Most Important</p>
-                                </div>
-                                <div class="rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 p-5">
-                                    <h5 class="mb-2 font-bold text-purple-700">Service Type Preference</h5>
-                                    <p class="text-sm text-slate-600 mb-2">Most Popular Service Types:</p>
-                                    <ul class="space-y-1 text-xs text-slate-700">
-                                        <li>• Campus Facilities Introduction (21.83%)</li>
-                                        <li>• Life Services Guide (20.33%)</li>
-                                        <li>• Academic Resources Guide (19.9%)</li>
+                                    <ul class="viz-legend">
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-slate-400"></span>Not Used</span>
+                                            <span class="legend-value">86.67%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-teal-500"></span>Used</span>
+                                            <span class="legend-value">13.33%</span>
+                                        </li>
                                     </ul>
                                 </div>
+                            </article>
+
+                            <article class="card viz-card p-6">
+                                <span class="viz-kicker">Quick View 02</span>
+                                <h3 class="mb-5 text-2xl font-bold text-slate-900">Expectation Level</h3>
+                                <div class="viz-layout">
+                                    <div class="donut-chart" style="background: conic-gradient(#14b8a6 0 30%, #fbbf24 30% 70%, #f87171 70% 100%);">
+                                        <div class="donut-center">
+                                            <strong>40%</strong>
+                                            <span>neutral</span>
+                                        </div>
+                                    </div>
+                                    <ul class="viz-legend">
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-teal-500"></span>Very Eager</span>
+                                            <span class="legend-value">30%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-amber-400"></span>Neutral</span>
+                                            <span class="legend-value">40%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-red-400"></span>Not Eager</span>
+                                            <span class="legend-value">30%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="card viz-card p-6">
+                                <span class="viz-kicker">Quick View 03</span>
+                                <h3 class="mb-5 text-2xl font-bold text-slate-900">Future Intention</h3>
+                                <div class="viz-layout">
+                                    <div class="donut-chart" style="background: conic-gradient(#14b8a6 0 66.67%, #fbbf24 66.67% 83.34%, #f87171 83.34% 100%);">
+                                        <div class="donut-center">
+                                            <strong>66.67%</strong>
+                                            <span>willing</span>
+                                        </div>
+                                    </div>
+                                    <ul class="viz-legend">
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-teal-500"></span>Willing</span>
+                                            <span class="legend-value">66.67%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-amber-400"></span>Uncertain</span>
+                                            <span class="legend-value">16.67%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-red-400"></span>Unwilling</span>
+                                            <span class="legend-value">16.66%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Core Dimensions of User Group Segmentation</h3>
+                                <p class="mb-4 text-lg text-slate-600">User group modules can be segmented based on following two core dimensions, which serve as foundation for dividing core groups, potential groups, and blank groups:</p>
+                                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                    <div class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 p-6">
+                                        <h4 class="mb-2 text-lg font-bold text-teal-700">Demographic Characteristics</h4>
+                                        <p class="text-slate-600">Grade, Gender, Age</p>
+                                    </div>
+                                    <div class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 p-6">
+                                        <h4 class="mb-2 text-lg font-bold text-amber-700">Service Usage Behavior</h4>
+                                        <p class="text-slate-600">Whether Used, Usage Frequency</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div>
-                            <h4 class="mb-4 text-xl font-bold text-slate-800">Personalized Preferences by Group</h4>
-                            <ul class="space-y-2 text-slate-600">
-                                <li>• <span class="font-bold">Loading Preference Differences:</span> 75% of users pursuing high-definition content choose 3D/VR; 60% of users pursuing fast loading choose 3D/VR, with demand for intelligent Q&A robots rising to 20%</li>
-                                <li>• <span class="font-bold">Grade Preferences:</span> Junior students are main group expressing preferences for 3D/VR and fast loading</li>
-                                <li>• <span class="font-bold">Gender Preferences:</span> High-expectation female groups are more receptive to high-quality content and interactive services</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Service Usage Behavior Group Data</h3>
 
-                <div data-aos="fade-up" data-aos-delay="400">
-                    <div class="card rounded-2xl p-8">
-                        <h3 class="mb-6 text-2xl font-bold text-slate-900">Service Expectation and Usage Intention Characteristics</h3>
-
-                        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-                            <div>
-                                <h4 class="mb-4 text-xl font-bold text-slate-800">Service Expectation Level</h4>
-                                <div class="space-y-3">
-                                    <div class="flex items-center gap-3">
-                                        <div class="h-3 w-3 rounded-full bg-teal-500"></div>
-                                        <div class="flex-1">
-                                            <div class="mb-1 flex justify-between text-sm">
-                                                <span>Very Eager</span>
-                                                <span class="font-bold">30%</span>
-                                            </div>
-                                            <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                <div class="h-full bg-teal-500" style="width: 30%"></div>
-                                            </div>
+                                <div class="mb-8">
+                                    <h4 class="mb-4 text-xl font-bold text-slate-800">Usage Status Distribution</h4>
+                                    <div class="mb-4 overflow-hidden rounded-xl bg-slate-50">
+                                        <div class="flex h-8">
+                                            <div class="flex items-center justify-center bg-slate-400 text-white" style="width: 86.67%">Not Used 86.67%</div>
+                                            <div class="flex items-center justify-center bg-teal-500 text-white" style="width: 13.33%">Used 13.33%</div>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="h-3 w-3 rounded-full bg-amber-400"></div>
-                                        <div class="flex-1">
-                                            <div class="mb-1 flex justify-between text-sm">
-                                                <span>Neutral</span>
-                                                <span class="font-bold">40%</span>
-                                            </div>
-                                            <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                <div class="h-full bg-amber-400" style="width: 40%"></div>
-                                            </div>
+
+                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                        <div class="rounded-xl border border-teal-200 bg-teal-50 p-5">
+                                            <h5 class="mb-3 font-bold text-teal-700">Needs of Users Who Have Used</h5>
+                                            <ul class="space-y-1 text-sm text-slate-600">
+                                                <li>• Increase Service Time (42.86%)</li>
+                                                <li>• Enhance Interactivity (100%)</li>
+                                                <li>• Optimize Mobile Experience (75%)</li>
+                                            </ul>
+                                            <p class="mt-2 text-xs font-bold text-teal-600">Focus: Service Experience and Convenience</p>
                                         </div>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="h-3 w-3 rounded-full bg-red-400"></div>
-                                        <div class="flex-1">
-                                            <div class="mb-1 flex justify-between text-sm">
-                                                <span>Not Eager/Not Expecting</span>
-                                                <span class="font-bold">30%</span>
-                                            </div>
-                                            <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                <div class="h-full bg-red-400" style="width: 30%"></div>
-                                            </div>
+                                        <div class="rounded-xl border border-amber-200 bg-amber-50 p-5">
+                                            <h5 class="mb-3 font-bold text-amber-700">Needs of Users Who Haven't Used</h5>
+                                            <ul class="space-y-1 text-sm text-slate-600">
+                                                <li>• Enrich Explanation Content (85.71%)</li>
+                                                <li>• Optimize Mobile Experience (80%)</li>
+                                            </ul>
+                                            <p class="mt-2 text-xs font-bold text-amber-600">Focus: Content Quality and Basic Convenience</p>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="mt-4 text-sm text-slate-600">Overall neutral-positive; low-expectation group is all male, high-expectation group has increased female proportion.</p>
-                            </div>
 
-                            <div>
-                                <h4 class="mb-4 text-xl font-bold text-slate-800">Future Usage Intention</h4>
-                                <div class="space-y-3">
-                                    <div class="flex items-center gap-3">
-                                        <div class="h-3 w-3 rounded-full bg-teal-500"></div>
-                                        <div class="flex-1">
-                                            <div class="mb-1 flex justify-between text-sm">
-                                                <span>Willing/Very Willing</span>
-                                                <span class="font-bold">66.67%</span>
-                                            </div>
-                                            <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                <div class="h-full bg-teal-500" style="width: 66.67%"></div>
-                                            </div>
+                                <div>
+                                    <h4 class="mb-4 text-xl font-bold text-slate-800">Usage Frequency Distribution (Users Who Have Used)</h4>
+                                    <div class="mb-4 overflow-hidden rounded-xl bg-slate-50">
+                                        <div class="flex h-8">
+                                            <div class="flex items-center justify-center bg-red-400 text-white" style="width: 50%">Once Only 50%</div>
+                                            <div class="flex items-center justify-center bg-amber-400 text-white" style="width: 25%">Once a Week 25%</div>
+                                            <div class="flex items-center justify-center bg-teal-400 text-white" style="width: 25%">Once a Semester 25%</div>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="h-3 w-3 rounded-full bg-amber-400"></div>
-                                        <div class="flex-1">
-                                            <div class="mb-1 flex justify-between text-sm">
-                                                <span>Uncertain</span>
-                                                <span class="font-bold">16.67%</span>
-                                            </div>
-                                            <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                <div class="h-full bg-amber-400" style="width: 16.67%"></div>
-                                            </div>
+                                    <p class="text-slate-600">Regardless of service needs, user usage frequency is concentrated in low-frequency/single-use, with no medium-to-high frequency user groups, indicating extremely low service stickiness.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Common and Personalized Preferences Across Groups</h3>
+
+                                <div class="mb-8">
+                                    <h4 class="mb-4 text-xl font-bold text-slate-800">Common Preferences Across All Groups</h4>
+                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+                                        <div class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 p-5">
+                                            <h5 class="mb-2 font-bold text-teal-700">Technology Form</h5>
+                                            <p class="text-2xl font-bold text-teal-600">60%</p>
+                                            <p class="text-sm text-slate-600">Prefer 3D/VR panoramic tours or real photos</p>
                                         </div>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="h-3 w-3 rounded-full bg-red-400"></div>
-                                        <div class="flex-1">
-                                            <div class="mb-1 flex justify-between text-sm">
-                                                <span>Unwilling/Very Unwilling</span>
-                                                <span class="font-bold">16.66%</span>
-                                            </div>
-                                            <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                <div class="h-full bg-red-400" style="width: 16.66%"></div>
-                                            </div>
+                                        <div class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 p-5">
+                                            <h5 class="mb-2 font-bold text-amber-700">Experience Needs</h5>
+                                            <p class="text-2xl font-bold text-amber-600">50%</p>
+                                            <p class="text-sm text-slate-600">Prioritize "Fast Loading + Simple Content"</p>
+                                        </div>
+                                        <div class="rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 p-5">
+                                            <h5 class="mb-2 font-bold text-orange-700">Service Importance</h5>
+                                            <p class="text-2xl font-bold text-orange-600">4.0</p>
+                                            <p class="text-sm text-slate-600">Information Accuracy is Most Important</p>
+                                        </div>
+                                        <div class="rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 p-5">
+                                            <h5 class="mb-2 font-bold text-purple-700">Service Type Preference</h5>
+                                            <p class="text-sm text-slate-600 mb-2">Most Popular Service Types:</p>
+                                            <ul class="space-y-1 text-xs text-slate-700">
+                                                <li>• Campus Facilities Introduction (21.83%)</li>
+                                                <li>• Life Services Guide (20.33%)</li>
+                                                <li>• Academic Resources Guide (19.9%)</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="mt-4 text-sm text-slate-600">Positive intention group is 100% junior students; uncertain group has prominent other gender proportion (20%); unwilling group includes freshmen.</p>
+
+                                <div>
+                                    <h4 class="mb-4 text-xl font-bold text-slate-800">Personalized Preferences by Group</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li>• <span class="font-bold">Loading Preference Differences:</span> 75% of users pursuing high-definition content choose 3D/VR; 60% of users pursuing fast loading choose 3D/VR, with demand for intelligent Q&A robots rising to 20%</li>
+                                        <li>• <span class="font-bold">Grade Preferences:</span> Junior students are main group expressing preferences for 3D/VR and fast loading</li>
+                                        <li>• <span class="font-bold">Gender Preferences:</span> High-expectation female groups are more receptive to high-quality content and interactive services</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Service Expectation and Usage Intention Characteristics</h3>
+
+                                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                                    <div>
+                                        <h4 class="mb-4 text-xl font-bold text-slate-800">Service Expectation Level</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex items-center gap-3">
+                                                <div class="h-3 w-3 rounded-full bg-teal-500"></div>
+                                                <div class="flex-1">
+                                                    <div class="mb-1 flex justify-between text-sm">
+                                                        <span>Very Eager</span>
+                                                        <span class="font-bold">30%</span>
+                                                    </div>
+                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
+                                                        <div class="h-full bg-teal-500" style="width: 30%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <div class="h-3 w-3 rounded-full bg-amber-400"></div>
+                                                <div class="flex-1">
+                                                    <div class="mb-1 flex justify-between text-sm">
+                                                        <span>Neutral</span>
+                                                        <span class="font-bold">40%</span>
+                                                    </div>
+                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
+                                                        <div class="h-full bg-amber-400" style="width: 40%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <div class="h-3 w-3 rounded-full bg-red-400"></div>
+                                                <div class="flex-1">
+                                                    <div class="mb-1 flex justify-between text-sm">
+                                                        <span>Not Eager/Not Expecting</span>
+                                                        <span class="font-bold">30%</span>
+                                                    </div>
+                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
+                                                        <div class="h-full bg-red-400" style="width: 30%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-4 text-sm text-slate-600">Overall neutral-positive; low-expectation group is all male, high-expectation group has increased female proportion.</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="mb-4 text-xl font-bold text-slate-800">Future Usage Intention</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex items-center gap-3">
+                                                <div class="h-3 w-3 rounded-full bg-teal-500"></div>
+                                                <div class="flex-1">
+                                                    <div class="mb-1 flex justify-between text-sm">
+                                                        <span>Willing/Very Willing</span>
+                                                        <span class="font-bold">66.67%</span>
+                                                    </div>
+                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
+                                                        <div class="h-full bg-teal-500" style="width: 66.67%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <div class="h-3 w-3 rounded-full bg-amber-400"></div>
+                                                <div class="flex-1">
+                                                    <div class="mb-1 flex justify-between text-sm">
+                                                        <span>Uncertain</span>
+                                                        <span class="font-bold">16.67%</span>
+                                                    </div>
+                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
+                                                        <div class="h-full bg-amber-400" style="width: 16.67%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <div class="h-3 w-3 rounded-full bg-red-400"></div>
+                                                <div class="flex-1">
+                                                    <div class="mb-1 flex justify-between text-sm">
+                                                        <span>Unwilling/Very Unwilling</span>
+                                                        <span class="font-bold">16.66%</span>
+                                                    </div>
+                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
+                                                        <div class="h-full bg-red-400" style="width: 16.66%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-4 text-sm text-slate-600">Positive intention group is 100% junior students; uncertain group has prominent other gender proportion (20%); unwilling group includes freshmen.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section id="persona" class="px-6 py-20 md:py-24">
-            <div class="mx-auto max-w-6xl">
-                <div class="mb-16 text-center">
-                    <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Our Team</h2>
-                </div>
-
-                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                    <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="0">
-                        <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
-                            <img src="./LeiZhang.png" alt="Zhang Lei" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                <section id="persona" class="px-6 py-20 md:py-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Our Team</h2>
                         </div>
-                        <h3 class="mb-1 text-xl font-bold text-slate-900">Zhang Lei</h3>
-                        <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-teal-600">Developer</p>
-                        <p class="text-sm leading-relaxed text-slate-500">
-                            I am a Year 3 student at Xi’an Jiaotong-Liverpool University, majoring in Information and Computing Science. I am enthusiastic about working with my teammates on this project and committed to delivering valuable and influential results through joint efforts.
-                        </p>
-                    </article>
 
-                    <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
-                            <img src="./HanyanNiu.png" alt="Hanyan Niu" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="0">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./LeiZhang.png" alt="Zhang Lei" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Zhang Lei</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-teal-600">Developer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">
+                                    I am a Year 3 student at Xi’an Jiaotong-Liverpool University, majoring in Information and Computing Science. I am enthusiastic about working with my teammates on this project and committed to delivering valuable and influential results through joint efforts.
+                                </p>
+                            </article>
+
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./HanyanNiu.png" alt="Hanyan Niu" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Hanyan Niu</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-amber-600">Designer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">
+                                    I am a Year 3 student at Xi’an Jiaotong-Liverpool University, majoring in Information and Computing Science. I am passionate about applying my problem-solving skills and fostering effective collaboration. I am dedicated to producing substantial, high-quality outcomes that create real value through our teamwork.
+                                </p>
+                            </article>
+
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./YiduoGuo.png" alt="Yiduo Guo" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Yiduo Guo</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-sky-600">Developer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">
+                                    I am a third-year Information and Computing Science student at Xi’an Jiaotong-Liverpool University. My teammates and I have worked together on developing the Campus Guide project, and we hope it can be helpful for you in exploring the campus.
+                                </p>
+                            </article>
+
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./QiCao.png" alt="Qi Cao" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Qi Cao</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-orange-500">Developer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">
+                                    I am a Year 3 student at Xi’an Jiaotong-Liverpool University, majoring in Information and Computing Science. I am eager to collaborate with my team members on this project and contribute to the development of meaningful and impactful outcomes.
+                                </p>
+                            </article>
                         </div>
-                        <h3 class="mb-1 text-xl font-bold text-slate-900">Hanyan Niu</h3>
-                        <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-amber-600">Designer</p>
-                        <p class="text-sm leading-relaxed text-slate-500">
-                            I am a Year 3 student at Xi’an Jiaotong-Liverpool University, majoring in Information and Computing Science. I am passionate about applying my problem-solving skills and fostering effective collaboration. I am dedicated to producing substantial, high-quality outcomes that create real value through our teamwork.
-                        </p>
-                    </article>
+                    </div>
+                </section>
 
-                    <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
-                            <img src="./YiduoGuo.png" alt="Yiduo Guo" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                <section id="reflection" class="px-6 py-24 md:py-32">
+                    <div class="mx-auto max-w-5xl">
+                        <div class="quote-card glass rounded-[2.5rem] px-8 py-14 text-center md:px-16 md:py-20">
+                            <h2 class="mb-10 text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
+                            <p class="mx-auto max-w-4xl text-xl leading-relaxed text-slate-600 italic" data-aos="fade-up" data-aos-delay="120">
+                                "Developing the WayLens XJTLU project highlighted the importance of integrating physical environments with digital interaction. Designing experiences that respond to real-world locations requires careful consideration of technical constraints and user experience."
+                            </p>
                         </div>
-                        <h3 class="mb-1 text-xl font-bold text-slate-900">Yiduo Guo</h3>
-                        <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-sky-600">Developer</p>
-                        <p class="text-sm leading-relaxed text-slate-500">
-                            I am a third-year Information and Computing Science student at Xi’an Jiaotong-Liverpool University. My teammates and I have worked together on developing the Campus Guide project, and we hope it can be helpful for you in exploring the campus.
-                        </p>
-                    </article>
+                    </div>
+                </section>
 
-                    <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
-                            <img src="./QiCao.png" alt="Qi Cao" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                <footer id="contact" class="px-6 pb-32 pt-10 md:pb-24">
+                    <div class="mx-auto max-w-5xl rounded-[2.5rem] border border-slate-200 bg-[#14202a] px-8 py-14 text-center text-white shadow-[0_30px_100px_rgba(20,32,42,0.24)] md:px-16 md:py-16">
+                        <h2 class="mb-12 text-4xl font-bold tracking-tight">Contact Me</h2>
+                        <div class="flex flex-col items-center justify-center gap-5 text-base font-medium text-white/70 md:flex-row md:gap-10">
+                            <a href="mailto:yourname@email.com" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-amber-300 hover:text-white">
+                                <span class="mr-2 text-xl">📧</span> yourname@email.com
+                            </a>
+                            <a href="https://github.com/yourusername" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-teal-300 hover:text-white">
+                                <span class="mr-2 text-xl">🔗</span> github.com/yourusername
+                            </a>
                         </div>
-                        <h3 class="mb-1 text-xl font-bold text-slate-900">Qi Cao</h3>
-                        <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-orange-500">Developer</p>
-                        <p class="text-sm leading-relaxed text-slate-500">
-                            I am a Year 3 student at Xi’an Jiaotong-Liverpool University, majoring in Information and Computing Science. I am eager to collaborate with my team members on this project and contribute to the development of meaningful and impactful outcomes.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="reflection" class="px-6 py-24 md:py-32">
-            <div class="mx-auto max-w-5xl">
-                <div class="quote-card glass rounded-[2.5rem] px-8 py-14 text-center md:px-16 md:py-20">
-                    <h2 class="mb-10 text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
-                    <p class="mx-auto max-w-4xl text-xl leading-relaxed text-slate-600 italic" data-aos="fade-up" data-aos-delay="120">
-                        "Developing the XR Campus Tour project highlighted the importance of integrating physical environments with digital interaction. Designing experiences that respond to real-world locations requires careful consideration of technical constraints and user experience."
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <footer id="contact" class="px-6 pb-32 pt-10 md:pb-24">
-            <div class="mx-auto max-w-5xl rounded-[2.5rem] border border-slate-200 bg-[#14202a] px-8 py-14 text-center text-white shadow-[0_30px_100px_rgba(20,32,42,0.24)] md:px-16 md:py-16">
-                <h2 class="mb-12 text-4xl font-bold tracking-tight">Contact Me</h2>
-                <div class="flex flex-col items-center justify-center gap-5 text-base font-medium text-white/70 md:flex-row md:gap-10">
-                    <a href="mailto:yourname@email.com" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-amber-300 hover:text-white">
-                        <span class="mr-2 text-xl">📧</span> yourname@email.com
-                    </a>
-                    <a href="https://github.com/yourusername" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-teal-300 hover:text-white">
-                        <span class="mr-2 text-xl">🔗</span> github.com/yourusername
-                    </a>
-                </div>
-                <p class="mt-16 text-sm italic text-white/35">© 2026 XR Campus Tour Portfolio. Created for CPT208 Excellence.</p>
-            </div>
-        </footer>
-    </main>
+                        <p class="mt-16 text-sm italic text-white/35">© 2026 WayLens XJTLU Portfolio. Created for CPT208 Excellence.</p>
+                    </div>
+                </footer>
+        </main>
 
     <div class="mobile-dock fixed bottom-4 left-1/2 z-50 flex w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 items-center justify-between rounded-full glass px-3 py-2 md:hidden">
         <a href="#about" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">About</a>
