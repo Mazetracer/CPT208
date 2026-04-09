@@ -892,17 +892,22 @@
             gap: 1rem;
         }
 
-        .persona-column {
+        .persona-row-grid {
             display: grid;
-            gap: 1rem;
-            align-content: start;
+            gap: 0.9rem;
         }
 
         .persona-card-block {
             border-radius: 1.45rem;
             border: 1px solid rgba(20, 32, 42, 0.07);
             background: rgba(255, 255, 255, 0.8);
-            padding: 1rem;
+            padding: 0.95rem 1rem;
+        }
+
+        .persona-card-section + .persona-card-section {
+            margin-top: 0.95rem;
+            padding-top: 0.95rem;
+            border-top: 1px dashed rgba(20, 32, 42, 0.08);
         }
 
         .persona-block-label {
@@ -1022,8 +1027,19 @@
 
         .priority-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 0.75rem;
+        }
+
+        .persona-dual-grid,
+        .needs-strip-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .persona-span-4,
+        .persona-span-8,
+        .persona-span-12 {
+            min-width: 0;
         }
 
         .priority-card {
@@ -1280,12 +1296,42 @@
             .persona-board {
                 padding: 1.8rem;
             }
+
+            .persona-stage-list,
+            .persona-dual-grid,
+            .needs-strip-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
         @media (min-width: 1024px) {
-            .persona-board-grid {
-                grid-template-columns: 0.92fr 1.14fr 0.94fr;
+            .persona-row-grid {
+                grid-template-columns: repeat(12, minmax(0, 1fr));
                 align-items: start;
+            }
+
+            .persona-span-4 {
+                grid-column: span 4;
+            }
+
+            .persona-span-8 {
+                grid-column: span 8;
+            }
+
+            .persona-span-12 {
+                grid-column: span 12;
+            }
+
+            .persona-stage-list {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .needs-strip-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .persona-dual-grid {
+                grid-template-columns: 0.95fr 1.05fr;
             }
         }
 
@@ -1774,67 +1820,66 @@
                                         </div>
 
                                         <div class="persona-board-grid">
-                                            <aside class="persona-column">
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Core Mindset</div>
-                                                    <p class="persona-quote-block">"If it helps me in the middle of a real day, I will keep it. If it feels slow, empty, or gimmicky, I will close it."</p>
-                                                </div>
-
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Profile Snapshot</div>
-                                                    <div class="persona-fact-list">
-                                                        <div class="persona-fact"><span>Context</span><strong>Year 3 student balancing classes, labs, and clubs</strong></div>
-                                                        <div class="persona-fact"><span>Use Pattern</span><strong>Checks routes and campus info in short bursts between tasks</strong></div>
-                                                        <div class="persona-fact"><span>Decision Style</span><strong>Independent, efficient, willing to explore only after trust is earned</strong></div>
-                                                        <div class="persona-fact"><span>Emotional Need</span><strong>Wants confidence without giving up speed</strong></div>
+                                            <div class="persona-row-grid">
+                                                <aside class="persona-card-block persona-span-4">
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Core Mindset</div>
+                                                        <p class="persona-quote-block">"If it helps me in the middle of a real day, I will keep it. If it feels slow, empty, or gimmicky, I will close it."</p>
                                                     </div>
-                                                </div>
-
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Temperament</div>
-                                                    <div class="persona-chip-list">
-                                                        <span class="persona-chip">Independent</span>
-                                                        <span class="persona-chip">Curiosity-led</span>
-                                                        <span class="persona-chip">Time-sensitive</span>
-                                                        <span class="persona-chip">Digitally fluent</span>
-                                                        <span class="persona-chip">Quick to judge value</span>
-                                                    </div>
-                                                </div>
-                                            </aside>
-
-                                            <div class="persona-column">
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Journey Lens</div>
-                                                    <div class="persona-stage-list">
-                                                        <div class="persona-stage">
-                                                            <span>Before Moving</span>
-                                                            <p>He opens the platform between two real activities, not during dedicated planning time, so the next useful action must appear almost immediately.</p>
-                                                        </div>
-                                                        <div class="persona-stage">
-                                                            <span>While Walking</span>
-                                                            <p>He will stay engaged if the interface helps him make small decisions fast, such as which route, which building entrance, or which nearby service is actually relevant.</p>
-                                                        </div>
-                                                        <div class="persona-stage">
-                                                            <span>After Arrival</span>
-                                                            <p>Once the basic task is solved, he becomes much more open to check-ins, XR layers, and concise stories that explain why a place matters on campus.</p>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Profile Snapshot</div>
+                                                        <div class="persona-fact-list">
+                                                            <div class="persona-fact"><span>Context</span><strong>Year 3 student balancing classes, labs, and clubs</strong></div>
+                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Checks routes and campus info in short bursts between tasks</strong></div>
+                                                            <div class="persona-fact"><span>Decision Style</span><strong>Independent, efficient, willing to explore only after trust is earned</strong></div>
+                                                            <div class="persona-fact"><span>Emotional Need</span><strong>Wants confidence without giving up speed</strong></div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Temperament</div>
+                                                        <div class="persona-chip-list">
+                                                            <span class="persona-chip">Independent</span>
+                                                            <span class="persona-chip">Curiosity-led</span>
+                                                            <span class="persona-chip">Time-sensitive</span>
+                                                            <span class="persona-chip">Digitally fluent</span>
+                                                            <span class="persona-chip">Quick to judge value</span>
+                                                        </div>
+                                                    </div>
+                                                </aside>
 
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">What Success Looks Like</div>
-                                                    <ul class="persona-response-list">
-                                                        <li><span class="persona-response-dot"></span><span>Find the next building, service, or academic resource without switching between multiple tools.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Receive content that is concise at first, then deepens only when he actively wants more detail.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Feel that interactivity adds meaning to the place rather than delaying access to information.</span></li>
-                                                    </ul>
+                                                <div class="persona-card-block persona-span-8">
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Journey Lens</div>
+                                                        <div class="persona-stage-list">
+                                                            <div class="persona-stage">
+                                                                <span>Before Moving</span>
+                                                                <p>He opens the platform between two real activities, not during dedicated planning time, so the next useful action must appear almost immediately.</p>
+                                                            </div>
+                                                            <div class="persona-stage">
+                                                                <span>While Walking</span>
+                                                                <p>He will stay engaged if the interface helps him make small decisions fast, such as which route, which building entrance, or which nearby service is actually relevant.</p>
+                                                            </div>
+                                                            <div class="persona-stage">
+                                                                <span>After Arrival</span>
+                                                                <p>Once the basic task is solved, he becomes much more open to check-ins, XR layers, and concise stories that explain why a place matters on campus.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">What Success Looks Like</div>
+                                                        <ul class="persona-response-list">
+                                                            <li><span class="persona-response-dot"></span><span>Find the next building, service, or academic resource without switching between multiple tools.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Receive content that is concise at first, then deepens only when he actively wants more detail.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Feel that interactivity adds meaning to the place rather than delaying access to information.</span></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="persona-column">
-                                                <div class="persona-card-block">
+                                            <div class="persona-row-grid">
+                                                <div class="persona-card-block persona-span-12">
                                                     <div class="persona-block-label">Needs Hierarchy</div>
-                                                    <div class="priority-grid">
+                                                    <div class="needs-strip-grid">
                                                         <article class="priority-card">
                                                             <span>01</span>
                                                             <strong>Instant route clarity</strong>
@@ -1857,19 +1902,24 @@
                                                         </article>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Friction Triggers</div>
-                                                    <ul class="persona-response-list">
-                                                        <li><span class="persona-response-dot"></span><span>Long introductions before he can act on the information.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Interactive elements that feel decorative instead of helpful.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Slow AR or media layers that interrupt fast decision-making.</span></li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Survey Signal</div>
-                                                    <p class="persona-signal-note">This persona is strongly grounded in the updated survey: 74.51% asked for stronger interactivity, 64.71% wanted richer explanation content, and 52.94% still preferred a fast, simplified interface.</p>
+                                            <div class="persona-row-grid">
+                                                <div class="persona-card-block persona-span-12">
+                                                    <div class="persona-dual-grid">
+                                                        <article class="priority-card">
+                                                            <div class="persona-block-label">Friction Triggers</div>
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Long introductions before he can act on the information.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Interactive elements that feel decorative instead of helpful.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Slow AR or media layers that interrupt fast decision-making.</span></li>
+                                                            </ul>
+                                                        </article>
+                                                        <article class="priority-card">
+                                                            <div class="persona-block-label">Survey Signal</div>
+                                                            <p class="persona-signal-note">This persona is strongly grounded in the updated survey: 74.51% asked for stronger interactivity, 64.71% wanted richer explanation content, and 52.94% still preferred a fast, simplified interface.</p>
+                                                        </article>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1886,67 +1936,66 @@
                                         </div>
 
                                         <div class="persona-board-grid">
-                                            <aside class="persona-column">
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Core Mindset</div>
-                                                    <p class="persona-quote-block">"I need to know where to start, what I am looking at, and why this campus is different, without feeling lost or embarrassed."</p>
-                                                </div>
-
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Profile Snapshot</div>
-                                                    <div class="persona-fact-list">
-                                                        <div class="persona-fact"><span>Context</span><strong>Open-day or short-visit guest with limited time on campus</strong></div>
-                                                        <div class="persona-fact"><span>Use Pattern</span><strong>Relies on landmarks, photos, and obvious entry points</strong></div>
-                                                        <div class="persona-fact"><span>Decision Style</span><strong>Cautious at first, then impression-led once orientation feels clear</strong></div>
-                                                        <div class="persona-fact"><span>Emotional Need</span><strong>Wants reassurance, readability, and a memorable story</strong></div>
+                                            <div class="persona-row-grid">
+                                                <aside class="persona-card-block persona-span-4">
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Core Mindset</div>
+                                                        <p class="persona-quote-block">"I need to know where to start, what I am looking at, and why this campus is different, without feeling lost or embarrassed."</p>
                                                     </div>
-                                                </div>
-
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Temperament</div>
-                                                    <div class="persona-chip-list">
-                                                        <span class="persona-chip">First-time user</span>
-                                                        <span class="persona-chip">Landmark-driven</span>
-                                                        <span class="persona-chip">Observant</span>
-                                                        <span class="persona-chip">Comparison-oriented</span>
-                                                        <span class="persona-chip">Easily unsettled by ambiguity</span>
-                                                    </div>
-                                                </div>
-                                            </aside>
-
-                                            <div class="persona-column">
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Journey Lens</div>
-                                                    <div class="persona-stage-list">
-                                                        <div class="persona-stage">
-                                                            <span>Before Arrival</span>
-                                                            <p>She wants a clear starting point, a sense of the route ahead, and confidence that the visit will cover the most meaningful places without wasting time.</p>
-                                                        </div>
-                                                        <div class="persona-stage">
-                                                            <span>On Site</span>
-                                                            <p>She depends on visible cues more than campus jargon, so photos, landmark recognition, and unmistakable naming matter more than complex menus.</p>
-                                                        </div>
-                                                        <div class="persona-stage">
-                                                            <span>After Discovery</span>
-                                                            <p>Once oriented, she becomes interested in how each space reflects XJTLU's identity, especially innovation, collaboration, and student autonomy.</p>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Profile Snapshot</div>
+                                                        <div class="persona-fact-list">
+                                                            <div class="persona-fact"><span>Context</span><strong>Open-day or short-visit guest with limited time on campus</strong></div>
+                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Relies on landmarks, photos, and obvious entry points</strong></div>
+                                                            <div class="persona-fact"><span>Decision Style</span><strong>Cautious at first, then impression-led once orientation feels clear</strong></div>
+                                                            <div class="persona-fact"><span>Emotional Need</span><strong>Wants reassurance, readability, and a memorable story</strong></div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Temperament</div>
+                                                        <div class="persona-chip-list">
+                                                            <span class="persona-chip">First-time user</span>
+                                                            <span class="persona-chip">Landmark-driven</span>
+                                                            <span class="persona-chip">Observant</span>
+                                                            <span class="persona-chip">Comparison-oriented</span>
+                                                            <span class="persona-chip">Easily unsettled by ambiguity</span>
+                                                        </div>
+                                                    </div>
+                                                </aside>
 
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">What Success Looks Like</div>
-                                                    <ul class="persona-response-list">
-                                                        <li><span class="persona-response-dot"></span><span>Recognise key buildings quickly without having to decode abbreviations or ask others for basic orientation.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Use a fast map-like interface first, then move into richer media only when she wants context or immersion.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Leave the visit with a clearer understanding of what kind of learning environment XJTLU is trying to create.</span></li>
-                                                    </ul>
+                                                <div class="persona-card-block persona-span-8">
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Journey Lens</div>
+                                                        <div class="persona-stage-list">
+                                                            <div class="persona-stage">
+                                                                <span>Before Arrival</span>
+                                                                <p>She wants a clear starting point, a sense of the route ahead, and confidence that the visit will cover the most meaningful places without wasting time.</p>
+                                                            </div>
+                                                            <div class="persona-stage">
+                                                                <span>On Site</span>
+                                                                <p>She depends on visible cues more than campus jargon, so photos, landmark recognition, and unmistakable naming matter more than complex menus.</p>
+                                                            </div>
+                                                            <div class="persona-stage">
+                                                                <span>After Discovery</span>
+                                                                <p>Once oriented, she becomes interested in how each space reflects XJTLU's identity, especially innovation, collaboration, and student autonomy.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">What Success Looks Like</div>
+                                                        <ul class="persona-response-list">
+                                                            <li><span class="persona-response-dot"></span><span>Recognise key buildings quickly without having to decode abbreviations or ask others for basic orientation.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Use a fast map-like interface first, then move into richer media only when she wants context or immersion.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Leave the visit with a clearer understanding of what kind of learning environment XJTLU is trying to create.</span></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="persona-column">
-                                                <div class="persona-card-block">
+                                            <div class="persona-row-grid">
+                                                <div class="persona-card-block persona-span-12">
                                                     <div class="persona-block-label">Needs Hierarchy</div>
-                                                    <div class="priority-grid">
+                                                    <div class="needs-strip-grid">
                                                         <article class="priority-card">
                                                             <span>01</span>
                                                             <strong>Know where to start</strong>
@@ -1969,19 +2018,24 @@
                                                         </article>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Friction Triggers</div>
-                                                    <ul class="persona-response-list">
-                                                        <li><span class="persona-response-dot"></span><span>Building codes, unexplained labels, or route steps that assume insider knowledge.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Heavy text before basic orientation is established.</span></li>
-                                                        <li><span class="persona-response-dot"></span><span>Slow immersive media that loads before the visitor knows why it matters.</span></li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="persona-card-block">
-                                                    <div class="persona-block-label">Survey Signal</div>
-                                                    <p class="persona-signal-note">Because the questionnaire is student-heavy, this persona extends the dataset with the campus-tour scenario. The strongest supporting signals are that 50.98% prefer 3D/VR tours without a human guide, while campus facilities and life-service guidance together account for 44.76% of service preference.</p>
+                                            <div class="persona-row-grid">
+                                                <div class="persona-card-block persona-span-12">
+                                                    <div class="persona-dual-grid">
+                                                        <article class="priority-card">
+                                                            <div class="persona-block-label">Friction Triggers</div>
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Building codes, unexplained labels, or route steps that assume insider knowledge.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Heavy text before basic orientation is established.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Slow immersive media that loads before the visitor knows why it matters.</span></li>
+                                                            </ul>
+                                                        </article>
+                                                        <article class="priority-card">
+                                                            <div class="persona-block-label">Survey Signal</div>
+                                                            <p class="persona-signal-note">Because the questionnaire is student-heavy, this persona extends the dataset with the campus-tour scenario. The strongest supporting signals are that 50.98% prefer 3D/VR tours without a human guide, while campus facilities and life-service guidance together account for 44.76% of service preference.</p>
+                                                        </article>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
