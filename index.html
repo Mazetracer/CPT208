@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WayLens XJTLU | Full Process Portfolio</title>
+    <title>X·EasyGo | Full Process Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -791,6 +791,214 @@
             color: var(--navy);
         }
 
+        .persona-stack {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .persona-sheet {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            padding: 1.6rem;
+        }
+
+        .persona-sheet::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), transparent 36%);
+            pointer-events: none;
+        }
+
+        .persona-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .persona-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .persona-avatar {
+            width: 4.25rem;
+            height: 4.25rem;
+            border-radius: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            box-shadow: 0 14px 28px rgba(16, 34, 46, 0.16);
+        }
+
+        .persona-tag {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 0.45rem 0.85rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--navy);
+            background: rgba(20, 50, 74, 0.08);
+        }
+
+        .persona-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .persona-panel {
+            border-radius: 1.5rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.78);
+            padding: 1rem;
+        }
+
+        .persona-panel-title {
+            margin-bottom: 0.75rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        .persona-quote {
+            color: #4d5c67;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .persona-data-list {
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .persona-data-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-bottom: 0.45rem;
+            border-bottom: 1px dashed rgba(20, 32, 42, 0.08);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .persona-data-row:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .persona-data-row strong {
+            color: var(--navy);
+            text-align: right;
+        }
+
+        .persona-main {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .persona-section {
+            border-radius: 1.5rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.78);
+            padding: 1rem 1.1rem;
+        }
+
+        .persona-section h5 {
+            margin: 0 0 0.8rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .persona-list {
+            display: grid;
+            gap: 0.7rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .persona-list li {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .persona-bullet {
+            margin-top: 0.45rem;
+            width: 0.42rem;
+            height: 0.42rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--amber));
+        }
+
+        .persona-bio {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .metric-box {
+            border-radius: 1.5rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.78);
+            padding: 1rem;
+        }
+
+        .metric-box h6 {
+            margin: 0 0 0.75rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.94rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .metric-stack {
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: 4.7rem 1fr;
+            gap: 0.7rem;
+            align-items: center;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .metric-track {
+            position: relative;
+            overflow: hidden;
+            height: 0.38rem;
+            border-radius: 999px;
+            background: rgba(20, 32, 42, 0.08);
+        }
+
+        .metric-fill {
+            position: absolute;
+            inset: 0 auto 0 0;
+            border-radius: inherit;
+        }
+
         .nav-link {
             position: relative;
             color: var(--muted);
@@ -1002,6 +1210,23 @@
             .stakeholder-viz-grid {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
             }
+
+            .persona-sheet {
+                padding: 1.9rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .persona-grid {
+                grid-template-columns: 0.9fr 1.3fr 0.85fr;
+                align-items: start;
+            }
+
+            .persona-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
         }
     </style>
 </head>
@@ -1015,7 +1240,7 @@
 
     <nav id="site-nav" class="fixed top-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 rounded-full glass px-4 py-3 transition-all duration-300 md:top-6 md:w-[calc(100%-3rem)] md:px-6">
         <div class="flex items-center justify-between gap-4">
-            <a href="#top" class="display-font text-sm font-bold tracking-[0.22em] text-slate-700 md:text-base">WAYLENS XJTLU</a>
+            <a href="#top" class="display-font text-sm font-bold tracking-[0.22em] text-slate-700 md:text-base">X·EASYGO</a>
             <div class="hidden items-center gap-7 text-sm font-medium md:flex">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#concepts" class="nav-link">Concepts</a>
@@ -1044,7 +1269,7 @@
                             </div>
 
                             <h1 class="mb-8 text-5xl font-extrabold tracking-[-0.06em] text-slate-900 sm:text-6xl md:text-7xl">
-                                WayLens <span class="text-gradient">XJTLU</span>
+                                X·Easy<span class="text-gradient">Go</span>
                             </h1>
 
                             <p class="hero-subcopy mx-auto mb-12 text-lg font-light leading-relaxed text-slate-600 md:text-xl lg:mx-0">
@@ -1127,7 +1352,7 @@
                         <div class="campus-kicker">Campus Snapshot</div>
                         <h3 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">A campus experience shaped by place, movement, and discovery</h3>
                         <p class="mt-5 leading-relaxed text-slate-600">
-                            The platform is designed around the real spatial character of XJTLU. Instead of treating the campus as a static background, WayLens XJTLU uses buildings, pathways, waterfront views, and learning spaces as interactive entry points for guidance and storytelling.
+                            The platform is designed around the real spatial character of XJTLU. Instead of treating the campus as a static background, X·EasyGo uses buildings, pathways, waterfront views, and learning spaces as interactive entry points for guidance and storytelling.
                         </p>
 
                         <div class="campus-stat-grid">
@@ -1150,12 +1375,12 @@
                                 Motivation & Research
                             </h2>
                             <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">
-                                This section explains why we chose the WayLens XJTLU project and how academic research and existing products informed our design direction.
+                                This section explains why we chose the X·EasyGo project and how academic research and existing products informed our design direction.
                             </p>
                         </div>
 
                         <!-- The Why -->
-                        <div class="grid gap-8 md:grid-cols-2">
+                        <div class="grid gap-8 lg:grid-cols-3">
                             <article class="card hover-lift rounded-[2rem] p-10 md:p-12" data-aos="fade-up">
                                 <div class="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-teal-700">
                                     The Why
@@ -1165,9 +1390,6 @@
                                 </h3>
                                 <p class="leading-relaxed text-slate-600">
                                     We chose this project because traditional campus visits often rely on guided tours and one-way lectures, which make visitors passive listeners rather than active explorers. At XJTLU, this problem is especially significant because the university’s student-centered philosophy cannot be fully understood through explanations alone. It is better experienced through direct interaction with classrooms, learning spaces, and campus culture. For new students, traditional tours may provide information but often fail to create a memorable sense of connection with the university. For external visitors, especially educators and administrators joining ILEAD activities, such visits may present the campus physically but do not always communicate the deeper educational ideas behind each space.
-                                </p>
-                                <p class="mt-5 leading-relaxed text-slate-600">
-                                    Our project aims to transform the campus tour into a mobile, interactive, and playful experience. By combining location-based guidance, gamified check-ins, XR elements, and AI-supported interaction, the system encourages users to explore the campus independently and engage with each site more deeply. This helps visitors move beyond simply seeing buildings to understanding how XJTLU designs learning environments to support innovation, collaboration, and student autonomy.
                                 </p>
                             </article>
 
@@ -1183,6 +1405,21 @@
                                 </p>
                                 <p class="mt-5 leading-relaxed text-white/80">
                                     By comparing their strengths and limitations, we identified which ideas could be adapted for XJTLU’s campus context and which issues should be avoided in our own design, especially in terms of usability, role-based content, and balancing learning with interaction.
+                                </p>
+                            </article>
+
+                            <article class="hover-lift rounded-[2rem] border border-orange-100 bg-gradient-to-br from-[#fff7ec] via-[#fffdfa] to-[#fff1e8] p-10 shadow-[0_24px_70px_rgba(243,169,59,0.10)] md:p-12" data-aos="fade-up" data-aos-delay="180">
+                                <div class="mb-4 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-orange-700">
+                                    The Vision
+                                </div>
+                                <h3 class="mb-6 text-3xl font-bold tracking-tight text-slate-900">
+                                    What X·EasyGo is trying to create
+                                </h3>
+                                <p class="leading-relaxed text-slate-600">
+                                    Our project aims to transform the campus tour into a mobile, interactive, and playful experience. By combining location-based guidance, gamified check-ins, XR elements, and AI-supported interaction, the system encourages users to explore the campus independently and engage with each site more deeply.
+                                </p>
+                                <p class="mt-5 leading-relaxed text-slate-600">
+                                    This helps visitors move beyond simply seeing buildings to understanding how XJTLU designs learning environments to support innovation, collaboration, and student autonomy.
                                 </p>
                             </article>
                         </div>
@@ -1408,7 +1645,7 @@
                                 Stakeholders
                             </h3>
                             <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-                                Primary and secondary user groups identified for the WayLens XJTLU project.
+                                Primary and secondary user groups identified for the X·EasyGo project.
                             </p>
                         </div>
                         <div class="mb-12" data-aos="fade-up" data-aos-delay="500">
@@ -1444,69 +1681,310 @@
                         </div>
 
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <div class="card rounded-2xl p-8">
-                                <h3 class="mb-6 text-2xl font-bold text-slate-900">User Personas</h3>
+                            <div class="card rounded-2xl p-8 md:p-10">
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">User Personas</h3>
+                                <p class="mb-8 max-w-3xl text-slate-600">Four representative personas were developed from questionnaire findings to translate the survey data into concrete user needs, behavioural patterns, and design implications.</p>
 
-                                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                        <div class="mb-4 flex items-center gap-4">
-                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-2xl font-bold text-white">LM</div>
-                                            <div>
-                                                <h4 class="text-lg font-bold text-slate-900">Li Ming</h4>
-                                                <p class="text-sm text-teal-600">Junior Student | Primary User</p>
+                                <div class="persona-stack">
+                                    <article class="persona-sheet card">
+                                        <div class="persona-header">
+                                            <div class="persona-title">
+                                                <div class="persona-avatar bg-gradient-to-br from-teal-500 to-cyan-600">LM</div>
+                                                <div>
+                                                    <h4 class="text-2xl font-bold text-slate-900">Li Ming</h4>
+                                                    <p class="text-sm font-medium text-teal-600">Junior Student | Primary User | Tech-Forward Explorer</p>
+                                                </div>
+                                            </div>
+                                            <span class="persona-tag">High adoption potential</span>
+                                        </div>
+
+                                        <div class="persona-grid">
+                                            <div class="space-y-4">
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">Persona Quote</div>
+                                                    <p class="persona-quote">"If campus guidance feels intuitive and interactive, I am happy to explore more places and spend longer using it."</p>
+                                                </div>
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">User Attributes</div>
+                                                    <div class="persona-data-list">
+                                                        <div class="persona-data-row"><span>Age</span><strong>20</strong></div>
+                                                        <div class="persona-data-row"><span>Major</span><strong>ICS</strong></div>
+                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Frequent mobile user</strong></div>
+                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Wants depth + interactivity</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="persona-main">
+                                                <div class="persona-section">
+                                                    <h5>Goals</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Explore the campus independently without relying on fixed guided tours.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Access richer stories behind spaces instead of only basic building introductions.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Use a mobile platform that feels playful, responsive, and worth revisiting.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Frustrations</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Traditional campus tours feel passive and lack immersion.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Existing services do not provide enough interaction or visual engagement.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Mobile experiences often feel secondary rather than central to the journey.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Bio</h5>
+                                                    <p class="persona-bio">Li Ming represents the high-intention, high-engagement user group in our research. He is confident with digital tools, values experiential interaction, and is more willing than other groups to try XR, 3D/VR, and intelligent Q&A features. For him, X·EasyGo should not only help with wayfinding but also turn campus exploration into a rewarding interactive experience.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="space-y-4">
+                                                <div class="metric-box">
+                                                    <h6>Motivation</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 92%"></div></div></div>
+                                                        <div class="metric-row"><span>Novelty</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 88%"></div></div></div>
+                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 73%"></div></div></div>
+                                                        <div class="metric-row"><span>Social</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 66%"></div></div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Tech Usage</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 94%"></div></div></div>
+                                                        <div class="metric-row"><span>Map Tools</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 84%"></div></div></div>
+                                                        <div class="metric-row"><span>XR/3D</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 78%"></div></div></div>
+                                                        <div class="metric-row"><span>AI Q&A</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 71%"></div></div></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="space-y-3 text-sm text-slate-600">
-                                            <p><span class="font-bold text-slate-800">Characteristics:</span> Tech-savvy, frequently uses campus services, values interactive experience</p>
-                                            <p><span class="font-bold text-slate-800">Needs:</span> 3D/VR campus tour, intelligent Q&A, mobile optimization</p>
-                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Current service lacks interactivity, mobile experience needs improvement</p>
-                                        </div>
-                                    </div>
+                                    </article>
 
-                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                        <div class="mb-4 flex items-center gap-4">
-                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-2xl font-bold text-white">WF</div>
-                                            <div>
-                                                <h4 class="text-lg font-bold text-slate-900">Wang Fang</h4>
-                                                <p class="text-sm text-amber-600">Junior Student | Primary User</p>
+                                    <article class="persona-sheet card">
+                                        <div class="persona-header">
+                                            <div class="persona-title">
+                                                <div class="persona-avatar bg-gradient-to-br from-amber-500 to-orange-500">WF</div>
+                                                <div>
+                                                    <h4 class="text-2xl font-bold text-slate-900">Wang Fang</h4>
+                                                    <p class="text-sm font-medium text-amber-600">Junior Student | Primary User | Quality-Seeking Planner</p>
+                                                </div>
+                                            </div>
+                                            <span class="persona-tag">Content-sensitive user</span>
+                                        </div>
+
+                                        <div class="persona-grid">
+                                            <div class="space-y-4">
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">Persona Quote</div>
+                                                    <p class="persona-quote">"I do not mind spending time on a campus guide if the information is accurate, polished, and actually useful."</p>
+                                                </div>
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">User Attributes</div>
+                                                    <div class="persona-data-list">
+                                                        <div class="persona-data-row"><span>Age</span><strong>21</strong></div>
+                                                        <div class="persona-data-row"><span>Major</span><strong>ICS</strong></div>
+                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Selective but engaged</strong></div>
+                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Needs quality assurance</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="persona-main">
+                                                <div class="persona-section">
+                                                    <h5>Goals</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Get trustworthy and well-structured information about campus facilities and services.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Enjoy an interface that feels polished rather than experimental or messy.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Use content that is both informative and engaging enough to sustain attention.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Frustrations</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Poorly curated content quickly reduces trust in the platform.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Interactive features feel pointless if they do not add clear informational value.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Low service stickiness often comes from content feeling repetitive or shallow.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Bio</h5>
+                                                    <p class="persona-bio">Wang Fang reflects the user segment with high service expectations and strong sensitivity to content quality. She values clarity, accuracy, and well-designed interactions. For this persona, X·EasyGo succeeds when it combines attractive storytelling with reliable campus information, rather than relying on novelty alone.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="space-y-4">
+                                                <div class="metric-box">
+                                                    <h6>Motivation</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Accuracy</span><div class="metric-track"><div class="metric-fill bg-amber-500" style="width: 95%"></div></div></div>
+                                                        <div class="metric-row"><span>Quality</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 90%"></div></div></div>
+                                                        <div class="metric-row"><span>Engagement</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 76%"></div></div></div>
+                                                        <div class="metric-row"><span>Novelty</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 58%"></div></div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Usage Preferences</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Rich Content</span><div class="metric-track"><div class="metric-fill bg-amber-500" style="width: 91%"></div></div></div>
+                                                        <div class="metric-row"><span>Interactive UI</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 79%"></div></div></div>
+                                                        <div class="metric-row"><span>AR Features</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 70%"></div></div></div>
+                                                        <div class="metric-row"><span>Fast Access</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 68%"></div></div></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="space-y-3 text-sm text-slate-600">
-                                            <p><span class="font-bold text-slate-800">Characteristics:</span> High service expectations, prefers high-quality content and interactive services</p>
-                                            <p><span class="font-bold text-slate-800">Needs:</span> Rich content, accurate information, engaging interactions</p>
-                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Content quality needs improvement, service stickiness is low</p>
-                                        </div>
-                                    </div>
+                                    </article>
 
-                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                        <div class="mb-4 flex items-center gap-4">
-                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-2xl font-bold text-white">CJ</div>
-                                            <div>
-                                                <h4 class="text-lg font-bold text-slate-900">Chen Jing</h4>
-                                                <p class="text-sm text-sky-600">Freshman | Secondary User</p>
+                                    <article class="persona-sheet card">
+                                        <div class="persona-header">
+                                            <div class="persona-title">
+                                                <div class="persona-avatar bg-gradient-to-br from-sky-500 to-indigo-500">CJ</div>
+                                                <div>
+                                                    <h4 class="text-2xl font-bold text-slate-900">Chen Jing</h4>
+                                                    <p class="text-sm font-medium text-sky-600">Freshman | Secondary User | Newcomer Seeking Guidance</p>
+                                                </div>
+                                            </div>
+                                            <span class="persona-tag">Onboarding-critical user</span>
+                                        </div>
+
+                                        <div class="persona-grid">
+                                            <div class="space-y-4">
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">Persona Quote</div>
+                                                    <p class="persona-quote">"When I first arrive on campus, I need simple guidance first. Extra features only matter if they help me feel less lost."</p>
+                                                </div>
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">User Attributes</div>
+                                                    <div class="persona-data-list">
+                                                        <div class="persona-data-row"><span>Age</span><strong>18</strong></div>
+                                                        <div class="persona-data-row"><span>Status</span><strong>Freshman</strong></div>
+                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Needs first-time guidance</strong></div>
+                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Reduce confusion quickly</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="persona-main">
+                                                <div class="persona-section">
+                                                    <h5>Goals</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Understand the overall campus layout and identify important facilities quickly.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Find life services, academic resources, and common student destinations with low effort.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Gain confidence in moving around campus independently.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Frustrations</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Does not yet understand which campus locations matter most.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Can feel overwhelmed by too much information or unfamiliar terminology.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Needs clearer value before committing to repeated usage.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Bio</h5>
+                                                    <p class="persona-bio">Chen Jing represents the secondary user group that sees value in campus guidance but is not yet strongly attached to the service. This persona needs onboarding, clarity, and immediate usefulness. For Chen Jing, X·EasyGo should foreground essential navigation and campus orientation before introducing richer XR or gamified layers.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="space-y-4">
+                                                <div class="metric-box">
+                                                    <h6>Motivation</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Clarity</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 93%"></div></div></div>
+                                                        <div class="metric-row"><span>Safety</span><div class="metric-track"><div class="metric-fill bg-indigo-500" style="width: 82%"></div></div></div>
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 60%"></div></div></div>
+                                                        <div class="metric-row"><span>Playfulness</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 48%"></div></div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Support Needs</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Map Guidance</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 92%"></div></div></div>
+                                                        <div class="metric-row"><span>Service Guide</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 84%"></div></div></div>
+                                                        <div class="metric-row"><span>Academic Help</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 72%"></div></div></div>
+                                                        <div class="metric-row"><span>XR Layer</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 52%"></div></div></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="space-y-3 text-sm text-slate-600">
-                                            <p><span class="font-bold text-slate-800">Characteristics:</span> New to campus, uncertain about service value, needs guidance</p>
-                                            <p><span class="font-bold text-slate-800">Needs:</span> Campus facilities introduction, life services guide, academic resources</p>
-                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Not familiar with campus, unclear about service benefits</p>
-                                        </div>
-                                    </div>
+                                    </article>
 
-                                    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-                                        <div class="mb-4 flex items-center gap-4">
-                                            <div class="h-16 w-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-2xl font-bold text-white">ZW</div>
-                                            <div>
-                                                <h4 class="text-lg font-bold text-slate-900">Zhang Wei</h4>
-                                                <p class="text-sm text-orange-600">Sophomore Student | Secondary User</p>
+                                    <article class="persona-sheet card">
+                                        <div class="persona-header">
+                                            <div class="persona-title">
+                                                <div class="persona-avatar bg-gradient-to-br from-orange-500 to-rose-500">ZW</div>
+                                                <div>
+                                                    <h4 class="text-2xl font-bold text-slate-900">Zhang Wei</h4>
+                                                    <p class="text-sm font-medium text-orange-600">Sophomore Student | Secondary User | Efficiency-First Pragmatist</p>
+                                                </div>
+                                            </div>
+                                            <span class="persona-tag">Retention-sensitive user</span>
+                                        </div>
+
+                                        <div class="persona-grid">
+                                            <div class="space-y-4">
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">Persona Quote</div>
+                                                    <p class="persona-quote">"I will keep using the platform only if it loads fast, stays simple, and solves a real problem immediately."</p>
+                                                </div>
+                                                <div class="persona-panel">
+                                                    <div class="persona-panel-title">User Attributes</div>
+                                                    <div class="persona-data-list">
+                                                        <div class="persona-data-row"><span>Age</span><strong>19</strong></div>
+                                                        <div class="persona-data-row"><span>Status</span><strong>Sophomore</strong></div>
+                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Occasional utility use</strong></div>
+                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Minimise friction</strong></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="persona-main">
+                                                <div class="persona-section">
+                                                    <h5>Goals</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Reach information quickly without navigating through too many layers.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Use a lightweight campus tool that is helpful even for short, occasional sessions.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Understand the benefit of the platform at a glance.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Frustrations</h5>
+                                                    <ul class="persona-list">
+                                                        <li><span class="persona-bullet"></span><span>Low willingness to revisit if features feel decorative rather than practical.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Complex interactions can make the service feel slower than necessary.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Unclear value proposition weakens future usage intention.</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="persona-section">
+                                                    <h5>Bio</h5>
+                                                    <p class="persona-bio">Zhang Wei reflects the user segment with neutral expectations and stronger preference for fast loading and basic convenience. This persona is critical for retention: if the platform can communicate value quickly and reduce interaction cost, it has a chance to convert uncertain users into regular users. For Zhang Wei, X·EasyGo should feel immediate, efficient, and lightweight.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="space-y-4">
+                                                <div class="metric-box">
+                                                    <h6>Motivation</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 94%"></div></div></div>
+                                                        <div class="metric-row"><span>Convenience</span><div class="metric-track"><div class="metric-fill bg-rose-500" style="width: 88%"></div></div></div>
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 45%"></div></div></div>
+                                                        <div class="metric-row"><span>Immersion</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 39%"></div></div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Channel Preference</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Mobile UI</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 89%"></div></div></div>
+                                                        <div class="metric-row"><span>Short Content</span><div class="metric-track"><div class="metric-fill bg-rose-500" style="width: 86%"></div></div></div>
+                                                        <div class="metric-row"><span>Search/Map</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 79%"></div></div></div>
+                                                        <div class="metric-row"><span>Extended Story</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 41%"></div></div></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="space-y-3 text-sm text-slate-600">
-                                            <p><span class="font-bold text-slate-800">Characteristics:</span> Neutral expectations, prioritizes fast loading and simple content</p>
-                                            <p><span class="font-bold text-slate-800">Needs:</span> Quick access to information, efficient navigation, basic convenience</p>
-                                            <p><span class="font-bold text-slate-800">Pain Points:</span> Uncertain about future usage, needs clearer value proposition</p>
-                                        </div>
-                                    </div>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -1951,7 +2429,7 @@
                         <div class="quote-card glass rounded-[2.5rem] px-8 py-14 text-center md:px-16 md:py-20">
                             <h2 class="mb-10 text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
                             <p class="mx-auto max-w-4xl text-xl leading-relaxed text-slate-600 italic" data-aos="fade-up" data-aos-delay="120">
-                                "Developing the WayLens XJTLU project highlighted the importance of integrating physical environments with digital interaction. Designing experiences that respond to real-world locations requires careful consideration of technical constraints and user experience."
+                                "Developing the X·EasyGo project highlighted the importance of integrating physical environments with digital interaction. Designing experiences that respond to real-world locations requires careful consideration of technical constraints and user experience."
                             </p>
                         </div>
                     </div>
@@ -1968,7 +2446,7 @@
                                 <span class="mr-2 text-xl">🔗</span> github.com/yourusername
                             </a>
                         </div>
-                        <p class="mt-16 text-sm italic text-white/35">© 2026 WayLens XJTLU Portfolio. Created for CPT208 Excellence.</p>
+                        <p class="mt-16 text-sm italic text-white/35">© 2026 X·EasyGo Portfolio. Created for CPT208 Excellence.</p>
                     </div>
                 </footer>
         </main>
