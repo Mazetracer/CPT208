@@ -801,6 +801,8 @@
             overflow: hidden;
             border-radius: 2rem;
             padding: 1.6rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 251, 250, 0.78));
         }
 
         .persona-sheet::before {
@@ -808,6 +810,15 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), transparent 36%);
+            pointer-events: none;
+        }
+
+        .persona-sheet::after {
+            content: "";
+            position: absolute;
+            inset: 0.8rem;
+            border-radius: 1.55rem;
+            border: 1px solid rgba(20, 32, 42, 0.05);
             pointer-events: none;
         }
 
@@ -978,7 +989,7 @@
 
         .metric-row {
             display: grid;
-            grid-template-columns: 4.7rem 1fr;
+            grid-template-columns: 5.2rem 1fr 2.6rem;
             gap: 0.7rem;
             align-items: center;
             color: var(--muted);
@@ -997,6 +1008,14 @@
             position: absolute;
             inset: 0 auto 0 0;
             border-radius: inherit;
+        }
+
+        .metric-value {
+            text-align: right;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--navy);
         }
 
         .nav-link {
@@ -1692,25 +1711,25 @@
                                                 <div class="persona-avatar bg-gradient-to-br from-teal-500 to-cyan-600">LM</div>
                                                 <div>
                                                     <h4 class="text-2xl font-bold text-slate-900">Li Ming</h4>
-                                                    <p class="text-sm font-medium text-teal-600">Junior Student | Primary User | Tech-Forward Explorer</p>
+                                                    <p class="text-sm font-medium text-teal-600">Junior Student | Primary User | Curious Digital Native</p>
                                                 </div>
                                             </div>
-                                            <span class="persona-tag">High adoption potential</span>
+                                            <span class="persona-tag">Active campus explorer</span>
                                         </div>
 
                                         <div class="persona-grid">
                                             <div class="space-y-4">
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">Persona Quote</div>
-                                                    <p class="persona-quote">"If campus guidance feels intuitive and interactive, I am happy to explore more places and spend longer using it."</p>
+                                                    <p class="persona-quote">"If the guide gives me routes, stories, and something fun to unlock, I will keep using it long after orientation week."</p>
                                                 </div>
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>20</strong></div>
-                                                        <div class="persona-data-row"><span>Major</span><strong>ICS</strong></div>
-                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Frequent mobile user</strong></div>
-                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Wants depth + interactivity</strong></div>
+                                                        <div class="persona-data-row"><span>Study Context</span><strong>Year 3 ICS</strong></div>
+                                                        <div class="persona-data-row"><span>Daily Routine</span><strong>Classes + clubs across campus</strong></div>
+                                                        <div class="persona-data-row"><span>Personality</span><strong>Curious, independent, fast-moving</strong></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1719,22 +1738,22 @@
                                                 <div class="persona-section">
                                                     <h5>Goals</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Explore the campus independently without relying on fixed guided tours.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Access richer stories behind spaces instead of only basic building introductions.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Use a mobile platform that feels playful, responsive, and worth revisiting.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Discover more campus spaces without depending on scheduled guided tours.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Use navigation that feels smooth enough to support real movement between activities.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Get deeper stories and XR moments that make familiar buildings feel more interesting.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Frustrations</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Traditional campus tours feel passive and lack immersion.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Existing services do not provide enough interaction or visual engagement.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Mobile experiences often feel secondary rather than central to the journey.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Traditional tours feel too passive and do not match how he actually explores campus.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Apps lose his attention quickly if the interaction feels static or repetitive.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>He is willing to try new features, but not if they slow him down.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Bio</h5>
-                                                    <p class="persona-bio">Li Ming represents the high-intention, high-engagement user group in our research. He is confident with digital tools, values experiential interaction, and is more willing than other groups to try XR, 3D/VR, and intelligent Q&A features. For him, X·EasyGo should not only help with wayfinding but also turn campus exploration into a rewarding interactive experience.</p>
+                                                    <p class="persona-bio">Li Ming is the kind of student who already moves confidently around campus, but still wants a better experience than a plain map. He switches between lectures, project meetings, and student activities, so he appreciates tools that are both efficient and engaging. He is not looking for basic orientation alone; he wants a platform that rewards curiosity and adds depth to the places he visits.</p>
                                                 </div>
                                             </div>
 
@@ -1742,19 +1761,28 @@
                                                 <div class="metric-box">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 92%"></div></div></div>
-                                                        <div class="metric-row"><span>Novelty</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 88%"></div></div></div>
-                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 73%"></div></div></div>
-                                                        <div class="metric-row"><span>Social</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 66%"></div></div></div>
+                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 76%"></div></div><span class="metric-value">76%</span></div>
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 93%"></div></div><span class="metric-value">93%</span></div>
+                                                        <div class="metric-row"><span>Social</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 68%"></div></div><span class="metric-value">68%</span></div>
+                                                        <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 62%"></div></div><span class="metric-value">62%</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="metric-box">
                                                     <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 94%"></div></div></div>
-                                                        <div class="metric-row"><span>Map Tools</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 84%"></div></div></div>
-                                                        <div class="metric-row"><span>XR/3D</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 78%"></div></div></div>
-                                                        <div class="metric-row"><span>AI Q&A</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 71%"></div></div></div>
+                                                        <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 95%"></div></div><span class="metric-value">95%</span></div>
+                                                        <div class="metric-row"><span>Map Tools</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 84%"></div></div><span class="metric-value">84%</span></div>
+                                                        <div class="metric-row"><span>AR/XR</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 80%"></div></div><span class="metric-value">80%</span></div>
+                                                        <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 74%"></div></div><span class="metric-value">74%</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Feature Needs</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 83%"></div></div><span class="metric-value">83%</span></div>
+                                                        <div class="metric-row"><span>Rich Content</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 78%"></div></div><span class="metric-value">78%</span></div>
+                                                        <div class="metric-row"><span>Gamification</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 89%"></div></div><span class="metric-value">89%</span></div>
+                                                        <div class="metric-row"><span>Smart Q&amp;A</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 75%"></div></div><span class="metric-value">75%</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1767,25 +1795,25 @@
                                                 <div class="persona-avatar bg-gradient-to-br from-amber-500 to-orange-500">WF</div>
                                                 <div>
                                                     <h4 class="text-2xl font-bold text-slate-900">Wang Fang</h4>
-                                                    <p class="text-sm font-medium text-amber-600">Junior Student | Primary User | Quality-Seeking Planner</p>
+                                                    <p class="text-sm font-medium text-amber-600">Junior Student | Primary User | Detail-Oriented Planner</p>
                                                 </div>
                                             </div>
-                                            <span class="persona-tag">Content-sensitive user</span>
+                                            <span class="persona-tag">Trust-driven decision maker</span>
                                         </div>
 
                                         <div class="persona-grid">
                                             <div class="space-y-4">
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">Persona Quote</div>
-                                                    <p class="persona-quote">"I do not mind spending time on a campus guide if the information is accurate, polished, and actually useful."</p>
+                                                    <p class="persona-quote">"I do not need the app to be flashy. I need it to feel polished, reliable, and worth recommending to someone visiting campus."</p>
                                                 </div>
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>21</strong></div>
-                                                        <div class="persona-data-row"><span>Major</span><strong>ICS</strong></div>
-                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Selective but engaged</strong></div>
-                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Needs quality assurance</strong></div>
+                                                        <div class="persona-data-row"><span>Study Context</span><strong>Year 3 ICS</strong></div>
+                                                        <div class="persona-data-row"><span>Daily Routine</span><strong>Often helps visitors and classmates</strong></div>
+                                                        <div class="persona-data-row"><span>Personality</span><strong>Careful, quality-conscious, selective</strong></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1794,22 +1822,22 @@
                                                 <div class="persona-section">
                                                     <h5>Goals</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Get trustworthy and well-structured information about campus facilities and services.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Enjoy an interface that feels polished rather than experimental or messy.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Use content that is both informative and engaging enough to sustain attention.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Access campus information that is accurate, well-written, and easy to trust.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Use a platform with a visually polished interface rather than something that feels experimental.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Recommend the guide confidently to new students, visitors, or parents.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Frustrations</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Poorly curated content quickly reduces trust in the platform.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Interactive features feel pointless if they do not add clear informational value.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Low service stickiness often comes from content feeling repetitive or shallow.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Outdated or inconsistent information immediately weakens her trust in the service.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Interactive features feel pointless if they do not improve understanding.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>She dislikes cluttered interfaces that make important content harder to find.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Bio</h5>
-                                                    <p class="persona-bio">Wang Fang reflects the user segment with high service expectations and strong sensitivity to content quality. She values clarity, accuracy, and well-designed interactions. For this persona, X·EasyGo succeeds when it combines attractive storytelling with reliable campus information, rather than relying on novelty alone.</p>
+                                                    <p class="persona-bio">Wang Fang is not resistant to new technology, but she judges it by quality rather than novelty. She often ends up being the person friends ask when they need practical campus information, so she notices when content is vague, inconsistent, or overly decorative. For her, X·EasyGo should feel dependable first, and expressive second.</p>
                                                 </div>
                                             </div>
 
@@ -1817,19 +1845,28 @@
                                                 <div class="metric-box">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Accuracy</span><div class="metric-track"><div class="metric-fill bg-amber-500" style="width: 95%"></div></div></div>
-                                                        <div class="metric-row"><span>Quality</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 90%"></div></div></div>
-                                                        <div class="metric-row"><span>Engagement</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 76%"></div></div></div>
-                                                        <div class="metric-row"><span>Novelty</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 58%"></div></div></div>
+                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-500" style="width: 74%"></div></div><span class="metric-value">74%</span></div>
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 58%"></div></div><span class="metric-value">58%</span></div>
+                                                        <div class="metric-row"><span>Social</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 64%"></div></div><span class="metric-value">64%</span></div>
+                                                        <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 89%"></div></div><span class="metric-value">89%</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="metric-box">
-                                                    <h6>Usage Preferences</h6>
+                                                    <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Rich Content</span><div class="metric-track"><div class="metric-fill bg-amber-500" style="width: 91%"></div></div></div>
-                                                        <div class="metric-row"><span>Interactive UI</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 79%"></div></div></div>
-                                                        <div class="metric-row"><span>AR Features</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 70%"></div></div></div>
-                                                        <div class="metric-row"><span>Fast Access</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 68%"></div></div></div>
+                                                        <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 90%"></div></div><span class="metric-value">90%</span></div>
+                                                        <div class="metric-row"><span>Map Tools</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 76%"></div></div><span class="metric-value">76%</span></div>
+                                                        <div class="metric-row"><span>AR/XR</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 60%"></div></div><span class="metric-value">60%</span></div>
+                                                        <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 56%"></div></div><span class="metric-value">56%</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Feature Needs</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 78%"></div></div><span class="metric-value">78%</span></div>
+                                                        <div class="metric-row"><span>Rich Content</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 95%"></div></div><span class="metric-value">95%</span></div>
+                                                        <div class="metric-row"><span>Gamification</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 42%"></div></div><span class="metric-value">42%</span></div>
+                                                        <div class="metric-row"><span>Smart Q&amp;A</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 66%"></div></div><span class="metric-value">66%</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1842,25 +1879,25 @@
                                                 <div class="persona-avatar bg-gradient-to-br from-sky-500 to-indigo-500">CJ</div>
                                                 <div>
                                                     <h4 class="text-2xl font-bold text-slate-900">Chen Jing</h4>
-                                                    <p class="text-sm font-medium text-sky-600">Freshman | Secondary User | Newcomer Seeking Guidance</p>
+                                                    <p class="text-sm font-medium text-sky-600">Freshman | Secondary User | Cautious Newcomer</p>
                                                 </div>
                                             </div>
-                                            <span class="persona-tag">Onboarding-critical user</span>
+                                            <span class="persona-tag">Needs reassurance fast</span>
                                         </div>
 
                                         <div class="persona-grid">
                                             <div class="space-y-4">
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">Persona Quote</div>
-                                                    <p class="persona-quote">"When I first arrive on campus, I need simple guidance first. Extra features only matter if they help me feel less lost."</p>
+                                                    <p class="persona-quote">"In my first few weeks on campus, I mainly want something that makes me feel less lost and less embarrassed about asking for help."</p>
                                                 </div>
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>18</strong></div>
-                                                        <div class="persona-data-row"><span>Status</span><strong>Freshman</strong></div>
-                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Needs first-time guidance</strong></div>
-                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Reduce confusion quickly</strong></div>
+                                                        <div class="persona-data-row"><span>Study Context</span><strong>Freshman, first semester</strong></div>
+                                                        <div class="persona-data-row"><span>Daily Routine</span><strong>Classroom hunting + daily errands</strong></div>
+                                                        <div class="persona-data-row"><span>Personality</span><strong>Careful, curious, easily overwhelmed</strong></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1869,22 +1906,22 @@
                                                 <div class="persona-section">
                                                     <h5>Goals</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Understand the overall campus layout and identify important facilities quickly.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Find life services, academic resources, and common student destinations with low effort.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Gain confidence in moving around campus independently.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Understand where key buildings and student services are as quickly as possible.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Reduce the anxiety of moving through an unfamiliar campus alone.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Build enough confidence to navigate independently without repeatedly asking others.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Frustrations</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Does not yet understand which campus locations matter most.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Can feel overwhelmed by too much information or unfamiliar terminology.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Needs clearer value before committing to repeated usage.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Building names, abbreviations, and campus terminology can feel confusing at first.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Too much information at once makes it hard to know what matters now.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>She wants helpful guidance, not features that make her feel even more lost.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Bio</h5>
-                                                    <p class="persona-bio">Chen Jing represents the secondary user group that sees value in campus guidance but is not yet strongly attached to the service. This persona needs onboarding, clarity, and immediate usefulness. For Chen Jing, X·EasyGo should foreground essential navigation and campus orientation before introducing richer XR or gamified layers.</p>
+                                                    <p class="persona-bio">Chen Jing is new to both the campus and the routines that older students already understand. She frequently saves screenshots, asks friends for directions, and worries about taking the wrong path before class. For her, X·EasyGo should first act as a calm, reassuring guide, then gradually introduce richer exploration once she feels secure.</p>
                                                 </div>
                                             </div>
 
@@ -1892,19 +1929,28 @@
                                                 <div class="metric-box">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Clarity</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 93%"></div></div></div>
-                                                        <div class="metric-row"><span>Safety</span><div class="metric-track"><div class="metric-fill bg-indigo-500" style="width: 82%"></div></div></div>
-                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 60%"></div></div></div>
-                                                        <div class="metric-row"><span>Playfulness</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 48%"></div></div></div>
+                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 84%"></div></div><span class="metric-value">84%</span></div>
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 52%"></div></div><span class="metric-value">52%</span></div>
+                                                        <div class="metric-row"><span>Social</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 61%"></div></div><span class="metric-value">61%</span></div>
+                                                        <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 96%"></div></div><span class="metric-value">96%</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="metric-box">
-                                                    <h6>Support Needs</h6>
+                                                    <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Map Guidance</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 92%"></div></div></div>
-                                                        <div class="metric-row"><span>Service Guide</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 84%"></div></div></div>
-                                                        <div class="metric-row"><span>Academic Help</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 72%"></div></div></div>
-                                                        <div class="metric-row"><span>XR Layer</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 52%"></div></div></div>
+                                                        <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 87%"></div></div><span class="metric-value">87%</span></div>
+                                                        <div class="metric-row"><span>Map Tools</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 93%"></div></div><span class="metric-value">93%</span></div>
+                                                        <div class="metric-row"><span>AR/XR</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 38%"></div></div><span class="metric-value">38%</span></div>
+                                                        <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 44%"></div></div><span class="metric-value">44%</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Feature Needs</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 97%"></div></div><span class="metric-value">97%</span></div>
+                                                        <div class="metric-row"><span>Rich Content</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 68%"></div></div><span class="metric-value">68%</span></div>
+                                                        <div class="metric-row"><span>Gamification</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 35%"></div></div><span class="metric-value">35%</span></div>
+                                                        <div class="metric-row"><span>Smart Q&amp;A</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 57%"></div></div><span class="metric-value">57%</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1920,22 +1966,22 @@
                                                     <p class="text-sm font-medium text-orange-600">Sophomore Student | Secondary User | Efficiency-First Pragmatist</p>
                                                 </div>
                                             </div>
-                                            <span class="persona-tag">Retention-sensitive user</span>
+                                            <span class="persona-tag">Low-friction or nothing</span>
                                         </div>
 
                                         <div class="persona-grid">
                                             <div class="space-y-4">
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">Persona Quote</div>
-                                                    <p class="persona-quote">"I will keep using the platform only if it loads fast, stays simple, and solves a real problem immediately."</p>
+                                                    <p class="persona-quote">"If I can get where I need to go in ten seconds, I will use it. If it asks too much attention from me, I will close it."</p>
                                                 </div>
                                                 <div class="persona-panel">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>19</strong></div>
-                                                        <div class="persona-data-row"><span>Status</span><strong>Sophomore</strong></div>
-                                                        <div class="persona-data-row"><span>Usage Pattern</span><strong>Occasional utility use</strong></div>
-                                                        <div class="persona-data-row"><span>Design Signal</span><strong>Minimise friction</strong></div>
+                                                        <div class="persona-data-row"><span>Study Context</span><strong>Sophomore</strong></div>
+                                                        <div class="persona-data-row"><span>Daily Routine</span><strong>Tight schedule, task-focused use</strong></div>
+                                                        <div class="persona-data-row"><span>Personality</span><strong>Pragmatic, independent, impatient</strong></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1944,22 +1990,22 @@
                                                 <div class="persona-section">
                                                     <h5>Goals</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Reach information quickly without navigating through too many layers.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Use a lightweight campus tool that is helpful even for short, occasional sessions.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Understand the benefit of the platform at a glance.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Get the shortest useful route or answer without browsing through extra content.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Use a lightweight tool that is helpful even in brief, occasional sessions.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Understand the platform value immediately instead of learning it gradually.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Frustrations</h5>
                                                     <ul class="persona-list">
-                                                        <li><span class="persona-bullet"></span><span>Low willingness to revisit if features feel decorative rather than practical.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Complex interactions can make the service feel slower than necessary.</span></li>
-                                                        <li><span class="persona-bullet"></span><span>Unclear value proposition weakens future usage intention.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Long introductions or overly theatrical storytelling feel like friction rather than value.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>He quickly abandons tools that feel slower than simply asking someone nearby.</span></li>
+                                                        <li><span class="persona-bullet"></span><span>Decorative features reduce trust if the basic guidance is not immediate and clear.</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="persona-section">
                                                     <h5>Bio</h5>
-                                                    <p class="persona-bio">Zhang Wei reflects the user segment with neutral expectations and stronger preference for fast loading and basic convenience. This persona is critical for retention: if the platform can communicate value quickly and reduce interaction cost, it has a chance to convert uncertain users into regular users. For Zhang Wei, X·EasyGo should feel immediate, efficient, and lightweight.</p>
+                                                    <p class="persona-bio">Zhang Wei is not against digital guidance; he is against wasted time. He already knows enough of the campus to solve many problems on his own, so a new platform has to justify itself quickly. For him, X·EasyGo should be fast, minimal, and useful first, with richer features available only when he actively wants them.</p>
                                                 </div>
                                             </div>
 
@@ -1967,19 +2013,28 @@
                                                 <div class="metric-box">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 94%"></div></div></div>
-                                                        <div class="metric-row"><span>Convenience</span><div class="metric-track"><div class="metric-fill bg-rose-500" style="width: 88%"></div></div></div>
-                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 45%"></div></div></div>
-                                                        <div class="metric-row"><span>Immersion</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 39%"></div></div></div>
+                                                        <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 96%"></div></div><span class="metric-value">96%</span></div>
+                                                        <div class="metric-row"><span>Exploration</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 37%"></div></div><span class="metric-value">37%</span></div>
+                                                        <div class="metric-row"><span>Social</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 34%"></div></div><span class="metric-value">34%</span></div>
+                                                        <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 62%"></div></div><span class="metric-value">62%</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="metric-box">
-                                                    <h6>Channel Preference</h6>
+                                                    <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
-                                                        <div class="metric-row"><span>Mobile UI</span><div class="metric-track"><div class="metric-fill bg-orange-500" style="width: 89%"></div></div></div>
-                                                        <div class="metric-row"><span>Short Content</span><div class="metric-track"><div class="metric-fill bg-rose-500" style="width: 86%"></div></div></div>
-                                                        <div class="metric-row"><span>Search/Map</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 79%"></div></div></div>
-                                                        <div class="metric-row"><span>Extended Story</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 41%"></div></div></div>
+                                                        <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 92%"></div></div><span class="metric-value">92%</span></div>
+                                                        <div class="metric-row"><span>Map Tools</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 83%"></div></div><span class="metric-value">83%</span></div>
+                                                        <div class="metric-row"><span>AR/XR</span><div class="metric-track"><div class="metric-fill bg-indigo-400" style="width: 24%"></div></div><span class="metric-value">24%</span></div>
+                                                        <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 39%"></div></div><span class="metric-value">39%</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box">
+                                                    <h6>Feature Needs</h6>
+                                                    <div class="metric-stack">
+                                                        <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 95%"></div></div><span class="metric-value">95%</span></div>
+                                                        <div class="metric-row"><span>Rich Content</span><div class="metric-track"><div class="metric-fill bg-orange-400" style="width: 48%"></div></div><span class="metric-value">48%</span></div>
+                                                        <div class="metric-row"><span>Gamification</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 18%"></div></div><span class="metric-value">18%</span></div>
+                                                        <div class="metric-row"><span>Smart Q&amp;A</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 42%"></div></div><span class="metric-value">42%</span></div>
                                                     </div>
                                                 </div>
                                             </div>
