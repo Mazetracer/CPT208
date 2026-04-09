@@ -866,14 +866,14 @@
 
         .persona-grid {
             display: grid;
-            gap: 1rem;
+            gap: 0.9rem;
         }
 
         .persona-panel {
             border-radius: 1.5rem;
             border: 1px solid rgba(20, 32, 42, 0.07);
             background: rgba(255, 255, 255, 0.78);
-            padding: 1rem;
+            padding: 0.95rem 1rem;
         }
 
         .persona-panel-title {
@@ -921,14 +921,14 @@
 
         .persona-main {
             display: grid;
-            gap: 1rem;
+            gap: 0.9rem;
         }
 
         .persona-section {
             border-radius: 1.5rem;
             border: 1px solid rgba(20, 32, 42, 0.07);
             background: rgba(255, 255, 255, 0.78);
-            padding: 1rem 1.1rem;
+            padding: 0.95rem 1rem;
         }
 
         .persona-section h5 {
@@ -971,7 +971,7 @@
             border-radius: 1.5rem;
             border: 1px solid rgba(20, 32, 42, 0.07);
             background: rgba(255, 255, 255, 0.78);
-            padding: 1rem;
+            padding: 0.95rem 1rem;
         }
 
         .metric-box h6 {
@@ -1016,6 +1016,47 @@
             font-size: 0.82rem;
             font-weight: 700;
             color: var(--navy);
+        }
+
+        .persona-side-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.95rem;
+        }
+
+        .persona-side-section + .persona-side-section,
+        .persona-metric-group + .persona-metric-group {
+            border-top: 1px dashed rgba(20, 32, 42, 0.08);
+            padding-top: 0.95rem;
+        }
+
+        .persona-mini-copy {
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.68;
+        }
+
+        .persona-mini-list {
+            display: grid;
+            gap: 0.55rem;
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .persona-mini-list li {
+            display: flex;
+            gap: 0.55rem;
+        }
+
+        .persona-mini-dot {
+            width: 0.36rem;
+            height: 0.36rem;
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--amber));
         }
 
         .nav-link {
@@ -1237,7 +1278,7 @@
 
         @media (min-width: 1024px) {
             .persona-grid {
-                grid-template-columns: 0.9fr 1.3fr 0.85fr;
+                grid-template-columns: 0.93fr 1.24fr 0.83fr;
                 align-items: start;
             }
 
@@ -1718,12 +1759,12 @@
                                         </div>
 
                                         <div class="persona-grid">
-                                            <div class="space-y-4">
-                                                <div class="persona-panel">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">Persona Quote</div>
                                                     <p class="persona-quote">"If the guide gives me routes, stories, and something fun to unlock, I will keep using it long after orientation week."</p>
                                                 </div>
-                                                <div class="persona-panel">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>20</strong></div>
@@ -1731,6 +1772,13 @@
                                                         <div class="persona-data-row"><span>Daily Routine</span><strong>Classes + clubs across campus</strong></div>
                                                         <div class="persona-data-row"><span>Personality</span><strong>Curious, independent, fast-moving</strong></div>
                                                     </div>
+                                                </div>
+                                                <div class="persona-side-section">
+                                                    <div class="persona-panel-title">Behaviour Snapshot</div>
+                                                    <ul class="persona-mini-list">
+                                                        <li><span class="persona-mini-dot"></span><span>Often checks routes while walking between classes instead of planning ahead.</span></li>
+                                                        <li><span class="persona-mini-dot"></span><span>Likely to share interesting campus features with friends once he discovers them.</span></li>
+                                                    </ul>
                                                 </div>
                                             </div>
 
@@ -1757,8 +1805,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="space-y-4">
-                                                <div class="metric-box">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-metric-group">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 76%"></div></div><span class="metric-value">76%</span></div>
@@ -1767,7 +1815,7 @@
                                                         <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 62%"></div></div><span class="metric-value">62%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 95%"></div></div><span class="metric-value">95%</span></div>
@@ -1776,7 +1824,7 @@
                                                         <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 74%"></div></div><span class="metric-value">74%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Feature Needs</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 83%"></div></div><span class="metric-value">83%</span></div>
@@ -1802,12 +1850,12 @@
                                         </div>
 
                                         <div class="persona-grid">
-                                            <div class="space-y-4">
-                                                <div class="persona-panel">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">Persona Quote</div>
                                                     <p class="persona-quote">"I do not need the app to be flashy. I need it to feel polished, reliable, and worth recommending to someone visiting campus."</p>
                                                 </div>
-                                                <div class="persona-panel">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>21</strong></div>
@@ -1815,6 +1863,13 @@
                                                         <div class="persona-data-row"><span>Daily Routine</span><strong>Often helps visitors and classmates</strong></div>
                                                         <div class="persona-data-row"><span>Personality</span><strong>Careful, quality-conscious, selective</strong></div>
                                                     </div>
+                                                </div>
+                                                <div class="persona-side-section">
+                                                    <div class="persona-panel-title">Behaviour Snapshot</div>
+                                                    <ul class="persona-mini-list">
+                                                        <li><span class="persona-mini-dot"></span><span>Cross-checks information before trusting it and notices mismatched details quickly.</span></li>
+                                                        <li><span class="persona-mini-dot"></span><span>Would recommend the platform only if it feels polished enough for external visitors too.</span></li>
+                                                    </ul>
                                                 </div>
                                             </div>
 
@@ -1841,8 +1896,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="space-y-4">
-                                                <div class="metric-box">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-metric-group">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-500" style="width: 74%"></div></div><span class="metric-value">74%</span></div>
@@ -1851,7 +1906,7 @@
                                                         <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 89%"></div></div><span class="metric-value">89%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 90%"></div></div><span class="metric-value">90%</span></div>
@@ -1860,7 +1915,7 @@
                                                         <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 56%"></div></div><span class="metric-value">56%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Feature Needs</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 78%"></div></div><span class="metric-value">78%</span></div>
@@ -1886,12 +1941,12 @@
                                         </div>
 
                                         <div class="persona-grid">
-                                            <div class="space-y-4">
-                                                <div class="persona-panel">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">Persona Quote</div>
                                                     <p class="persona-quote">"In my first few weeks on campus, I mainly want something that makes me feel less lost and less embarrassed about asking for help."</p>
                                                 </div>
-                                                <div class="persona-panel">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>18</strong></div>
@@ -1899,6 +1954,13 @@
                                                         <div class="persona-data-row"><span>Daily Routine</span><strong>Classroom hunting + daily errands</strong></div>
                                                         <div class="persona-data-row"><span>Personality</span><strong>Careful, curious, easily overwhelmed</strong></div>
                                                     </div>
+                                                </div>
+                                                <div class="persona-side-section">
+                                                    <div class="persona-panel-title">Behaviour Snapshot</div>
+                                                    <ul class="persona-mini-list">
+                                                        <li><span class="persona-mini-dot"></span><span>Tends to save screenshots and double-check directions before leaving for class.</span></li>
+                                                        <li><span class="persona-mini-dot"></span><span>Feels relieved by simple, reassuring guidance and stressed by crowded interfaces.</span></li>
+                                                    </ul>
                                                 </div>
                                             </div>
 
@@ -1925,8 +1987,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="space-y-4">
-                                                <div class="metric-box">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-metric-group">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 84%"></div></div><span class="metric-value">84%</span></div>
@@ -1935,7 +1997,7 @@
                                                         <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 96%"></div></div><span class="metric-value">96%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 87%"></div></div><span class="metric-value">87%</span></div>
@@ -1944,7 +2006,7 @@
                                                         <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 44%"></div></div><span class="metric-value">44%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Feature Needs</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 97%"></div></div><span class="metric-value">97%</span></div>
@@ -1970,12 +2032,12 @@
                                         </div>
 
                                         <div class="persona-grid">
-                                            <div class="space-y-4">
-                                                <div class="persona-panel">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">Persona Quote</div>
                                                     <p class="persona-quote">"If I can get where I need to go in ten seconds, I will use it. If it asks too much attention from me, I will close it."</p>
                                                 </div>
-                                                <div class="persona-panel">
+                                                <div class="persona-side-section">
                                                     <div class="persona-panel-title">User Attributes</div>
                                                     <div class="persona-data-list">
                                                         <div class="persona-data-row"><span>Age</span><strong>19</strong></div>
@@ -1983,6 +2045,13 @@
                                                         <div class="persona-data-row"><span>Daily Routine</span><strong>Tight schedule, task-focused use</strong></div>
                                                         <div class="persona-data-row"><span>Personality</span><strong>Pragmatic, independent, impatient</strong></div>
                                                     </div>
+                                                </div>
+                                                <div class="persona-side-section">
+                                                    <div class="persona-panel-title">Behaviour Snapshot</div>
+                                                    <ul class="persona-mini-list">
+                                                        <li><span class="persona-mini-dot"></span><span>Opens tools for a specific task and closes them immediately after getting the answer.</span></li>
+                                                        <li><span class="persona-mini-dot"></span><span>Will ignore expressive features unless the basic guidance proves useful first.</span></li>
+                                                    </ul>
                                                 </div>
                                             </div>
 
@@ -2009,8 +2078,8 @@
                                                 </div>
                                             </div>
 
-                                            <div class="space-y-4">
-                                                <div class="metric-box">
+                                            <div class="persona-panel persona-side-card">
+                                                <div class="persona-metric-group">
                                                     <h6>Motivation</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Efficiency</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 96%"></div></div><span class="metric-value">96%</span></div>
@@ -2019,7 +2088,7 @@
                                                         <div class="metric-row"><span>Confidence</span><div class="metric-track"><div class="metric-fill bg-cyan-500" style="width: 62%"></div></div><span class="metric-value">62%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Tech Usage</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Mobile Apps</span><div class="metric-track"><div class="metric-fill bg-teal-500" style="width: 92%"></div></div><span class="metric-value">92%</span></div>
@@ -2028,7 +2097,7 @@
                                                         <div class="metric-row"><span>AI Tools</span><div class="metric-track"><div class="metric-fill bg-amber-400" style="width: 39%"></div></div><span class="metric-value">39%</span></div>
                                                     </div>
                                                 </div>
-                                                <div class="metric-box">
+                                                <div class="persona-metric-group">
                                                     <h6>Feature Needs</h6>
                                                     <div class="metric-stack">
                                                         <div class="metric-row"><span>Navigation</span><div class="metric-track"><div class="metric-fill bg-sky-500" style="width: 95%"></div></div><span class="metric-value">95%</span></div>
