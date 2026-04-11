@@ -1357,14 +1357,15 @@
     <nav id="site-nav" class="fixed top-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 rounded-full glass px-4 py-3 transition-all duration-300 md:top-6 md:w-[calc(100%-3rem)] md:px-6">
         <div class="flex items-center justify-between gap-4">
             <a href="#top" class="display-font text-sm font-bold tracking-[0.22em] text-slate-700 md:text-base">X·EASYGO</a>
-            <div class="hidden items-center gap-7 text-sm font-medium md:flex">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#concepts" class="nav-link">Concepts</a>
+            <div class="hidden items-center gap-5 text-[0.92rem] font-medium md:flex">
+                <a href="#motivation" class="nav-link">Motivation</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#users" class="nav-link">Users</a>
+                <a href="#analysis" class="nav-link">Analysis</a>
                 <a href="#process" class="nav-link">Process</a>
-                <a href="#stakeholders" class="nav-link">Stakeholders</a>
                 <a href="#team" class="nav-link">Team</a>
                 <a href="#reflection" class="nav-link">Reflection</a>
-                <a href="#contact" class="rounded-full bg-slate-900 px-5 py-2.5 text-white transition hover:bg-[#1d4f5d]">Contact</a>
+                <a href="#contact" class="rounded-full bg-slate-900 px-4 py-2.5 text-white transition hover:bg-[#1d4f5d]">Contact</a>
             </div>
             <a href="#contact" class="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-300 hover:text-slate-900 md:hidden">Contact</a>
         </div>
@@ -1484,7 +1485,7 @@
                     </div>
                 </div>
 
-                <section id="about" class="px-6 py-20 md:py-24">
+                <section id="motivation" data-nav-anchor class="px-6 py-20 md:py-24">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">
@@ -1547,7 +1548,7 @@
                         </article>
 
                         <!-- Academic Research -->
-                        <div class="mt-16" data-aos="fade-up">
+                        <div id="research" data-nav-anchor class="mt-16" data-aos="fade-up">
                             <div class="mb-8 flex items-center justify-between gap-4">
                                 <div>
                                     <h3 class="text-3xl font-bold tracking-tight text-slate-900">Academic Research</h3>
@@ -1849,11 +1850,11 @@
                     </div>
                 </section>
 
-                <section id="stakeholders" class="px-6 py-20 md:py-24">
+                <section id="users" data-nav-anchor class="px-6 py-20 md:py-24">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Stakeholders &amp; Personas</h2>
-                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">This section brings the stakeholder focus, persona reasoning, and updated survey analysis into one continuous block so the audience logic and the evidence base can be read together.</p>
+                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">This section brings the stakeholder focus, persona reasoning, user requirements, site observation, and updated survey analysis into one continuous block so the audience logic and the evidence base can be read together.</p>
                         </div>
 
                         <div class="mb-12" data-aos="fade-up" data-aos-delay="120">
@@ -1900,7 +1901,7 @@
                                             <div>
                                                 <span class="persona-role">Student Persona</span>
                                                 <h4 class="persona-board-title">The Independent Student Explorer</h4>
-                                                <p class="persona-board-subtitle">A returning campus user who already knows the basics, but still wants quicker decisions, more meaningful context, and lightweight interaction that makes everyday movement feel richer instead of routine.</p>
+                                                <p class="persona-board-subtitle">A busy current student who wants guidance that saves time first, then adds value through useful context and light interaction.</p>
                                             </div>
                                             <div class="persona-marker">01</div>
                                         </div>
@@ -1910,102 +1911,42 @@
                                                 <aside class="persona-card-block persona-span-4">
                                                     <div class="persona-card-section">
                                                         <div class="persona-block-label">Core Mindset</div>
-                                                        <p class="persona-quote-block">"If it helps me in the middle of a real day, I will keep it. If it feels slow, empty, or gimmicky, I will close it."</p>
+                                                        <p class="persona-quote-block">"If it saves time in a real day, I will use it. If it feels slow or decorative, I will leave."</p>
                                                     </div>
                                                     <div class="persona-card-section">
                                                         <div class="persona-block-label">Profile Snapshot</div>
                                                         <div class="persona-fact-list">
-                                                            <div class="persona-fact"><span>Context</span><strong>Year 3 student balancing classes, labs, and clubs</strong></div>
-                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Checks routes and campus info in short bursts between tasks</strong></div>
-                                                            <div class="persona-fact"><span>Decision Style</span><strong>Independent, efficient, willing to explore only after trust is earned</strong></div>
-                                                            <div class="persona-fact"><span>Emotional Need</span><strong>Wants confidence without giving up speed</strong></div>
+                                                            <div class="persona-fact"><span>Context</span><strong>Year 3 student moving between classes and campus tasks</strong></div>
+                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Checks information in short, practical bursts</strong></div>
+                                                            <div class="persona-fact"><span>Priority</span><strong>Fast clarity before deeper exploration</strong></div>
                                                         </div>
                                                     </div>
                                                     <div class="persona-card-section">
-                                                        <div class="persona-block-label">Temperament</div>
+                                                        <div class="persona-block-label">Key Traits</div>
                                                         <div class="persona-chip-list">
                                                             <span class="persona-chip">Independent</span>
-                                                            <span class="persona-chip">Curiosity-led</span>
-                                                            <span class="persona-chip">Time-sensitive</span>
-                                                            <span class="persona-chip">Digitally fluent</span>
-                                                            <span class="persona-chip">Quick to judge value</span>
+                                                            <span class="persona-chip">Efficient</span>
+                                                            <span class="persona-chip">Mobile-first</span>
                                                         </div>
                                                     </div>
                                                 </aside>
 
                                                 <div class="persona-card-block persona-span-8">
                                                     <div class="persona-card-section">
-                                                        <div class="persona-block-label">Journey Lens</div>
-                                                        <div class="persona-stage-list">
-                                                            <div class="persona-stage">
-                                                                <span>Before Moving</span>
-                                                                <p>He opens the platform between two real activities, not during dedicated planning time, so the next useful action must appear almost immediately.</p>
-                                                            </div>
-                                                            <div class="persona-stage">
-                                                                <span>While Walking</span>
-                                                                <p>He will stay engaged if the interface helps him make small decisions fast, such as which route, which building entrance, or which nearby service is actually relevant.</p>
-                                                            </div>
-                                                            <div class="persona-stage">
-                                                                <span>After Arrival</span>
-                                                                <p>Once the basic task is solved, he becomes much more open to check-ins, XR layers, and concise stories that explain why a place matters on campus.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">What Success Looks Like</div>
+                                                        <div class="persona-block-label">What They Need</div>
                                                         <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Find the next building, service, or academic resource without switching between multiple tools.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Receive content that is concise at first, then deepens only when he actively wants more detail.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Feel that interactivity adds meaning to the place rather than delaying access to information.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Return to the platform naturally because it fits both urgent navigation and casual campus discovery.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>See the next route, service, or destination without switching between multiple tools.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Open richer content only when the urgent navigation task is already solved.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Use check-ins or XR features only when they add meaning to a real campus place.</span></li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="persona-row-grid">
-                                                <div class="persona-card-block persona-span-12">
-                                                    <div class="persona-block-label">Needs Hierarchy</div>
-                                                    <div class="needs-strip-grid">
-                                                        <article class="priority-card">
-                                                            <span>01</span>
-                                                            <strong>Instant route clarity</strong>
-                                                            <p>He needs the next step fast, especially when moving between classes or meetings.</p>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <span>02</span>
-                                                            <strong>Useful campus content</strong>
-                                                            <p>Academic resources and life services matter as much as storytelling.</p>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <span>03</span>
-                                                            <strong>Lightweight rewards</strong>
-                                                            <p>Gamified check-ins work when they feel optional and place-based.</p>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <span>04</span>
-                                                            <strong>Follow-up answers</strong>
-                                                            <p>Smart Q&amp;A becomes valuable after the core navigation need is solved.</p>
-                                                        </article>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="persona-row-grid">
-                                                <div class="persona-card-block persona-span-12">
-                                                    <div class="persona-dual-grid">
-                                                        <article class="priority-card">
-                                                            <div class="persona-block-label">Friction Triggers</div>
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Long introductions before he can act on the information.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Interactive elements that feel decorative instead of helpful.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Slow AR or media layers that interrupt fast decision-making.</span></li>
-                                                            </ul>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <div class="persona-block-label">Survey Signal</div>
-                                                            <p class="persona-signal-note">This persona is strongly grounded in the updated survey: 74.51% asked for stronger interactivity, 64.71% wanted richer explanation content, and 52.94% still preferred a fast, simplified interface.</p>
-                                                        </article>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Main Frictions</div>
+                                                        <ul class="persona-response-list">
+                                                            <li><span class="persona-response-dot"></span><span>Long introductions before any actionable guidance appears.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Interaction that feels decorative instead of practically useful.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Heavy media layers that interrupt quick decision-making.</span></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2017,7 +1958,7 @@
                                             <div>
                                                 <span class="persona-role">Visitor Persona</span>
                                                 <h4 class="persona-board-title">The First-Time Campus Visitor</h4>
-                                                <p class="persona-board-subtitle">A one-day visitor who does not yet have a campus mental map. This person forms impressions through landmarks, visual cues, and short explanations, and needs guidance that feels welcoming instead of cognitively heavy.</p>
+                                                <p class="persona-board-subtitle">A first-time visitor who needs orientation, reassurance, and a memorable explanation of what makes XJTLU different.</p>
                                             </div>
                                             <div class="persona-marker">02</div>
                                         </div>
@@ -2027,103 +1968,42 @@
                                                 <aside class="persona-card-block persona-span-4">
                                                     <div class="persona-card-section">
                                                         <div class="persona-block-label">Core Mindset</div>
-                                                        <p class="persona-quote-block">"I need to know where to start, what I am looking at, and why this campus is different, without feeling lost or embarrassed."</p>
+                                                        <p class="persona-quote-block">"I need to know where to start, what I am looking at, and why this campus matters, without feeling lost or embarrassed."</p>
                                                     </div>
                                                     <div class="persona-card-section">
                                                         <div class="persona-block-label">Profile Snapshot</div>
                                                         <div class="persona-fact-list">
-                                                            <div class="persona-fact"><span>Context</span><strong>Open-day or short-visit guest with limited time on campus</strong></div>
-                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Relies on landmarks, photos, and obvious entry points</strong></div>
-                                                            <div class="persona-fact"><span>Decision Style</span><strong>Cautious at first, then impression-led once orientation feels clear</strong></div>
-                                                            <div class="persona-fact"><span>Emotional Need</span><strong>Wants reassurance, readability, and a memorable story</strong></div>
+                                                            <div class="persona-fact"><span>Context</span><strong>Open-day or short-visit guest with limited time</strong></div>
+                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Relies on landmarks, photos, and obvious starting points</strong></div>
+                                                            <div class="persona-fact"><span>Priority</span><strong>Reassurance first, meaning second</strong></div>
                                                         </div>
                                                     </div>
                                                     <div class="persona-card-section">
-                                                        <div class="persona-block-label">Temperament</div>
+                                                        <div class="persona-block-label">Key Traits</div>
                                                         <div class="persona-chip-list">
-                                                            <span class="persona-chip">First-time user</span>
-                                                            <span class="persona-chip">Landmark-driven</span>
-                                                            <span class="persona-chip">Observant</span>
-                                                            <span class="persona-chip">Comparison-oriented</span>
-                                                            <span class="persona-chip">Easily unsettled by ambiguity</span>
+                                                            <span class="persona-chip">First-time</span>
+                                                            <span class="persona-chip">Landmark-led</span>
+                                                            <span class="persona-chip">Cautious</span>
                                                         </div>
                                                     </div>
                                                 </aside>
 
                                                 <div class="persona-card-block persona-span-8">
                                                     <div class="persona-card-section">
-                                                        <div class="persona-block-label">Journey Lens</div>
-                                                        <div class="persona-stage-list">
-                                                            <div class="persona-stage">
-                                                                <span>Before Arrival</span>
-                                                                <p>She wants a clear starting point, a sense of the route ahead, and confidence that the visit will cover the most meaningful places without wasting time.</p>
-                                                            </div>
-                                                            <div class="persona-stage">
-                                                                <span>On Site</span>
-                                                                <p>She depends on visible cues more than campus jargon, so photos, landmark recognition, and unmistakable naming matter more than complex menus.</p>
-                                                            </div>
-                                                            <div class="persona-stage">
-                                                                <span>After Discovery</span>
-                                                                <p>Once oriented, she becomes interested in how each space reflects XJTLU's identity, especially innovation, collaboration, and student autonomy.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">What Success Looks Like</div>
+                                                        <div class="persona-block-label">What They Need</div>
                                                         <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Recognise key buildings quickly without having to decode abbreviations or ask others for basic orientation.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Use a fast map-like interface first, then move into richer media only when she wants context or immersion.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Leave the visit with a clearer understanding of what kind of learning environment XJTLU is trying to create.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Feel confident enough to complete the visit independently while still coming away with a memorable impression of the campus.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Move from one landmark to the next without losing momentum or wondering whether the route is still correct.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Know where to start and what each important building or space is.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Use a map-like interface first, then open richer media only when orientation is clear.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Leave with a memorable understanding of XJTLU's learning environment.</span></li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="persona-row-grid">
-                                                <div class="persona-card-block persona-span-12">
-                                                    <div class="persona-block-label">Needs Hierarchy</div>
-                                                    <div class="needs-strip-grid">
-                                                        <article class="priority-card">
-                                                            <span>01</span>
-                                                            <strong>Know where to start</strong>
-                                                            <p>A visitor needs orientation before detail, or the tour feels stressful from the beginning.</p>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <span>02</span>
-                                                            <strong>Recognise important spaces</strong>
-                                                            <p>Facilities, entrances, and route landmarks should be immediately legible.</p>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <span>03</span>
-                                                            <strong>Understand what spaces mean</strong>
-                                                            <p>The tour should explain why a building matters, not only where it is.</p>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <span>04</span>
-                                                            <strong>Remember the visit</strong>
-                                                            <p>Immersive content helps turn orientation into a memorable impression of campus culture.</p>
-                                                        </article>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="persona-row-grid">
-                                                <div class="persona-card-block persona-span-12">
-                                                    <div class="persona-dual-grid">
-                                                        <article class="priority-card">
-                                                            <div class="persona-block-label">Friction Triggers</div>
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Building codes, unexplained labels, or route steps that assume insider knowledge.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Heavy text before basic orientation is established.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Slow immersive media that loads before the visitor knows why it matters.</span></li>
-                                                            </ul>
-                                                        </article>
-                                                        <article class="priority-card">
-                                                            <div class="persona-block-label">Survey Signal</div>
-                                                            <p class="persona-signal-note">Because the questionnaire is student-heavy, this persona extends the dataset with the campus-tour scenario. The strongest supporting signals are that 50.98% prefer 3D/VR tours without a human guide, while campus facilities and life-service guidance together account for 44.76% of service preference.</p>
-                                                        </article>
+                                                    <div class="persona-card-section">
+                                                        <div class="persona-block-label">Main Frictions</div>
+                                                        <ul class="persona-response-list">
+                                                            <li><span class="persona-response-dot"></span><span>Building codes or labels that assume insider knowledge.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Too much text before the route and place are understandable.</span></li>
+                                                            <li><span class="persona-response-dot"></span><span>Immersive content that appears before the basic visit feels under control.</span></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2133,7 +2013,66 @@
                             </div>
                         </div>
 
-                        <div class="mb-16 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="190">
+                            <div class="card rounded-2xl p-8 md:p-10">
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">3 Must-Have Requirements</h3>
+                                <p class="mb-8 max-w-4xl text-slate-600">Based on the personas, benchmark review, and survey results, the system needs three non-negotiable qualities. These are the minimum requirements for X·EasyGo to feel useful, believable, and worth returning to.</p>
+
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+                                    <article class="rounded-[1.6rem] border border-teal-200 bg-gradient-to-br from-teal-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Requirement 01</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">Instant route clarity</h4>
+                                        <p class="text-sm leading-relaxed text-slate-600">The platform must show the next useful step immediately, including destination name, route direction, and recognisable landmarks. Users should be able to orient themselves without opening multiple apps or decoding campus abbreviations first.</p>
+                                        <p class="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-teal-700">Why it matters: both students and visitors need confidence before they will engage any deeper content.</p>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-700">Requirement 02</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">Layered content with low friction</h4>
+                                        <p class="text-sm leading-relaxed text-slate-600">Information should arrive in layers: quick map-like guidance first, then optional deeper explanation through XR storytelling, service information, or AI-supported answers. This keeps the interface fast for urgent use while still allowing meaningful exploration.</p>
+                                        <p class="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-sky-700">Why it matters: users want richer content, but not at the cost of speed or readability.</p>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-orange-200 bg-gradient-to-br from-orange-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-orange-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-orange-700">Requirement 03</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">Playful interaction tied to place</h4>
+                                        <p class="text-sm leading-relaxed text-slate-600">Check-ins, XR moments, and lightweight rewards should be connected to real campus locations and real learning value. Playfulness should encourage movement, curiosity, and memory, rather than turning the experience into a detached game layer.</p>
+                                        <p class="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-orange-700">Why it matters: engagement is strongest when interaction feels meaningful to the campus itself.</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="210">
+                            <div class="card rounded-2xl p-8 md:p-10">
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">Evidence of Life</h3>
+                                <p class="mb-8 max-w-4xl text-slate-600">Our evidence-of-life material focuses on the real situations the design needs to respond to on campus: long walking routes, moments of hesitation at decision points, highly distinctive buildings that could support storytelling, and the transition between academic, social, and service spaces.</p>
+
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                                    <article class="rounded-[1.6rem] border border-slate-200 bg-white/80 p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-slate-900">What we observed on site</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• Key routes often contain several decision points where users need reassurance that they are still moving in the right direction.</li>
+                                            <li>• Some campus buildings have strong visual identity, but their function is not always obvious to a first-time visitor.</li>
+                                            <li>• Everyday student movement is task-driven, so navigation support needs to be fast and interruption-free.</li>
+                                            <li>• The campus also has spaces with strong atmosphere and symbolic value, which are suitable for XR storytelling and playful check-ins.</li>
+                                        </ul>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-slate-900">What this means for the design</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• Routes should be guided through clear landmark cues rather than relying only on building codes or abstract labels.</li>
+                                            <li>• Important spaces need short, readable introductions that explain both function and educational meaning.</li>
+                                            <li>• Playful features should appear at memorable places where interaction strengthens orientation and recall.</li>
+                                            <li>• The final experience should support two rhythms at once: efficient movement for students and exploratory discovery for visitors.</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="analysis" data-nav-anchor class="mb-16 text-center" data-aos="fade-up" data-aos-delay="200">
                             <h3 class="text-3xl font-bold tracking-tight text-slate-900">Stakeholder Analysis</h3>
                             <p class="mt-4 text-lg text-slate-600">Updated user research findings based on 51 valid questionnaires collected on April 9, 2026.</p>
                         </div>
@@ -2219,265 +2158,62 @@
 
                         <div class="mb-12" data-aos="fade-up">
                             <div class="card rounded-2xl p-8">
-                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Survey Frame and Research Boundaries</h3>
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Research Snapshot</h3>
                                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                                     <article class="rounded-xl bg-gradient-to-br from-slate-50 to-white p-6">
                                         <h4 class="mb-3 text-lg font-bold text-slate-900">Sample Snapshot</h4>
                                         <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
                                             <li>• 51 valid responses were collected in the updated questionnaire.</li>
-                                            <li>• 90.2% of respondents are Year 3 students, making this a strongly student-centred sample.</li>
-                                            <li>• 68.63% identify as male, and 70.59% are concentrated in the 21 to 23 age range.</li>
+                                            <li>• 90.2% of respondents are Year 3 students, so the dataset is strongly student-led.</li>
+                                            <li>• Current usage is low, but positive expectation and future willingness are both high.</li>
                                         </ul>
                                     </article>
                                     <article class="rounded-xl bg-gradient-to-br from-teal-50 to-white p-6">
-                                        <h4 class="mb-3 text-lg font-bold text-slate-900">Design Reading</h4>
+                                        <h4 class="mb-3 text-lg font-bold text-slate-900">What the Data Suggests</h4>
                                         <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
-                                            <li>• Existing guide usage is low, so adoption depends more on first-use value than on rebuilding an existing habit.</li>
-                                            <li>• Expectation and future willingness are much stronger than current usage, which suggests clear latent demand.</li>
-                                            <li>• Student behaviour is directly evidenced by the survey, while visitor needs are partly inferred from the campus-tour scenario.</li>
+                                            <li>• The main problem is not rejection, but weak exposure and weak habit formation.</li>
+                                            <li>• Fast entry matters: users want useful guidance before richer features appear.</li>
+                                            <li>• Visitor needs are less directly sampled, so they should be read alongside the campus-tour scenario.</li>
                                         </ul>
                                     </article>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mb-12" data-aos="fade-up" data-aos-delay="200">
+                        <div data-aos="fade-up" data-aos-delay="180">
                             <div class="card rounded-2xl p-8">
-                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Service Usage Pattern</h3>
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Design Implications</h3>
 
-                                <div class="mb-8">
-                                    <h4 class="mb-4 text-xl font-bold text-slate-800">Usage Status Distribution</h4>
-                                    <div class="mb-4 overflow-hidden rounded-xl bg-slate-50">
-                                        <div class="flex h-8">
-                                            <div class="flex items-center justify-center bg-slate-400 text-white" style="width: 82.35%">Not Used 82.35%</div>
-                                            <div class="flex items-center justify-center bg-teal-500 text-white" style="width: 17.65%">Used 17.65%</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                        <div class="rounded-xl border border-teal-200 bg-teal-50 p-5">
-                                            <h5 class="mb-3 font-bold text-teal-700">What current usage looks like</h5>
-                                            <ul class="space-y-1 text-sm text-slate-600">
-                                                <li>• Occasional use is highest at 44.44%</li>
-                                                <li>• Weekly use and one-time use both account for 22.22%</li>
-                                                <li>• Semester-level use is 11.11%, while monthly use is 0%</li>
-                                            </ul>
-                                            <p class="mt-2 text-xs font-bold text-teal-600">Reading: the service is situational, not habitual</p>
-                                        </div>
-                                        <div class="rounded-xl border border-amber-200 bg-amber-50 p-5">
-                                            <h5 class="mb-3 font-bold text-amber-700">What this means for X·EasyGo</h5>
-                                            <ul class="space-y-1 text-sm text-slate-600">
-                                                <li>• The key problem is low exposure and low stickiness, not active rejection.</li>
-                                                <li>• First-use value has to be obvious enough to beat asking someone nearby.</li>
-                                                <li>• Retention should come from richer interaction after basic trust is established.</li>
-                                            </ul>
-                                            <p class="mt-2 text-xs font-bold text-amber-600">Priority: awareness, fast onboarding, and easy re-entry</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h4 class="mb-4 text-xl font-bold text-slate-800">Usage Frequency Distribution (Among People Who Have Used)</h4>
-                                    <div class="mb-4 overflow-hidden rounded-xl bg-slate-50">
-                                        <div class="flex h-8">
-                                            <div class="flex min-w-0 items-center justify-center whitespace-nowrap bg-sky-500 px-1 text-[10px] font-semibold leading-none text-white sm:text-[11px] lg:text-xs" style="width: 22.22%">Weekly 22.22%</div>
-                                            <div class="flex min-w-0 items-center justify-center whitespace-nowrap bg-amber-400 px-1 text-[9px] font-semibold leading-none text-white sm:text-[10px] lg:text-xs" style="width: 11.11%">Semester 11.11%</div>
-                                            <div class="flex min-w-0 items-center justify-center whitespace-nowrap bg-orange-400 px-1 text-[10px] font-semibold leading-none text-white sm:text-[11px] lg:text-xs" style="width: 44.44%">Occasional 44.44%</div>
-                                            <div class="flex min-w-0 items-center justify-center whitespace-nowrap bg-teal-500 px-1 text-[10px] font-semibold leading-none text-white sm:text-[11px] lg:text-xs" style="width: 22.22%">Once Only 22.22%</div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
-                                        <span class="rounded-full bg-slate-100 px-3 py-1">Monthly Once: 0%</span>
-                                        <span class="rounded-full bg-slate-100 px-3 py-1">No stable monthly habit formed</span>
-                                    </div>
-                                    <p class="text-slate-600">The updated data confirms that usage remains low-frequency and event-driven. For this project, that means the product should behave like an instantly useful tool first, then gradually earn deeper engagement.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-12" data-aos="fade-up" data-aos-delay="300">
-                            <div class="card rounded-2xl p-8">
-                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Design Priorities from the Survey</h3>
-
-                                <div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-4">
+                                <div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-4">
                                     <div class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 p-5">
                                         <h4 class="mb-2 font-bold text-teal-700">Interactivity</h4>
                                         <p class="text-2xl font-bold text-teal-600">74.51%</p>
-                                        <p class="text-sm text-slate-600">asked for stronger interaction as the top improvement direction</p>
+                                        <p class="text-sm text-slate-600">asked for stronger interaction</p>
                                     </div>
                                     <div class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 p-5">
                                         <h4 class="mb-2 font-bold text-amber-700">Content Depth</h4>
                                         <p class="text-2xl font-bold text-amber-600">64.71%</p>
-                                        <p class="text-sm text-slate-600">want richer explanation content instead of surface-level guidance</p>
+                                        <p class="text-sm text-slate-600">wanted richer explanation content</p>
                                     </div>
                                     <div class="rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 p-5">
                                         <h4 class="mb-2 font-bold text-orange-700">No-Guide Mode</h4>
                                         <p class="text-2xl font-bold text-orange-600">50.98%</p>
-                                        <p class="text-sm text-slate-600">prefer 3D/VR panoramic tours when no human explanation is available</p>
+                                        <p class="text-sm text-slate-600">preferred panoramic or self-guided support</p>
                                     </div>
                                     <div class="rounded-xl bg-gradient-to-br from-sky-50 to-sky-100 p-5">
-                                        <h4 class="mb-2 font-bold text-sky-700">Access Preference</h4>
+                                        <h4 class="mb-2 font-bold text-sky-700">Fast Access</h4>
                                         <p class="text-2xl font-bold text-sky-600">52.94%</p>
-                                        <p class="text-sm text-slate-600">choose very fast loading and simplified content over heavier interfaces</p>
+                                        <p class="text-sm text-slate-600">preferred simplified, fast-loading entry</p>
                                     </div>
                                 </div>
 
-                                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                                    <article class="rounded-xl border border-slate-200 bg-white/80 p-6">
-                                        <h4 class="mb-3 text-lg font-bold text-slate-900">Top Service Categories</h4>
-                                        <ul class="space-y-2 text-sm text-slate-600">
-                                            <li>• Academic resources guide: 23.84%</li>
-                                            <li>• Campus facilities introduction: 22.82%</li>
-                                            <li>• Life services guide: 21.94%</li>
-                                            <li>• Club activity recommendation: 16.02%</li>
-                                            <li>• History and culture guide: 15.37%</li>
-                                        </ul>
-                                    </article>
-                                    <article class="rounded-xl border border-slate-200 bg-white/80 p-6">
-                                        <h4 class="mb-3 text-lg font-bold text-slate-900">Design Takeaway</h4>
-                                        <ul class="space-y-2 text-sm text-slate-600">
-                                            <li>• Navigation alone is not enough; the platform should also support academic and life-service discovery.</li>
-                                            <li>• Immersive content is attractive, but it must stay lightweight and easy to enter.</li>
-                                            <li>• Interactivity should clarify place and purpose, not behave like decoration around a map.</li>
-                                        </ul>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-up" data-aos-delay="400">
-                            <div class="card rounded-2xl p-8">
-                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Service Expectation and Usage Intention</h3>
-
-                                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-                                    <div>
-                                        <h4 class="mb-4 text-xl font-bold text-slate-800">Service Expectation Level</h4>
-                                        <div class="space-y-3">
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-teal-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Very Eager</span>
-                                                        <span class="font-bold">54.9%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-teal-500" style="width: 54.9%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-amber-400"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>General</span>
-                                                        <span class="font-bold">25.49%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-amber-400" style="width: 25.49%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-orange-400"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Not Very Eager</span>
-                                                        <span class="font-bold">13.73%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-orange-400" style="width: 13.73%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-red-400"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Not Eager</span>
-                                                        <span class="font-bold">5.88%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-red-400" style="width: 5.88%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="mt-4 text-sm text-slate-600">The expectation profile is clearly positive: more than half of respondents are already in the highest expectation group, while only a small minority report no expectation at all.</p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="mb-4 text-xl font-bold text-slate-800">Future Usage Intention</h4>
-                                        <div class="space-y-3">
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-teal-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Very Willing</span>
-                                                        <span class="font-bold">33.33%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-teal-500" style="width: 33.33%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-cyan-500"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Willing</span>
-                                                        <span class="font-bold">43.14%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-cyan-500" style="width: 43.14%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-amber-400"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Uncertain</span>
-                                                        <span class="font-bold">11.76%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-amber-400" style="width: 11.76%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-orange-400"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Unwilling</span>
-                                                        <span class="font-bold">9.8%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-orange-400" style="width: 9.8%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <div class="h-3 w-3 rounded-full bg-red-400"></div>
-                                                <div class="flex-1">
-                                                    <div class="mb-1 flex justify-between text-sm">
-                                                        <span>Very Unwilling</span>
-                                                        <span class="font-bold">1.96%</span>
-                                                    </div>
-                                                    <div class="h-2 overflow-hidden rounded-full bg-slate-200">
-                                                        <div class="h-full bg-red-400" style="width: 1.96%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="mt-4 text-sm text-slate-600">The willingness pattern is even stronger than current usage: 76.47% are positive about future use, which suggests strong room for a clearer, more compelling digital campus guide.</p>
-                                    </div>
-                                </div>
+                                <p class="text-slate-600">Together, these results suggest that X·EasyGo should work as a fast mobile guide first, then gradually open into richer storytelling and playful interaction. They also show that navigation alone is not enough: users are interested in academic resources, campus facilities, and life-service information as part of the overall experience.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="team" class="px-6 py-20 md:py-24">
+                <section id="team" data-nav-anchor class="px-6 py-20 md:py-24">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Our Team</h2>
@@ -2531,7 +2267,7 @@
                     </div>
                 </section>
 
-                <section id="reflection" class="px-6 py-24 md:py-32">
+                <section id="reflection" data-nav-anchor class="px-6 py-24 md:py-32">
                     <div class="mx-auto max-w-5xl">
                         <div class="quote-card glass rounded-[2.5rem] px-8 py-14 text-center md:px-16 md:py-20">
                             <h2 class="mb-10 text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
@@ -2559,10 +2295,9 @@
         </main>
 
     <div class="mobile-dock fixed bottom-4 left-1/2 z-50 flex w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 items-center justify-between rounded-full glass px-3 py-2 md:hidden">
-        <a href="#about" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">About</a>
-        <a href="#concepts" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Concepts</a>
+        <a href="#motivation" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Motivation</a>
+        <a href="#users" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Users</a>
         <a href="#process" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Process</a>
-        <a href="#stakeholders" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Stakeholders</a>
         <a href="#team" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Team</a>
         <a href="#contact" class="nav-pill rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Contact</a>
     </div>
@@ -2578,7 +2313,7 @@
 
     const progressBar = document.getElementById("progress-bar");
     const nav = document.getElementById("site-nav");
-    const sections = document.querySelectorAll("section[id], footer[id]");
+    const sections = document.querySelectorAll("[data-nav-anchor], footer[id]");
     const navLinks = document.querySelectorAll(".nav-link, .nav-pill");
 
     const syncProgress = () => {
