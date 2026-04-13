@@ -1036,18 +1036,29 @@
             gap: 0.85rem;
         }
 
+        .persona-photo-frame {
+            overflow: hidden;
+            border-radius: 1.3rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: 0 16px 30px rgba(16, 34, 46, 0.10);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
         .persona-photo {
             width: 100%;
             aspect-ratio: 4 / 3;
-            border-radius: 1.3rem;
             object-fit: cover;
             display: block;
-            border: 1px solid rgba(20, 32, 42, 0.08);
-            box-shadow: 0 16px 30px rgba(16, 34, 46, 0.10);
         }
 
         .persona-photo--top {
             object-position: center top;
+        }
+
+        .persona-photo--visitor {
+            object-position: 52% 18%;
+            transform: scale(1.14);
+            transform-origin: center top;
         }
 
         .persona-mini-kicker {
@@ -2014,7 +2025,9 @@
                                             <div class="persona-row-grid">
                                                 <aside class="persona-card-block persona-span-4 persona-profile-rail">
                                                     <div class="persona-photo-panel">
-                                                        <img src="./persona-student.jpg" alt="First-year student persona portrait" class="persona-photo">
+                                                        <div class="persona-photo-frame">
+                                                            <img src="./persona-student.jpg" alt="First-year student persona portrait" class="persona-photo">
+                                                        </div>
                                                         <div class="persona-mini-kicker">Freshman perspective</div>
                                                     </div>
                                                     <div class="persona-card-section">
@@ -2076,8 +2089,8 @@
                                                         <div class="persona-block-label">What Makes X·EasyGo Worth Reopening</div>
                                                         <div class="persona-summary-grid">
                                                             <div class="persona-summary-tile">
-                                                                <strong>Class-to-class speed</strong>
-                                                                <span>Useful between lectures and short daily tasks.</span>
+                                                                <strong>Campus life guidance speed</strong>
+                                                                <span>Provides practical study tips and daily life advice for new students.</span>
                                                             </div>
                                                             <div class="persona-summary-tile">
                                                                 <strong>Service visibility</strong>
@@ -2112,7 +2125,9 @@
                                             <div class="persona-row-grid">
                                                 <aside class="persona-card-block persona-span-4 persona-profile-rail">
                                                     <div class="persona-photo-panel">
-                                                        <img src="./persona-visitor.jpg" alt="Campus visitor persona portrait" class="persona-photo persona-photo--top">
+                                                        <div class="persona-photo-frame">
+                                                            <img src="./persona-visitor.jpg" alt="Campus visitor persona portrait" class="persona-photo persona-photo--visitor">
+                                                        </div>
                                                         <div class="persona-mini-kicker">Visitor perspective</div>
                                                     </div>
                                                     <div class="persona-card-section">
