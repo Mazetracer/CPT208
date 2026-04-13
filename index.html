@@ -1038,6 +1038,7 @@
 
         .persona-photo-frame {
             overflow: hidden;
+            aspect-ratio: 4 / 3;
             border-radius: 1.3rem;
             border: 1px solid rgba(20, 32, 42, 0.08);
             box-shadow: 0 16px 30px rgba(16, 34, 46, 0.10);
@@ -1046,19 +1047,13 @@
 
         .persona-photo {
             width: 100%;
-            aspect-ratio: 4 / 3;
+            height: 100%;
             object-fit: cover;
             display: block;
         }
 
         .persona-photo--top {
             object-position: center top;
-        }
-
-        .persona-photo--visitor {
-            object-position: 52% 18%;
-            transform: scale(1.14);
-            transform-origin: center top;
         }
 
         .persona-mini-kicker {
@@ -1461,9 +1456,10 @@
                 font-size: 1.6rem;
             }
 
-            .persona-photo {
+            .persona-photo-frame {
                 aspect-ratio: 16 / 10;
             }
+
         }
     </style>
 </head>
@@ -2126,7 +2122,7 @@
                                                 <aside class="persona-card-block persona-span-4 persona-profile-rail">
                                                     <div class="persona-photo-panel">
                                                         <div class="persona-photo-frame">
-                                                            <img src="./persona-visitor.jpg" alt="Campus visitor persona portrait" class="persona-photo persona-photo--visitor">
+                                                            <img src="./persona-visitor.jpg" alt="Campus visitor persona portrait" class="persona-photo">
                                                         </div>
                                                         <div class="persona-mini-kicker">Visitor perspective</div>
                                                     </div>
