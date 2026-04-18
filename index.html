@@ -1610,9 +1610,351 @@
             }
 
         }
+
+        body.toon-bounce-theme {
+            --bg: #f4ecff;
+            --bg-soft: #fbf7ff;
+            --surface: rgba(255, 253, 246, 0.88);
+            --surface-strong: rgba(255, 255, 255, 0.94);
+            --line: rgba(29, 29, 29, 0.14);
+            --ink: #1d1d1d;
+            --muted: #5d5078;
+            --navy: #1d1d1d;
+            --teal: #cdb7ff;
+            --amber: #8b5cf6;
+            --coral: #6d28d9;
+            --shadow: 0 14px 0 rgba(29, 29, 29, 0.12), 0 28px 48px rgba(29, 29, 29, 0.08);
+            background:
+                radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.52), transparent 22%),
+                radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.34), transparent 18%),
+                linear-gradient(180deg, #f7efff 0%, #eadcff 42%, #cfbcff 100%);
+        }
+
+        body.toon-bounce-theme::before {
+            background-image:
+                linear-gradient(rgba(29, 29, 29, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(29, 29, 29, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: none;
+            opacity: 0.5;
+        }
+
+        body.toon-bounce-theme::after {
+            background:
+                radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.48), transparent 24%),
+                radial-gradient(circle at 85% 24%, rgba(255, 255, 255, 0.24), transparent 18%);
+        }
+
+        body.toon-bounce-theme h1,
+        body.toon-bounce-theme h2,
+        body.toon-bounce-theme h3,
+        body.toon-bounce-theme .display-font,
+        body.toon-bounce-theme nav,
+        body.toon-bounce-theme .nav-pill,
+        body.toon-bounce-theme .cta-button {
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Noto Sans SC", sans-serif;
+        }
+
+        body.toon-bounce-theme .blob {
+            filter: blur(10px);
+            opacity: 0.55;
+        }
+
+        body.toon-bounce-theme .shell > .blob:nth-of-type(1) {
+            background: #d9c2ff;
+        }
+
+        body.toon-bounce-theme .shell > .blob:nth-of-type(2) {
+            background: #b794ff;
+        }
+
+        body.toon-bounce-theme .shell > .blob:nth-of-type(3) {
+            background: #e7dcff;
+        }
+
+        body.toon-bounce-theme .glass,
+        body.toon-bounce-theme .card,
+        body.toon-bounce-theme .campus-showcase,
+        body.toon-bounce-theme .process-showcase-frame,
+        body.toon-bounce-theme #site-nav,
+        body.toon-bounce-theme .mobile-dock,
+        body.toon-bounce-theme footer#contact > div {
+            background: rgba(255, 255, 255, 0.84);
+            border: 3px solid #1d1d1d;
+            box-shadow: var(--shadow);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        body.toon-bounce-theme .hero-panel,
+        body.toon-bounce-theme .hero-panel::before,
+        body.toon-bounce-theme .campus-showcase,
+        body.toon-bounce-theme .timeline-card,
+        body.toon-bounce-theme .team-card,
+        body.toon-bounce-theme .quote-card {
+            border-radius: 2rem;
+        }
+
+        body.toon-bounce-theme .hero-panel::before {
+            inset: 1rem;
+            border: 3px dashed rgba(29, 29, 29, 0.12);
+        }
+
+        body.toon-bounce-theme .hero-ring,
+        body.toon-bounce-theme .phone-orbit {
+            border: 3px dashed rgba(29, 29, 29, 0.14);
+        }
+
+        body.toon-bounce-theme .text-gradient {
+            background: none;
+            color: #7c3aed;
+            -webkit-text-fill-color: currentColor;
+            text-shadow: 4px 4px 0 #fff;
+            animation: none;
+        }
+
+        body.toon-bounce-theme .section-title {
+            letter-spacing: -0.05em;
+        }
+
+        body.toon-bounce-theme .section-title::after {
+            height: 8px;
+            width: 84px;
+            border: 2px solid #1d1d1d;
+            background: linear-gradient(90deg, #cdb7ff, #8b5cf6, #6d28d9);
+            box-shadow: 0 4px 0 rgba(29, 29, 29, 0.12);
+        }
+
+        body.toon-bounce-theme .eyebrow,
+        body.toon-bounce-theme .campus-kicker,
+        body.toon-bounce-theme .campus-badge,
+        body.toon-bounce-theme .phone-pill {
+            background: #fffdf6;
+            border: 3px solid #1d1d1d;
+            color: #1d1d1d;
+            font-weight: 800;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        body.toon-bounce-theme .campus-kicker,
+        body.toon-bounce-theme .phone-pill.top {
+            background: #d9c2ff;
+        }
+
+        body.toon-bounce-theme .phone-pill.bottom,
+        body.toon-bounce-theme .eyebrow {
+            background: #f7f1ff;
+        }
+
+        body.toon-bounce-theme .eyebrow-dot,
+        body.toon-bounce-theme .campus-badge-dot,
+        body.toon-bounce-theme .phone-pill .pulse {
+            background: #8b5cf6;
+            box-shadow: 0 0 0 5px rgba(139, 92, 246, 0.22);
+        }
+
+        body.toon-bounce-theme .nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.65rem 1rem;
+            border-radius: 999px;
+            color: #5a4740;
+            border: 3px solid transparent;
+            transition:
+                transform 0.22s ease,
+                background-color 0.22s ease,
+                border-color 0.22s ease,
+                color 0.22s ease,
+                box-shadow 0.22s ease;
+        }
+
+        body.toon-bounce-theme .nav-link::after {
+            display: none;
+        }
+
+        body.toon-bounce-theme .nav-link:hover,
+        body.toon-bounce-theme .nav-link.is-active,
+        body.toon-bounce-theme .nav-pill:hover,
+        body.toon-bounce-theme .nav-pill.is-active {
+            transform: translateY(-2px);
+            background: #d9c2ff;
+            border-color: #1d1d1d;
+            color: #1d1d1d;
+            box-shadow: 0 7px 0 rgba(29, 29, 29, 0.10);
+        }
+
+        body.toon-bounce-theme .nav-pill {
+            border: 3px solid transparent;
+        }
+
+        body.toon-bounce-theme .cta-button,
+        body.toon-bounce-theme #site-nav a[href="#contact"],
+        body.toon-bounce-theme footer#contact a {
+            background: linear-gradient(135deg, #9f67ff, #7c3aed);
+            color: #fff;
+            border: 3px solid #1d1d1d;
+            border-radius: 999px;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.12);
+        }
+
+        body.toon-bounce-theme #site-nav > div > a[href="#contact"] {
+            background: linear-gradient(135deg, #9f67ff, #7c3aed);
+            color: #fff;
+        }
+
+        body.toon-bounce-theme .cta-button:hover,
+        body.toon-bounce-theme #site-nav a[href="#contact"]:hover,
+        body.toon-bounce-theme footer#contact a:hover {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            transform: translateY(-3px) rotate(-1deg);
+        }
+
+        body.toon-bounce-theme .cta-button::before {
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0));
+        }
+
+        body.toon-bounce-theme .phone-frame {
+            background: #1d1d1d;
+            border: 4px solid #1d1d1d;
+            box-shadow: 0 18px 0 rgba(29, 29, 29, 0.16), 0 36px 60px rgba(29, 29, 29, 0.18);
+        }
+
+        body.toon-bounce-theme .phone-frame::before {
+            top: 0.7rem;
+            height: 1.1rem;
+            background: #fffdf6;
+            border: 3px solid #1d1d1d;
+        }
+
+        body.toon-bounce-theme .phone-screen {
+            background:
+                radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.5), transparent 22%),
+                linear-gradient(180deg, #f8f2ff 0%, #ebddff 52%, #ceb7ff 100%);
+            border: 3px solid #1d1d1d;
+        }
+
+        body.toon-bounce-theme .screen-status {
+            color: #5a4740;
+        }
+
+        body.toon-bounce-theme .screen-status .signal span {
+            background: rgba(29, 29, 29, 0.72);
+        }
+
+        body.toon-bounce-theme .map-layer::before {
+            background:
+                radial-gradient(circle at 18% 30%, rgba(139, 92, 246, 0.18), transparent 14%),
+                radial-gradient(circle at 76% 18%, rgba(205, 183, 255, 0.24), transparent 14%),
+                radial-gradient(circle at 70% 78%, rgba(109, 40, 217, 0.16), transparent 16%),
+                linear-gradient(rgba(29, 29, 29, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(29, 29, 29, 0.06) 1px, transparent 1px);
+            background-size: auto, auto, auto, 46px 46px, 46px 46px;
+        }
+
+        body.toon-bounce-theme .map-layer::after {
+            border: 3px solid rgba(29, 29, 29, 0.08);
+        }
+
+        body.toon-bounce-theme .map-road {
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: inset 0 0 0 2px rgba(29, 29, 29, 0.06);
+        }
+
+        body.toon-bounce-theme .map-pin {
+            border-color: #1d1d1d;
+            box-shadow: 0 8px 0 rgba(29, 29, 29, 0.10);
+        }
+
+        body.toon-bounce-theme .welcome-card {
+            background: rgba(255, 253, 246, 0.92);
+            border: 3px solid #1d1d1d;
+            color: #1d1d1d;
+            box-shadow: 0 12px 0 rgba(29, 29, 29, 0.10);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        body.toon-bounce-theme .welcome-card small,
+        body.toon-bounce-theme .welcome-card p {
+            color: #5a4740;
+        }
+
+        body.toon-bounce-theme .phone-nav {
+            background: rgba(255, 255, 255, 0.86);
+            border: 3px solid #1d1d1d;
+        }
+
+        body.toon-bounce-theme .nav-dot {
+            background: rgba(29, 29, 29, 0.14);
+        }
+
+        body.toon-bounce-theme .nav-dot.active {
+            background: linear-gradient(90deg, #cdb7ff, #8b5cf6, #6d28d9);
+        }
+
+        body.toon-bounce-theme .campus-visual,
+        body.toon-bounce-theme .process-showcase-frame {
+            border: 3px solid #1d1d1d;
+            box-shadow: 0 12px 0 rgba(29, 29, 29, 0.10);
+        }
+
+        body.toon-bounce-theme .campus-visual::after,
+        body.toon-bounce-theme .feature-card::before,
+        body.toon-bounce-theme .timeline-card::before {
+            background: none;
+        }
+
+        body.toon-bounce-theme .campus-stat,
+        body.toon-bounce-theme .priority-card,
+        body.toon-bounce-theme .persona-detail-card {
+            background: rgba(255, 255, 255, 0.82);
+            border: 3px solid #1d1d1d;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
+        }
+
+        body.toon-bounce-theme .hover-lift:hover {
+            transform: translateY(-8px) rotate(-0.4deg);
+            box-shadow: 0 14px 0 rgba(29, 29, 29, 0.12), 0 30px 48px rgba(29, 29, 29, 0.10);
+            border-color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme .quote-card::before {
+            color: rgba(29, 29, 29, 0.10);
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Noto Sans SC", sans-serif;
+        }
+
+        body.toon-bounce-theme footer#contact > div {
+            background: #fffdf6;
+            color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme footer#contact h2,
+        body.toon-bounce-theme footer#contact p,
+        body.toon-bounce-theme footer#contact .text-white\/70,
+        body.toon-bounce-theme footer#contact .text-white\/35 {
+            color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme footer#contact a {
+            background: #fff;
+            color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme footer#contact a:last-child {
+            background: #d9c2ff;
+        }
+
+        body.toon-bounce-theme #progress-bar {
+            height: 6px;
+            background: linear-gradient(90deg, #d9c2ff, #8b5cf6, #6d28d9);
+            box-shadow: 0 0 0 2px rgba(29, 29, 29, 0.06), 0 0 18px rgba(139, 92, 246, 0.35);
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased toon-bounce-theme">
 <div id="progress-bar"></div>
 
 <div class="shell min-h-screen">
