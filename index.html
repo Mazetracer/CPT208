@@ -861,13 +861,6 @@
             color: var(--navy);
         }
 
-        .persona-board-subtitle {
-            max-width: 42rem;
-            color: var(--muted);
-            font-size: 0.98rem;
-            line-height: 1.7;
-        }
-
         .persona-marker {
             width: 3rem;
             height: 3rem;
@@ -1077,10 +1070,21 @@
             box-shadow: 0 0 0 0.28rem var(--persona-accent-soft);
         }
 
+        .persona-profile-note {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.94rem;
+            line-height: 1.72;
+        }
+
         .persona-detail-grid {
             display: grid;
             gap: 0.9rem;
             align-content: start;
+        }
+
+        .persona-detail-grid--triple {
+            grid-template-columns: 1fr;
         }
 
         .persona-detail-card {
@@ -1091,11 +1095,24 @@
             padding: 0.95rem 1rem;
         }
 
+        .persona-detail-card--long {
+            padding: 1.15rem 1.2rem;
+        }
+
+        .persona-detail-card--landscape {
+            display: block;
+        }
+
         .persona-detail-card p {
             margin: 0;
             color: var(--muted);
             font-size: 0.94rem;
             line-height: 1.68;
+        }
+
+        .persona-detail-content {
+            display: grid;
+            gap: 0.85rem;
         }
 
         .persona-detail-span-2 {
@@ -1560,6 +1577,14 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .persona-detail-grid--triple {
+                grid-template-columns: 1fr;
+            }
+
+            .persona-detail-card--landscape .persona-block-label {
+                margin-bottom: 0.55rem;
+            }
+
             .persona-summary-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -1915,6 +1940,15 @@
             box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
         }
 
+        body.toon-bounce-theme .persona-card-block {
+            border: 3px solid #1d1d1d;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
+        }
+
+        body.toon-bounce-theme .persona-profile-note {
+            color: #5d5078;
+        }
+
         body.toon-bounce-theme .hover-lift:hover {
             transform: translateY(-8px) rotate(-0.4deg);
             box-shadow: 0 14px 0 rgba(29, 29, 29, 0.12), 0 30px 48px rgba(29, 29, 29, 0.10);
@@ -2098,9 +2132,6 @@
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">
                                 Research
                             </h2>
-                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">
-                                This section explains why we chose the X·EasyGo project and how academic research and existing products informed our design direction.
-                            </p>
                         </div>
 
                         <!-- The Why -->
@@ -2371,7 +2402,6 @@
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Stakeholders</h2>
-                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">This section defines the primary and secondary users, supports them with distinct personas, and translates the questionnaire findings into clear design implications.</p>
                         </div>
 
                         <div class="mb-12" data-aos="fade-up" data-aos-delay="120">
@@ -2418,7 +2448,6 @@
                                             <div>
                                                 <span class="persona-role">Student Persona</span>
                                                 <h4 class="persona-board-title">The First-Year Student Settling In</h4>
-                                                <p class="persona-board-subtitle">A first-semester student building a campus map through classes, study needs, and daily routines.</p>
                                             </div>
                                             <div class="persona-marker">01</div>
                                         </div>
@@ -2444,68 +2473,37 @@
                                                             <div class="persona-fact"><span>Priority</span><strong>Practical orientation first</strong></div>
                                                         </div>
                                                     </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">Key Traits</div>
-                                                        <div class="persona-chip-list">
-                                                            <span class="persona-chip">Routine-building</span>
-                                                            <span class="persona-chip">Mobile-dependent</span>
-                                                            <span class="persona-chip">Curious, easily overwhelmed</span>
-                                                        </div>
-                                                    </div>
                                                 </aside>
 
-                                                <div class="persona-span-8 persona-detail-grid">
-                                                    <div class="persona-detail-card">
+                                                <div class="persona-span-8 persona-detail-grid persona-detail-grid--triple">
+                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
                                                         <div class="persona-block-label">What They Need</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Fast routes to classes, library, food, services, and study spaces.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Student-life cues: quiet study, group work, useful facilities.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Light check-ins that support memory, not slow the task.</span></li>
-                                                        </ul>
+                                                        <div class="persona-detail-content">
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Fast routes to classes, library, food, services, and study spaces.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Student-life cues: quiet study, group work, useful facilities.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Short explanations and nearby recommendations that make the next useful destination obvious.</span></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <div class="persona-detail-card">
-                                                        <div class="persona-block-label">Main Frictions</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Building names and abbreviations mean little at first.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Space purpose is unclear: study, social, or service?</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Too much story before basic needs are solved.</span></li>
-                                                        </ul>
+                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
+                                                        <div class="persona-block-label">Pain Points</div>
+                                                        <div class="persona-detail-content">
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Building names and abbreviations mean little at first.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Space purpose is unclear: study, social, or service?</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Too much story or formal explanation appears before basic needs are solved.</span></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <div class="persona-detail-card">
-                                                        <div class="persona-block-label">What Builds Confidence</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Clear tags: study, food, service, quiet, collaboration.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Short student tips beat formal description.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Each stop should build routine and familiarity.</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="persona-detail-card">
-                                                        <div class="persona-block-label">What Place Information Should Tell Them</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>How this building fits daily student life.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Which spaces fit solo work, group work, or quick tasks.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Which useful service or next stop is nearby.</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="persona-detail-card persona-detail-span-2">
-                                                        <div class="persona-block-label">What Makes X·EasyGo Worth Reopening</div>
-                                                        <div class="persona-summary-grid">
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Campus life guidance speed</strong>
-                                                                <span>Provides practical study tips and daily life advice for new students.</span>
-                                                            </div>
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Service visibility</strong>
-                                                                <span>Food, printing, study, and support nearby.</span>
-                                                            </div>
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Low-friction labels</strong>
-                                                                <span>Study, quiet, collaboration, and service cues first.</span>
-                                                            </div>
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Confidence to explore</strong>
-                                                                <span>Unfamiliar places become a usable campus map.</span>
-                                                            </div>
+                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
+                                                        <div class="persona-block-label">Goals</div>
+                                                        <div class="persona-detail-content">
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Understand how core campus spaces support everyday study and student life.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Become confident enough to navigate independently without repeatedly asking for help.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Build a small but reliable mental map of useful places for class, study, food, and services.</span></li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2518,7 +2516,6 @@
                                             <div>
                                                 <span class="persona-role">Visitor Persona</span>
                                                 <h4 class="persona-board-title">The Curious Campus Visitor</h4>
-                                                <p class="persona-board-subtitle">A first-time guest reading the campus through landmarks, spaces, and educational meaning.</p>
                                             </div>
                                             <div class="persona-marker">02</div>
                                         </div>
@@ -2544,68 +2541,37 @@
                                                             <div class="persona-fact"><span>Priority</span><strong>Orientation first; meaning second</strong></div>
                                                         </div>
                                                     </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">Key Traits</div>
-                                                        <div class="persona-chip-list">
-                                                            <span class="persona-chip">Observant</span>
-                                                            <span class="persona-chip">Context-seeking</span>
-                                                            <span class="persona-chip">Comparison-minded</span>
-                                                        </div>
-                                                    </div>
                                                 </aside>
 
-                                                <div class="persona-span-8 persona-detail-grid">
-                                                    <div class="persona-detail-card">
+                                                <div class="persona-span-8 persona-detail-grid persona-detail-grid--triple">
+                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
                                                         <div class="persona-block-label">What They Need</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Clear route through key buildings, spaces, and landmarks.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Why each stop matters to XJTLU.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Richer media only after basic orientation.</span></li>
-                                                        </ul>
+                                                        <div class="persona-detail-content">
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>A simple route that takes them through the most representative places without needing prior campus knowledge.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Short explanations that tell them what each place is and why it matters to XJTLU.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Clear landmark cues, obvious starting points, and a visit flow that feels easy to follow from beginning to end.</span></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <div class="persona-detail-card">
-                                                        <div class="persona-block-label">Main Frictions</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Internal codes and labels mean nothing.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Too much student detail distracts.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>A route without narrative feels empty.</span></li>
-                                                        </ul>
+                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
+                                                        <div class="persona-block-label">Pain Points</div>
+                                                        <div class="persona-detail-content">
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Internal codes and labels mean nothing.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Too much student detail distracts.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>A route without narrative or focus feels empty and becomes hard to remember afterwards.</span></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <div class="persona-detail-card">
-                                                        <div class="persona-block-label">What Builds Confidence</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Obvious start point and landmark cues.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>Short story-based introductions.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>A clear final impression of XJTLU.</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="persona-detail-card">
-                                                        <div class="persona-block-label">What Place Information Should Tell Them</div>
-                                                        <ul class="persona-response-list">
-                                                            <li><span class="persona-response-dot"></span><span>Why this place matters in the university story.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>What learning culture or value it represents.</span></li>
-                                                            <li><span class="persona-response-dot"></span><span>How this stop connects to the next.</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="persona-detail-card persona-detail-span-2">
-                                                        <div class="persona-block-label">What Makes the Visit Memorable</div>
-                                                        <div class="persona-summary-grid">
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Clear starting point</strong>
-                                                                <span>No insider knowledge needed to begin.</span>
-                                                            </div>
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Landmark meaning</strong>
-                                                                <span>Each stop explains both place and philosophy.</span>
-                                                            </div>
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Curated route</strong>
-                                                                <span>Representative spaces over distracting detail.</span>
-                                                            </div>
-                                                            <div class="persona-summary-tile">
-                                                                <strong>Strong takeaway</strong>
-                                                                <span>A simple story of XJTLU through space.</span>
-                                                            </div>
+                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
+                                                        <div class="persona-block-label">Goals</div>
+                                                        <div class="persona-detail-content">
+                                                            <ul class="persona-response-list">
+                                                                <li><span class="persona-response-dot"></span><span>Leave the tour with a clear understanding of what makes XJTLU distinctive.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Follow a route that feels coherent, comfortable, and easy to remember afterwards.</span></li>
+                                                                <li><span class="persona-response-dot"></span><span>Connect major landmarks with the university's values, learning culture, and identity.</span></li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2618,7 +2584,6 @@
 
                         <div class="mb-16 text-center" data-aos="fade-up" data-aos-delay="200">
                             <h3 class="text-3xl font-bold tracking-tight text-slate-900">Stakeholder Analysis</h3>
-                            <p class="mt-4 text-lg text-slate-600">Updated user research findings based on 51 valid questionnaires collected on April 9, 2026.</p>
                         </div>
 
                         <div class="stakeholder-viz-grid" data-aos="fade-up" data-aos-delay="80">
@@ -2832,11 +2797,10 @@
                     </div>
                 </section>
 
-                <section id="ideation" data-nav-anchor class="px-6 pt-24 pb-10 md:pt-32 md:pb-12">
+                <section id="ideation" data-nav-anchor class="px-6 pt-12 pb-10 md:pt-14 md:pb-12">
                     <div class="mx-auto max-w-6xl">
-                        <div class="mb-20 text-center">
+                        <div class="mb-16 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900 md:text-5xl" data-aos="fade-up">Ideation</h2>
-                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">This section shows the iterative path from early concept development to low-fidelity interface proposals, including the Crazy Eights sketches and the clickable low-fi prototype.</p>
                         </div>
 
                         <div class="timeline-wrap mb-14 space-y-8 md:space-y-10">
@@ -2919,7 +2883,6 @@
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Implementation</h2>
-                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">This section shows the current high-fidelity prototype, the system workflow, and the contribution overview for the implementation stage.</p>
                         </div>
 
                         <div class="mb-10 space-y-6">
@@ -2997,7 +2960,6 @@
                     <div class="mx-auto max-w-5xl">
                         <div class="mb-12 text-center">
                             <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
-                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="100">This section gathers testing, iteration evidence, and the current reflection note for the project.</p>
                         </div>
 
                         <div class="mb-8 space-y-6">
