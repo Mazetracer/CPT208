@@ -1202,6 +1202,331 @@
             line-height: 1.72;
         }
 
+        .persona-gallery {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .persona-showcase {
+            --persona-primary: #7c3aed;
+            --persona-primary-soft: rgba(124, 58, 237, 0.14);
+            --persona-goal: #059669;
+            --persona-goal-soft: rgba(16, 185, 129, 0.12);
+            --persona-pain: #dc2626;
+            --persona-pain-soft: rgba(248, 113, 113, 0.14);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2.15rem;
+            border: 1px solid rgba(123, 92, 255, 0.18);
+            background:
+                linear-gradient(135deg, rgba(214, 204, 255, 0.72), rgba(255, 255, 255, 0.96) 18%, rgba(255, 255, 255, 0.98) 82%, rgba(208, 190, 255, 0.64)),
+                rgba(255, 255, 255, 0.95);
+            padding: 1.35rem;
+            box-shadow:
+                0 24px 48px rgba(57, 39, 105, 0.10),
+                0 0 0 1px rgba(255, 255, 255, 0.56) inset;
+        }
+
+        .persona-showcase::before {
+            content: "";
+            position: absolute;
+            inset: -0.45rem;
+            z-index: 0;
+            border-radius: 2.45rem;
+            background: linear-gradient(135deg, rgba(142, 93, 255, 0.34), rgba(59, 130, 246, 0.18), rgba(232, 121, 249, 0.28));
+            filter: blur(18px);
+            opacity: 0.78;
+        }
+
+        .persona-showcase--student {
+            --persona-primary: #5b35d5;
+        }
+
+        .persona-showcase--visitor {
+            --persona-primary: #6d28d9;
+        }
+
+        .persona-showcase > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .persona-showcase-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .persona-profile-column,
+        .persona-scenario-card,
+        .persona-focus-card {
+            border-radius: 1.55rem;
+            border: 1px solid rgba(121, 92, 255, 0.14);
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 14px 30px rgba(65, 47, 119, 0.08);
+        }
+
+        .persona-profile-column {
+            display: grid;
+            gap: 0.95rem;
+            align-content: start;
+            padding: 1.3rem 1.1rem 1.2rem;
+            background: linear-gradient(180deg, rgba(253, 252, 255, 0.96), rgba(238, 231, 255, 0.90));
+        }
+
+        .persona-portrait-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .persona-portrait-ring {
+            width: 11rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 999px;
+            padding: 0.34rem;
+            background: #ffffff;
+            box-shadow: 0 16px 32px rgba(59, 36, 119, 0.16);
+        }
+
+        .persona-portrait-ring img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        .persona-identity-card {
+            display: grid;
+            justify-items: center;
+            gap: 0.65rem;
+            border-radius: 1.3rem;
+            padding: 0.9rem 0.75rem 0.8rem;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(123, 92, 255, 0.10);
+        }
+
+        .persona-name {
+            margin: 0;
+            color: var(--persona-primary);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+            text-align: center;
+        }
+
+        .persona-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.45rem;
+        }
+
+        .persona-meta-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 1.75rem;
+            border-radius: 999px;
+            padding: 0.35rem 0.7rem;
+            background: rgba(245, 235, 255, 0.92);
+            color: var(--persona-primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .persona-role-pill {
+            display: inline-flex;
+            justify-self: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 0.65rem 1.05rem;
+            background: linear-gradient(135deg, rgba(149, 117, 255, 0.95), rgba(111, 76, 255, 0.92));
+            color: #fff;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow: 0 12px 24px rgba(92, 55, 199, 0.24);
+        }
+
+        .persona-quote-card {
+            position: relative;
+            border-radius: 1.5rem;
+            padding: 1.3rem 1.1rem 1.05rem 3.35rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 237, 255, 0.92));
+            border: 1px solid rgba(123, 92, 255, 0.12);
+        }
+
+        .persona-quote-mark {
+            position: absolute;
+            top: 1.15rem;
+            left: 1rem;
+            width: 1.9rem;
+            height: 1.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgba(124, 58, 237, 0.16);
+            color: var(--persona-primary);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .persona-quote-card p {
+            margin: 0;
+            color: var(--persona-primary);
+            font-size: 0.97rem;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .persona-scenario-card,
+        .persona-focus-card {
+            padding: 1.15rem 1.2rem;
+        }
+
+        .persona-panel-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 0.45rem;
+            color: var(--persona-primary);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .persona-panel-icon {
+            width: 1.55rem;
+            height: 1.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgba(96, 165, 250, 0.14);
+            color: #3b82f6;
+            font-size: 0.84rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .persona-scenario-card p {
+            margin: 0;
+            color: #475569;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.46;
+        }
+
+        .persona-focus-card--goals {
+            background: linear-gradient(180deg, rgba(220, 252, 238, 0.92), rgba(236, 253, 245, 0.78));
+            border-color: rgba(16, 185, 129, 0.18);
+        }
+
+        .persona-focus-card--pain {
+            background: linear-gradient(180deg, rgba(255, 237, 237, 0.92), rgba(255, 245, 245, 0.80));
+            border-color: rgba(248, 113, 113, 0.20);
+        }
+
+        .persona-panel-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 0.95rem;
+            color: var(--navy);
+            font-size: 1.05rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .persona-focus-card--goals .persona-panel-heading {
+            color: var(--persona-goal);
+        }
+
+        .persona-focus-card--pain .persona-panel-heading {
+            color: var(--persona-pain);
+        }
+
+        .persona-panel-badge {
+            width: 1.8rem;
+            height: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.92rem;
+            font-weight: 800;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .persona-focus-card--goals .persona-panel-badge {
+            background: #10b981;
+            box-shadow: 0 8px 18px rgba(16, 185, 129, 0.25);
+        }
+
+        .persona-focus-card--pain .persona-panel-badge {
+            background: #ff4d5a;
+            box-shadow: 0 8px 18px rgba(255, 77, 90, 0.22);
+        }
+
+        .persona-bullet-stack {
+            display: grid;
+            gap: 0.7rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .persona-bullet-stack li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            padding: 0.7rem 0.85rem;
+            color: #0f766e;
+            font-size: 0.98rem;
+            font-weight: 700;
+            line-height: 1.36;
+        }
+
+        .persona-bullet-stack li::before {
+            content: "+";
+            width: 1.15rem;
+            height: 1.15rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            background: #10b981;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .persona-bullet-stack--alert li {
+            color: #b91c1c;
+        }
+
+        .persona-bullet-stack--alert li::before {
+            content: "!";
+            background: #ff4d5a;
+        }
+
         .nav-link {
             position: relative;
             color: var(--muted);
@@ -1619,6 +1944,20 @@
             .persona-dual-grid {
                 grid-template-columns: 0.95fr 1.05fr;
             }
+
+            .persona-showcase-grid {
+                grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr) minmax(0, 1fr);
+                align-items: stretch;
+            }
+
+            .persona-profile-column {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
+            .persona-scenario-card {
+                grid-column: 2 / span 2;
+            }
         }
 
         @media (max-width: 767px) {
@@ -1632,6 +1971,29 @@
 
             .persona-photo-frame {
                 aspect-ratio: 16 / 10;
+            }
+
+            .persona-showcase {
+                padding: 1rem;
+            }
+
+            .persona-profile-column,
+            .persona-scenario-card,
+            .persona-focus-card {
+                padding: 1rem;
+            }
+
+            .persona-portrait-ring {
+                width: 8.8rem;
+            }
+
+            .persona-name {
+                font-size: 1.65rem;
+            }
+
+            .persona-bullet-stack li {
+                border-radius: 1rem;
+                font-size: 0.92rem;
             }
 
         }
@@ -2443,139 +2805,119 @@
                                 <p class="mb-8 max-w-4xl text-slate-600">These two personas capture the clearest split in user needs: a freshman solving daily campus life, and a visitor reading the campus as a story about XJTLU.</p>
 
                                 <div class="persona-gallery">
-                                    <article class="persona-board" style="--persona-accent:#4c69ff; --persona-accent-soft:rgba(76, 105, 255, 0.14);">
-                                        <div class="persona-board-head">
-                                            <div>
-                                                <span class="persona-role">Student Persona</span>
-                                                <h4 class="persona-board-title">The First-Year Student Settling In</h4>
-                                            </div>
-                                            <div class="persona-marker">01</div>
-                                        </div>
-
-                                        <div class="persona-board-grid">
-                                            <div class="persona-row-grid">
-                                                <aside class="persona-card-block persona-span-4 persona-profile-rail">
-                                                    <div class="persona-photo-panel">
-                                                        <div class="persona-photo-frame">
-                                                            <img src="./persona-student.jpg" alt="First-year student persona portrait" class="persona-photo">
-                                                        </div>
-                                                        <div class="persona-mini-kicker">Freshman perspective</div>
-                                                    </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">Core Mindset</div>
-                                                        <p class="persona-quote-block">"Don't just name the building. Tell me how I use it."</p>
-                                                    </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">Profile Snapshot</div>
-                                                        <div class="persona-fact-list">
-                                                            <div class="persona-fact"><span>Context</span><strong>First semester; learning routes, services, study spots</strong></div>
-                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Quick checks before class and between tasks</strong></div>
-                                                            <div class="persona-fact"><span>Priority</span><strong>Practical orientation first</strong></div>
-                                                        </div>
-                                                    </div>
-                                                </aside>
-
-                                                <div class="persona-span-8 persona-detail-grid persona-detail-grid--triple">
-                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
-                                                        <div class="persona-block-label">What They Need</div>
-                                                        <div class="persona-detail-content">
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Fast routes to classes, library, food, services, and study spaces.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Student-life cues: quiet study, group work, useful facilities.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Short explanations and nearby recommendations that make the next useful destination obvious.</span></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
-                                                        <div class="persona-block-label">Pain Points</div>
-                                                        <div class="persona-detail-content">
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Building names and abbreviations mean little at first.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Space purpose is unclear: study, social, or service?</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Too much story or formal explanation appears before basic needs are solved.</span></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
-                                                        <div class="persona-block-label">Goals</div>
-                                                        <div class="persona-detail-content">
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Understand how core campus spaces support everyday study and student life.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Become confident enough to navigate independently without repeatedly asking for help.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Build a small but reliable mental map of useful places for class, study, food, and services.</span></li>
-                                                            </ul>
-                                                        </div>
+                                    <article class="persona-showcase persona-showcase--student">
+                                        <div class="persona-showcase-grid">
+                                            <aside class="persona-profile-column">
+                                                <div class="persona-portrait-wrap">
+                                                    <div class="persona-portrait-ring">
+                                                        <img src="./persona-student.jpg" alt="Student persona portrait">
                                                     </div>
                                                 </div>
-                                            </div>
+                                                <div class="persona-identity-card">
+                                                    <h4 class="persona-name">Ethan Wu</h4>
+                                                    <div class="persona-meta-row">
+                                                        <span class="persona-meta-chip">19 years old</span>
+                                                        <span class="persona-meta-chip">Year 1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="persona-role-pill">New Student</div>
+                                                <div class="persona-quote-card">
+                                                    <span class="persona-quote-mark">"</span>
+                                                    <p>I need a campus guide that helps me survive daily life first, and understand the campus more naturally along the way.</p>
+                                                </div>
+                                            </aside>
+
+                                            <section class="persona-scenario-card">
+                                                <div class="persona-panel-kicker">
+                                                    <span class="persona-panel-icon">o</span>
+                                                    <span>Scenario</span>
+                                                </div>
+                                                <p>In the first two weeks of the semester, Ethan uses the mobile web app while walking between classes and service points. He wants to quickly find useful places such as study areas, service desks, and academic buildings, while also learning how the campus is organised. He prefers a guide that feels practical, lightweight, and motivating rather than a long formal introduction.</p>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--goals">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">+</span>
+                                                    <span>Goals &amp; Needs</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack">
+                                                    <li>Find important places for study, support, and daily campus life quickly</li>
+                                                    <li>Understand the practical functions of different buildings</li>
+                                                    <li>Learn practical information for studying, services, and campus routines</li>
+                                                    <li>Feel less confused when moving around campus for the first time</li>
+                                                </ul>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--pain">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">!</span>
+                                                    <span>Pain Points</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack persona-bullet-stack--alert">
+                                                    <li>The campus scale feels large and unfamiliar</li>
+                                                    <li>Building abbreviations are difficult to understand at first</li>
+                                                    <li>Existing maps do not explain what spaces are actually useful for</li>
+                                                    <li>It is hard to quickly connect places with real student needs</li>
+                                                </ul>
+                                            </section>
                                         </div>
                                     </article>
 
-                                    <article class="persona-board" style="--persona-accent:#845cff; --persona-accent-soft:rgba(132, 92, 255, 0.14);">
-                                        <div class="persona-board-head">
-                                            <div>
-                                                <span class="persona-role">Visitor Persona</span>
-                                                <h4 class="persona-board-title">The Curious Campus Visitor</h4>
-                                            </div>
-                                            <div class="persona-marker">02</div>
-                                        </div>
-
-                                        <div class="persona-board-grid">
-                                            <div class="persona-row-grid">
-                                                <aside class="persona-card-block persona-span-4 persona-profile-rail">
-                                                    <div class="persona-photo-panel">
-                                                        <div class="persona-photo-frame">
-                                                            <img src="./persona-visitor.jpg" alt="Campus visitor persona portrait" class="persona-photo">
-                                                        </div>
-                                                        <div class="persona-mini-kicker">Visitor perspective</div>
-                                                    </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">Core Mindset</div>
-                                                        <p class="persona-quote-block">"Show me what this campus stands for, not just the next turn."</p>
-                                                    </div>
-                                                    <div class="persona-card-section">
-                                                        <div class="persona-block-label">Profile Snapshot</div>
-                                                        <div class="persona-fact-list">
-                                                            <div class="persona-fact"><span>Context</span><strong>Open-day guest, parent, educator, or administrator</strong></div>
-                                                            <div class="persona-fact"><span>Use Pattern</span><strong>Landmark-led route with short explanations</strong></div>
-                                                            <div class="persona-fact"><span>Priority</span><strong>Orientation first; meaning second</strong></div>
-                                                        </div>
-                                                    </div>
-                                                </aside>
-
-                                                <div class="persona-span-8 persona-detail-grid persona-detail-grid--triple">
-                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
-                                                        <div class="persona-block-label">What They Need</div>
-                                                        <div class="persona-detail-content">
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>A simple route that takes them through the most representative places without needing prior campus knowledge.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Short explanations that tell them what each place is and why it matters to XJTLU.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Clear landmark cues, obvious starting points, and a visit flow that feels easy to follow from beginning to end.</span></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
-                                                        <div class="persona-block-label">Pain Points</div>
-                                                        <div class="persona-detail-content">
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Internal codes and labels mean nothing.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Too much student detail distracts.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>A route without narrative or focus feels empty and becomes hard to remember afterwards.</span></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="persona-detail-card persona-detail-card--long persona-detail-card--landscape">
-                                                        <div class="persona-block-label">Goals</div>
-                                                        <div class="persona-detail-content">
-                                                            <ul class="persona-response-list">
-                                                                <li><span class="persona-response-dot"></span><span>Leave the tour with a clear understanding of what makes XJTLU distinctive.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Follow a route that feels coherent, comfortable, and easy to remember afterwards.</span></li>
-                                                                <li><span class="persona-response-dot"></span><span>Connect major landmarks with the university's values, learning culture, and identity.</span></li>
-                                                            </ul>
-                                                        </div>
+                                    <article class="persona-showcase persona-showcase--visitor">
+                                        <div class="persona-showcase-grid">
+                                            <aside class="persona-profile-column">
+                                                <div class="persona-portrait-wrap">
+                                                    <div class="persona-portrait-ring">
+                                                        <img src="./persona-visitor.jpg" alt="Visitor persona portrait">
                                                     </div>
                                                 </div>
-                                            </div>
+                                                <div class="persona-identity-card">
+                                                    <h4 class="persona-name">Lina Zhao</h4>
+                                                    <div class="persona-meta-row">
+                                                        <span class="persona-meta-chip">39 years old</span>
+                                                        <span class="persona-meta-chip">Visitor</span>
+                                                    </div>
+                                                </div>
+                                                <div class="persona-role-pill">First-time Visitor</div>
+                                                <div class="persona-quote-card">
+                                                    <span class="persona-quote-mark">"</span>
+                                                    <p>I don't just want to know where the buildings are. I want to understand what makes this campus unique and why these places are worth visiting.</p>
+                                                </div>
+                                            </aside>
+
+                                            <section class="persona-scenario-card">
+                                                <div class="persona-panel-kicker">
+                                                    <span class="persona-panel-icon">o</span>
+                                                    <span>Scenario</span>
+                                                </div>
+                                                <p>During a short campus visit, Lina uses the mobile web app to explore the most representative places at XJTLU. She hopes the tour can be more than simple navigation, helping her quickly understand the university's atmosphere, academic character, and memorable landmarks through interactive features such as AR guidance and stamp collection.</p>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--goals">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">+</span>
+                                                    <span>Goals &amp; Needs</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack">
+                                                    <li>Discover the most iconic and meaningful places on campus efficiently</li>
+                                                    <li>Understand what different buildings represent, not just their names</li>
+                                                    <li>Experience the campus in a more engaging way than reading static signs</li>
+                                                    <li>Leave with a strong overall impression of XJTLU in a short amount of time</li>
+                                                </ul>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--pain">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">!</span>
+                                                    <span>Pain Points</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack persona-bullet-stack--alert">
+                                                    <li>Campus maps usually show locations, but not why places matter</li>
+                                                    <li>Traditional tours are often passive and easy to forget</li>
+                                                    <li>Building abbreviations and unfamiliar names are confusing</li>
+                                                    <li>Short visits make it hard to form a clear understanding of the campus</li>
+                                                </ul>
+                                            </section>
                                         </div>
                                     </article>
                                 </div>
@@ -2768,26 +3110,43 @@
                         <div class="mb-12" data-aos="fade-up" data-aos-delay="180">
                             <div class="card rounded-2xl p-8 md:p-10">
                                 <h3 class="mb-3 text-2xl font-bold text-slate-900">Evidence of Life</h3>
-                                <p class="mb-8 max-w-4xl text-slate-600">Our evidence-of-life material focuses on the real moments the design needs to respond to on campus.</p>
+                                <p class="mb-8 max-w-4xl text-slate-600">We conducted short on-site interviews with student participants to understand what kinds of campus information feel most useful, memorable, and motivating in real use situations.</p>
+
+                                <div class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+                                    <figure class="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                        <img src="./interview-1.jpg" alt="Interview session with participant one" class="block h-full w-full object-cover">
+                                        <figcaption class="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">Interview 01: discussing first impressions, route clarity, and practical campus needs.</figcaption>
+                                    </figure>
+
+                                    <figure class="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                        <img src="./interview-2.jpg" alt="Interview session with participant two" class="block h-full w-full object-cover">
+                                        <figcaption class="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">Interview 02: exploring how users interpret buildings, services, and wayfinding cues.</figcaption>
+                                    </figure>
+
+                                    <figure class="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                        <img src="./interview-3.jpg" alt="Interview session with participant three" class="block h-full w-full object-cover">
+                                        <figcaption class="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">Interview 03: identifying what kind of interaction feels engaging without becoming distracting.</figcaption>
+                                    </figure>
+                                </div>
 
                                 <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
                                     <article class="rounded-[1.6rem] border border-slate-200 bg-white/80 p-6">
                                         <h4 class="mb-4 text-xl font-bold text-slate-900">What we observed on site</h4>
                                         <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
-                                            <li>• Key routes contain decision points where users need reassurance.</li>
-                                            <li>• Distinctive buildings are memorable, but their function is not always obvious.</li>
-                                            <li>• Student movement is task-driven, so guidance needs to stay fast.</li>
-                                            <li>• Some spaces are especially suitable for XR storytelling and check-ins.</li>
+                                            <li>• Participants wanted faster orientation before any deeper content appeared.</li>
+                                            <li>• Building names alone were not enough; users wanted function, context, and nearby relevance.</li>
+                                            <li>• Students described campus movement as short, task-driven, and time-sensitive.</li>
+                                            <li>• Interviewees responded more positively when interaction was tied to real places and real decisions.</li>
                                         </ul>
                                     </article>
 
                                     <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
                                         <h4 class="mb-4 text-xl font-bold text-slate-900">What this means for the design</h4>
                                         <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
-                                            <li>• Routes should rely on landmark cues rather than building codes alone.</li>
-                                            <li>• Important spaces need short introductions with both function and meaning.</li>
-                                            <li>• Playful features should appear where they strengthen orientation and recall.</li>
-                                            <li>• The experience should support both efficient movement and exploratory discovery.</li>
+                                            <li>• Route guidance should stay immediate, simple, and landmark-led.</li>
+                                            <li>• Place information should explain both use and meaning, not just names.</li>
+                                            <li>• XR and playful moments should reinforce orientation, memory, and motivation.</li>
+                                            <li>• The system should support quick everyday use while still enabling richer campus storytelling.</li>
                                         </ul>
                                     </article>
                                 </div>
@@ -2956,8 +3315,44 @@
                         <div class="mb-8 space-y-6">
                             <article class="card rounded-2xl p-8" data-aos="fade-up">
                                 <div class="mb-4 inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-700">Usability Testing</div>
-                                <h3 class="mb-3 text-2xl font-bold text-slate-900">Alpha testing with 3 users</h3>
-                                <p class="text-slate-600">This section will summarise task observations, feedback, and key findings from three real users testing the alpha version.</p>
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">A/B testing with 10 participants</h3>
+                                <p class="mb-6 max-w-4xl text-slate-600">In the evaluation stage, we invited 10 participants to use and experience X·EasyGo. They were divided into two groups to compare two different approaches to stamp collection.</p>
+
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+                                    <div class="space-y-5">
+                                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-1">
+                                            <article class="rounded-[1.6rem] border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6">
+                                                <h4 class="mb-3 text-xl font-bold text-slate-900">Prototype A</h4>
+                                                <p class="text-sm leading-relaxed text-slate-600">Users automatically receive a stamp when the location system detects that they are near a building.</p>
+                                            </article>
+
+                                            <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
+                                                <h4 class="mb-3 text-xl font-bold text-slate-900">Prototype B</h4>
+                                                <p class="text-sm leading-relaxed text-slate-600">Users must scan the signboard outside the building in order to obtain a stamp.</p>
+                                            </article>
+                                        </div>
+
+                                        <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                            <h4 class="mb-4 text-xl font-bold text-slate-900">Key findings</h4>
+                                            <ul class="space-y-3 text-sm leading-relaxed text-slate-600">
+                                                <li>• Prototype A was more efficient overall, with lower task completion time, lower error rate, and lower user effort.</li>
+                                                <li>• Prototype B produced stronger engagement and enjoyment, with engagement rising from 73 to 88 and enjoyment from 7.4 to 8.2.</li>
+                                                <li>• Prototype A performed better on practical speed measures, while Prototype B better matched the playful and memorable experience users expected.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+
+                                    <div class="space-y-5">
+                                        <figure class="process-showcase-frame self-start p-4 md:p-5 xl:ml-auto xl:max-w-[760px]">
+                                            <img src="./usability-performance-metrics.png" alt="Radar chart comparing Prototype A and Prototype B across usability performance metrics" class="process-showcase-image rounded-[1.2rem]">
+                                        </figure>
+
+                                        <article class="rounded-[1.6rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6">
+                                            <h4 class="mb-3 text-xl font-bold text-slate-900">Testing outcome</h4>
+                                            <p class="text-sm leading-relaxed text-slate-600">Although Prototype A reduced time, effort, and errors, Prototype B delivered the stronger overall experience. Because engagement and enjoyment were central to our design goals, Prototype B was selected as the final direction.</p>
+                                        </article>
+                                    </div>
+                                </div>
                             </article>
 
                             <article class="card rounded-2xl p-8 md:p-10" data-aos="fade-up" data-aos-delay="80">
@@ -2970,15 +3365,34 @@
                             </article>
                         </div>
 
-                        <div class="quote-card glass rounded-[2.5rem] px-8 py-14 text-center md:px-16 md:py-20">
+                        <div class="quote-card glass rounded-[2.5rem] px-8 py-14 md:px-16 md:py-20">
                             <div class="mb-4 inline-flex rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-slate-700">Final Reflection</div>
-                            <h3 class="mb-8 text-3xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Current reflection note</h3>
-                            <p class="mx-auto max-w-4xl text-xl leading-relaxed text-slate-600 italic" data-aos="fade-up" data-aos-delay="120">
-                                "Developing the X·EasyGo project highlighted the importance of integrating physical environments with digital interaction. Designing experiences that respond to real-world locations requires careful consideration of technical constraints and user experience."
+                            <h3 class="mb-5 text-3xl font-bold tracking-tight text-slate-900" data-aos="fade-up">What the process taught us</h3>
+                            <p class="max-w-4xl text-base leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="80">
+                                This project became much clearer once we stopped thinking of it as a general XR tour and started treating it as a role-based campus guide. The research, personas, journey maps, interviews, prototyping, and A/B testing all pushed us toward one core idea: X·EasyGo has to solve orientation first, then add explanation, interaction, and memory in ways that feel meaningful to the place.
                             </p>
-                            <p class="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="150">
-                                The next step is to extend this reflection with the social, ethical, and AI-related implications of the system.
-                            </p>
+
+                            <div class="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">From analysis to user needs</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The questionnaire, stakeholder analysis, and user journey maps showed that students and visitors do not explore campus in the same way. Students care about practical support such as routes, study spaces, facilities, and service points, while visitors care more about landmark meaning, campus identity, and memorable interpretation. This led us to define three core requirements: instant route clarity, layered content with low friction, and playful interaction tied to place.</p>
+                                </article>
+
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Design, iteration, and evaluation</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The design process gradually moved from broad interface sketches to a map-first, role-based system. Our low-fi wireframes helped us test route entry, role selection, landmark pages, AR guidance, and progress feedback before moving into the high-fi prototype. The A/B test on stamp collection was especially important because it showed a real trade-off: Prototype A was more efficient, but Prototype B created more engagement and enjoyment, which better matched our project goals.</p>
+                                </article>
+
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Challenges we encountered</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The main challenge was balancing usefulness and immersion. If the experience became too playful or too descriptive too early, it stopped being helpful; if it stayed too functional, it lost the distinctive value of an XR campus guide. We also had to design for two user groups with different expectations, while keeping navigation simple and technically realistic. In future AI-supported versions, another important concern will be keeping place information accurate, avoiding misleading answers, and protecting user location or progress data responsibly.</p>
+                                </article>
+
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Future development</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The next development stage would expand X·EasyGo beyond a prototype into a fuller campus service. This includes adding more landmarks, study and service locations, improving route accuracy and QR interaction, and building stronger saved-progress functions. We would also like to develop role-based personalised routes, multilingual support, richer AR storytelling, and the comment or message-board features identified in our gap analysis so users can leave impressions, share useful tips, and build a more social touring experience.</p>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </section>
