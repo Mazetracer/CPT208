@@ -1,0 +1,3470 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X·EasyGo | Full Process Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f3efff;
+            --bg-soft: #fcfbff;
+            --surface: rgba(255, 255, 255, 0.72);
+            --surface-strong: rgba(255, 255, 255, 0.9);
+            --line: rgba(34, 26, 82, 0.10);
+            --ink: #1e1a42;
+            --muted: #676d8d;
+            --navy: #221a52;
+            --teal: #4c69ff;
+            --amber: #845cff;
+            --coral: #6b8dff;
+            --shadow: 0 24px 70px rgba(34, 26, 82, 0.14);
+            --radius-xl: 2rem;
+            --radius-2xl: 2.75rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 7rem;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "Noto Sans SC", sans-serif;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(132, 92, 255, 0.18), transparent 30%),
+                radial-gradient(circle at 82% 12%, rgba(76, 105, 255, 0.20), transparent 28%),
+                radial-gradient(circle at 80% 72%, rgba(107, 141, 255, 0.16), transparent 26%),
+                linear-gradient(180deg, #f3efff 0%, #fcfbff 44%, #f1f5ff 100%);
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(20, 32, 42, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 32, 42, 0.03) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 88%);
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(140deg, rgba(255, 255, 255, 0.55), transparent 40%),
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.75), transparent 24%);
+            z-index: -3;
+        }
+
+        h1,
+        h2,
+        h3,
+        .display-font,
+        nav,
+        .nav-pill,
+        .cta-button {
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .shell {
+            position: relative;
+            overflow: clip;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(18px);
+            opacity: 0.45;
+            z-index: -1;
+        }
+
+        .glass {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.65);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .hover-lift {
+            transition:
+                transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.35s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(16, 34, 46, 0.15);
+            border-color: rgba(132, 92, 255, 0.28);
+        }
+
+        .text-gradient {
+            background: linear-gradient(115deg, var(--navy), var(--amber), var(--teal));
+            background-size: 180% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 7s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 180% center;
+            }
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 72px;
+            height: 4px;
+            transform: translateX(-50%);
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--amber), var(--teal), var(--coral));
+        }
+
+        .hero-panel {
+            position: relative;
+            border-radius: 2.5rem;
+            padding: 2rem;
+        }
+
+        .hero-panel::before {
+            content: "";
+            position: absolute;
+            inset: 1rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            pointer-events: none;
+        }
+
+        .hero-ring {
+            position: absolute;
+            inset: auto;
+            border-radius: 999px;
+            border: 1px dashed rgba(20, 32, 42, 0.12);
+            animation: spin 22s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.65rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background: rgba(255, 255, 255, 0.66);
+            color: #41505a;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .eyebrow-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--amber), var(--teal));
+            box-shadow: 0 0 0 6px rgba(132, 92, 255, 0.10);
+        }
+
+        .hero-subcopy {
+            max-width: 34rem;
+        }
+
+        .phone-stage {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        .phone-stage::before {
+            content: "";
+            position: absolute;
+            inset: 8% 6% 10%;
+            border-radius: 3rem;
+            background: radial-gradient(circle, rgba(76, 105, 255, 0.22), transparent 52%);
+            filter: blur(22px);
+            z-index: 0;
+        }
+
+        .phone-orbit {
+            position: absolute;
+            border-radius: 999px;
+            border: 1px dashed rgba(20, 50, 74, 0.12);
+            pointer-events: none;
+            animation: spin 24s linear infinite;
+        }
+
+        .phone-orbit.orbit-a {
+            width: 24rem;
+            height: 24rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .phone-orbit.orbit-b {
+            width: 18rem;
+            height: 18rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-direction: reverse;
+            animation-duration: 18s;
+        }
+
+        .phone-frame {
+            position: relative;
+            width: min(100%, 21rem);
+            padding: 0.9rem;
+            border-radius: 2.8rem;
+            background: linear-gradient(160deg, #2a235f, #1a1843 45%, #273a84 100%);
+            box-shadow:
+                0 30px 80px rgba(16, 34, 46, 0.24),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            z-index: 1;
+        }
+
+        .phone-frame::before {
+            content: "";
+            position: absolute;
+            top: 0.6rem;
+            left: 50%;
+            width: 38%;
+            height: 1.5rem;
+            transform: translateX(-50%);
+            border-radius: 999px;
+            background: rgba(7, 12, 18, 0.88);
+            z-index: 3;
+        }
+
+        .phone-screen {
+            position: relative;
+            min-height: 37rem;
+            overflow: hidden;
+            border-radius: 2.15rem;
+            background:
+                radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.5), transparent 22%),
+                linear-gradient(180deg, #f0eeff 0%, #fbf9ff 48%, #eef3ff 100%);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .screen-status {
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.4rem;
+            color: rgba(20, 32, 42, 0.74);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            z-index: 3;
+        }
+
+        .screen-status .signal {
+            display: flex;
+            gap: 0.22rem;
+            align-items: flex-end;
+        }
+
+        .screen-status .signal span {
+            width: 0.18rem;
+            border-radius: 999px;
+            background: rgba(20, 32, 42, 0.64);
+        }
+
+        .screen-status .signal span:nth-child(1) { height: 0.35rem; }
+        .screen-status .signal span:nth-child(2) { height: 0.5rem; }
+        .screen-status .signal span:nth-child(3) { height: 0.7rem; }
+        .screen-status .signal span:nth-child(4) { height: 0.9rem; }
+
+        .map-layer {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .map-layer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 30%, rgba(132, 92, 255, 0.12), transparent 14%),
+                radial-gradient(circle at 76% 18%, rgba(76, 105, 255, 0.16), transparent 14%),
+                radial-gradient(circle at 70% 78%, rgba(107, 141, 255, 0.14), transparent 16%),
+                linear-gradient(rgba(20, 32, 42, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 32, 42, 0.04) 1px, transparent 1px);
+            background-size: auto, auto, auto, 46px 46px, 46px 46px;
+        }
+
+        .map-layer::after {
+            content: "";
+            position: absolute;
+            inset: 2rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(20, 50, 74, 0.06);
+            pointer-events: none;
+        }
+
+        .map-road {
+            position: absolute;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: inset 0 0 0 1px rgba(20, 50, 74, 0.04);
+        }
+
+        .map-road.road-a {
+            width: 130%;
+            height: 1.2rem;
+            top: 44%;
+            left: -12%;
+            transform: rotate(-24deg);
+        }
+
+        .map-road.road-b {
+            width: 1.2rem;
+            height: 72%;
+            top: 16%;
+            left: 57%;
+            transform: rotate(14deg);
+        }
+
+        .map-road.road-c {
+            width: 82%;
+            height: 1rem;
+            bottom: 18%;
+            left: 8%;
+            transform: rotate(8deg);
+        }
+
+        .map-route {
+            position: absolute;
+            width: 58%;
+            height: 34%;
+            top: 25%;
+            left: 24%;
+            border: 3px dashed rgba(20, 50, 74, 0.28);
+            border-color: rgba(76, 105, 255, 0.82) transparent transparent transparent;
+            border-radius: 60% 40% 56% 44%;
+            transform: rotate(18deg);
+        }
+
+        .map-route::after {
+            content: "";
+            position: absolute;
+            right: -0.35rem;
+            top: 48%;
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 999px;
+            background: var(--teal);
+            box-shadow: 0 0 0 0.35rem rgba(76, 105, 255, 0.12);
+        }
+
+        .map-pin {
+            position: absolute;
+            width: 1.15rem;
+            height: 1.15rem;
+            border-radius: 999px;
+            border: 4px solid #fff;
+            box-shadow: 0 12px 24px rgba(20, 32, 42, 0.14);
+        }
+
+        .map-pin.pin-a {
+            top: 21%;
+            left: 20%;
+            background: var(--amber);
+        }
+
+        .map-pin.pin-b {
+            top: 53%;
+            right: 18%;
+            background: var(--teal);
+        }
+
+        .map-pin.pin-c {
+            bottom: 19%;
+            left: 27%;
+            background: var(--coral);
+        }
+
+        .phone-pill {
+            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 0.85rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            box-shadow: 0 12px 24px rgba(20, 32, 42, 0.10);
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #30414d;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .phone-pill.top {
+            top: 4rem;
+            left: 1.2rem;
+        }
+
+        .phone-pill.bottom {
+            right: 1.2rem;
+            bottom: 8.4rem;
+        }
+
+        .phone-pill .pulse {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 999px;
+            background: var(--teal);
+            box-shadow: 0 0 0 0.32rem rgba(132, 92, 255, 0.14);
+        }
+
+        .welcome-card {
+            position: absolute;
+            left: 1.2rem;
+            right: 1.2rem;
+            bottom: 5.3rem;
+            z-index: 2;
+            padding: 1.25rem 1.2rem;
+            border-radius: 1.7rem;
+            background: rgba(34, 26, 82, 0.90);
+            color: #fff;
+            box-shadow: 0 24px 40px rgba(16, 34, 46, 0.18);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .welcome-card small {
+            display: inline-block;
+            margin-bottom: 0.55rem;
+            color: rgba(255, 255, 255, 0.68);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .welcome-card h3 {
+            margin: 0;
+            font-size: 2rem;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .welcome-card p {
+            margin: 0.8rem 0 0;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .phone-nav {
+            position: absolute;
+            left: 1.1rem;
+            right: 1.1rem;
+            bottom: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.6rem;
+            padding: 0.7rem;
+            border-radius: 1.5rem;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            z-index: 2;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .nav-dot {
+            height: 0.5rem;
+            border-radius: 999px;
+            background: rgba(20, 32, 42, 0.14);
+        }
+
+        .nav-dot.active {
+            background: linear-gradient(90deg, var(--teal), var(--amber));
+        }
+
+        .campus-showcase {
+            position: relative;
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            padding: 1.1rem;
+            border-radius: 2.2rem;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(240, 249, 245, 0.72));
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .campus-showcase::before {
+            content: "";
+            position: absolute;
+            inset: auto -6rem -7rem auto;
+            width: 16rem;
+            height: 16rem;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(132, 92, 255, 0.18), transparent 70%);
+            pointer-events: none;
+        }
+
+        .campus-visual {
+            position: relative;
+            overflow: hidden;
+            min-height: 20rem;
+            border-radius: 1.8rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background: #ddebff;
+        }
+
+        .campus-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .campus-visual::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(20, 50, 74, 0.03), rgba(20, 50, 74, 0.26));
+            pointer-events: none;
+        }
+
+        .campus-badge {
+            position: absolute;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.65rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.84);
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: 0 14px 28px rgba(16, 34, 46, 0.12);
+            color: #31424e;
+            font-size: 0.78rem;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .campus-badge.top-left {
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .campus-badge.bottom-right {
+            right: 1rem;
+            bottom: 1rem;
+        }
+
+        .campus-badge-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--amber));
+        }
+
+        .campus-copy {
+            position: relative;
+            z-index: 1;
+            padding: 0.75rem 0.5rem 0.75rem 0.2rem;
+        }
+
+        .campus-kicker {
+            display: inline-flex;
+            margin-bottom: 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(132, 92, 255, 0.18);
+            background: rgba(132, 92, 255, 0.08);
+            padding: 0.45rem 0.85rem;
+            color: #5a47c7;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .campus-stat-grid {
+            display: grid;
+            gap: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        .campus-stat {
+            border-radius: 1.3rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.75);
+            padding: 1rem 1.1rem;
+        }
+
+        .campus-stat strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+        }
+
+        .stakeholder-viz-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .viz-card {
+            border-radius: 1.8rem;
+        }
+
+        .viz-kicker {
+            display: inline-flex;
+            margin-bottom: 0.5rem;
+            color: var(--muted);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .viz-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .donut-chart {
+            position: relative;
+            width: 11.25rem;
+            aspect-ratio: 1;
+            border-radius: 999px;
+            flex-shrink: 0;
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+                0 18px 35px rgba(16, 34, 46, 0.10);
+        }
+
+        .donut-chart::after {
+            content: "";
+            position: absolute;
+            inset: 20%;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: inset 0 0 0 1px rgba(20, 32, 42, 0.05);
+        }
+
+        .donut-center {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .donut-center strong {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.5rem;
+            line-height: 1;
+            color: var(--navy);
+        }
+
+        .donut-center span {
+            margin-top: 0.35rem;
+            color: var(--muted);
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .viz-legend {
+            width: 100%;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .viz-legend li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            padding: 0.6rem 0.9rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .legend-left {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .legend-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 999px;
+        }
+
+        .legend-value {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .persona-gallery {
+            display: grid;
+            gap: 1.75rem;
+        }
+
+        .persona-board {
+            --persona-accent: var(--teal);
+            --persona-accent-soft: rgba(76, 105, 255, 0.14);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background:
+                radial-gradient(circle at 88% 10%, var(--persona-accent-soft), transparent 30%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 251, 250, 0.8));
+            box-shadow: var(--shadow);
+        }
+
+        .persona-board::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0.32rem;
+            background: linear-gradient(90deg, var(--persona-accent), transparent 76%);
+        }
+
+        .persona-board::after {
+            content: "";
+            position: absolute;
+            inset: 0.8rem;
+            border-radius: 1.55rem;
+            border: 1px solid rgba(20, 32, 42, 0.05);
+            pointer-events: none;
+        }
+
+        .persona-board-head {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .persona-role {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 0.48rem 0.85rem;
+            background: var(--persona-accent-soft);
+            color: var(--persona-accent);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .persona-board-title {
+            margin: 0.65rem 0 0.35rem;
+            font-size: 1.85rem;
+            line-height: 1.04;
+            letter-spacing: -0.04em;
+            color: var(--navy);
+        }
+
+        .persona-marker {
+            width: 3rem;
+            height: 3rem;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background: rgba(255, 255, 255, 0.76);
+            color: var(--persona-accent);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            box-shadow: 0 14px 28px rgba(16, 34, 46, 0.10);
+        }
+
+        .persona-board-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .persona-row-grid {
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .persona-card-block {
+            border-radius: 1.45rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.95rem 1rem;
+        }
+
+        .persona-card-section + .persona-card-section {
+            margin-top: 0.95rem;
+            padding-top: 0.95rem;
+            border-top: 1px dashed rgba(20, 32, 42, 0.08);
+        }
+
+        .persona-block-label {
+            margin-bottom: 0.75rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        .persona-quote-block {
+            margin: 0;
+            color: #485761;
+            font-size: 1rem;
+            line-height: 1.78;
+            font-style: italic;
+        }
+
+        .persona-fact-list {
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .persona-fact {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-bottom: 0.48rem;
+            border-bottom: 1px dashed rgba(20, 32, 42, 0.08);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .persona-fact:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .persona-fact strong {
+            color: var(--navy);
+            text-align: right;
+        }
+
+        .persona-chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+        }
+
+        .persona-chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 0.45rem 0.72rem;
+            background: var(--persona-accent-soft);
+            color: var(--navy);
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .persona-stage-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .persona-stage {
+            border-radius: 1.2rem;
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 248, 247, 0.82));
+            padding: 0.95rem 1rem;
+        }
+
+        .persona-stage span {
+            display: inline-flex;
+            margin-bottom: 0.45rem;
+            color: var(--persona-accent);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .persona-stage p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.94rem;
+            line-height: 1.72;
+        }
+
+        .persona-response-list {
+            display: grid;
+            gap: 0.7rem;
+            color: var(--muted);
+            font-size: 0.94rem;
+            line-height: 1.68;
+        }
+
+        .persona-response-list li {
+            display: flex;
+            gap: 0.65rem;
+        }
+
+        .persona-response-dot {
+            width: 0.42rem;
+            height: 0.42rem;
+            margin-top: 0.42rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            background: var(--persona-accent);
+            box-shadow: 0 0 0 0.32rem var(--persona-accent-soft);
+        }
+
+        .persona-profile-rail {
+            display: grid;
+            gap: 0.9rem;
+            align-content: start;
+        }
+
+        .persona-photo-panel {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .persona-photo-frame {
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            border-radius: 1.3rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            box-shadow: 0 16px 30px rgba(16, 34, 46, 0.10);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .persona-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .persona-photo--top {
+            object-position: center top;
+        }
+
+        .persona-mini-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--persona-accent);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .persona-mini-kicker::before {
+            content: "";
+            width: 0.46rem;
+            height: 0.46rem;
+            border-radius: 999px;
+            background: var(--persona-accent);
+            box-shadow: 0 0 0 0.28rem var(--persona-accent-soft);
+        }
+
+        .persona-profile-note {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.94rem;
+            line-height: 1.72;
+        }
+
+        .persona-detail-grid {
+            display: grid;
+            gap: 0.9rem;
+            align-content: start;
+        }
+
+        .persona-detail-grid--triple {
+            grid-template-columns: 1fr;
+        }
+
+        .persona-detail-card {
+            height: 100%;
+            border-radius: 1.45rem;
+            border: 1px solid rgba(20, 32, 42, 0.07);
+            background: rgba(255, 255, 255, 0.82);
+            padding: 0.95rem 1rem;
+        }
+
+        .persona-detail-card--long {
+            padding: 1.15rem 1.2rem;
+        }
+
+        .persona-detail-card--landscape {
+            display: block;
+        }
+
+        .persona-detail-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.94rem;
+            line-height: 1.68;
+        }
+
+        .persona-detail-content {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .persona-detail-span-2 {
+            grid-column: 1 / -1;
+        }
+
+        .persona-summary-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .persona-summary-tile {
+            border-radius: 1.05rem;
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 248, 0.84));
+            padding: 0.8rem 0.9rem;
+        }
+
+        .persona-summary-tile strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--navy);
+            font-size: 0.95rem;
+            line-height: 1.3;
+        }
+
+        .persona-summary-tile span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.84rem;
+            line-height: 1.5;
+        }
+
+        .priority-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .persona-dual-grid,
+        .needs-strip-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .persona-span-4,
+        .persona-span-8,
+        .persona-span-12 {
+            min-width: 0;
+        }
+
+        .priority-card {
+            border-radius: 1.15rem;
+            border: 1px solid rgba(20, 32, 42, 0.06);
+            background: rgba(255, 255, 255, 0.82);
+            padding: 0.9rem;
+        }
+
+        .priority-card span {
+            display: inline-flex;
+            margin-bottom: 0.45rem;
+            color: var(--persona-accent);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+
+        .priority-card strong {
+            display: block;
+            margin-bottom: 0.32rem;
+            color: var(--navy);
+            font-size: 0.98rem;
+            line-height: 1.35;
+        }
+
+        .priority-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.89rem;
+            line-height: 1.62;
+        }
+
+        .persona-signal-note {
+            margin: 0;
+            color: #44525c;
+            font-size: 0.93rem;
+            line-height: 1.72;
+        }
+
+        .persona-gallery {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .persona-showcase {
+            --persona-primary: #7c3aed;
+            --persona-primary-soft: rgba(124, 58, 237, 0.14);
+            --persona-goal: #059669;
+            --persona-goal-soft: rgba(16, 185, 129, 0.12);
+            --persona-pain: #dc2626;
+            --persona-pain-soft: rgba(248, 113, 113, 0.14);
+            position: relative;
+            overflow: hidden;
+            border-radius: 2.15rem;
+            border: 1px solid rgba(123, 92, 255, 0.18);
+            background:
+                linear-gradient(135deg, rgba(214, 204, 255, 0.72), rgba(255, 255, 255, 0.96) 18%, rgba(255, 255, 255, 0.98) 82%, rgba(208, 190, 255, 0.64)),
+                rgba(255, 255, 255, 0.95);
+            padding: 1.35rem;
+            box-shadow:
+                0 24px 48px rgba(57, 39, 105, 0.10),
+                0 0 0 1px rgba(255, 255, 255, 0.56) inset;
+        }
+
+        .persona-showcase::before {
+            content: "";
+            position: absolute;
+            inset: -0.45rem;
+            z-index: 0;
+            border-radius: 2.45rem;
+            background: linear-gradient(135deg, rgba(142, 93, 255, 0.34), rgba(59, 130, 246, 0.18), rgba(232, 121, 249, 0.28));
+            filter: blur(18px);
+            opacity: 0.78;
+        }
+
+        .persona-showcase--student {
+            --persona-primary: #5b35d5;
+        }
+
+        .persona-showcase--visitor {
+            --persona-primary: #6d28d9;
+        }
+
+        .persona-showcase > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .persona-showcase-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .persona-profile-column,
+        .persona-scenario-card,
+        .persona-focus-card {
+            border-radius: 1.55rem;
+            border: 1px solid rgba(121, 92, 255, 0.14);
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 14px 30px rgba(65, 47, 119, 0.08);
+        }
+
+        .persona-profile-column {
+            display: grid;
+            gap: 0.95rem;
+            align-content: start;
+            padding: 1.3rem 1.1rem 1.2rem;
+            background: linear-gradient(180deg, rgba(253, 252, 255, 0.96), rgba(238, 231, 255, 0.90));
+        }
+
+        .persona-portrait-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .persona-portrait-ring {
+            width: 11rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 999px;
+            padding: 0.34rem;
+            background: #ffffff;
+            box-shadow: 0 16px 32px rgba(59, 36, 119, 0.16);
+        }
+
+        .persona-portrait-ring img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        .persona-identity-card {
+            display: grid;
+            justify-items: center;
+            gap: 0.65rem;
+            border-radius: 1.3rem;
+            padding: 0.9rem 0.75rem 0.8rem;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(123, 92, 255, 0.10);
+        }
+
+        .persona-name {
+            margin: 0;
+            color: var(--persona-primary);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+            text-align: center;
+        }
+
+        .persona-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.45rem;
+        }
+
+        .persona-meta-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 1.75rem;
+            border-radius: 999px;
+            padding: 0.35rem 0.7rem;
+            background: rgba(245, 235, 255, 0.92);
+            color: var(--persona-primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .persona-role-pill {
+            display: inline-flex;
+            justify-self: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            padding: 0.65rem 1.05rem;
+            background: linear-gradient(135deg, rgba(149, 117, 255, 0.95), rgba(111, 76, 255, 0.92));
+            color: #fff;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow: 0 12px 24px rgba(92, 55, 199, 0.24);
+        }
+
+        .persona-quote-card {
+            position: relative;
+            border-radius: 1.5rem;
+            padding: 1.3rem 1.1rem 1.05rem 3.35rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 237, 255, 0.92));
+            border: 1px solid rgba(123, 92, 255, 0.12);
+        }
+
+        .persona-quote-mark {
+            position: absolute;
+            top: 1.15rem;
+            left: 1rem;
+            width: 1.9rem;
+            height: 1.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgba(124, 58, 237, 0.16);
+            color: var(--persona-primary);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .persona-quote-card p {
+            margin: 0;
+            color: var(--persona-primary);
+            font-size: 0.97rem;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .persona-scenario-card,
+        .persona-focus-card {
+            padding: 1.15rem 1.2rem;
+        }
+
+        .persona-panel-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 0.45rem;
+            color: var(--persona-primary);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .persona-panel-icon {
+            width: 1.55rem;
+            height: 1.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgba(96, 165, 250, 0.14);
+            color: #3b82f6;
+            font-size: 0.84rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .persona-scenario-card p {
+            margin: 0;
+            color: #475569;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.46;
+        }
+
+        .persona-focus-card--goals {
+            background: linear-gradient(180deg, rgba(220, 252, 238, 0.92), rgba(236, 253, 245, 0.78));
+            border-color: rgba(16, 185, 129, 0.18);
+        }
+
+        .persona-focus-card--pain {
+            background: linear-gradient(180deg, rgba(255, 237, 237, 0.92), rgba(255, 245, 245, 0.80));
+            border-color: rgba(248, 113, 113, 0.20);
+        }
+
+        .persona-panel-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 0.95rem;
+            color: var(--navy);
+            font-size: 1.05rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .persona-focus-card--goals .persona-panel-heading {
+            color: var(--persona-goal);
+        }
+
+        .persona-focus-card--pain .persona-panel-heading {
+            color: var(--persona-pain);
+        }
+
+        .persona-panel-badge {
+            width: 1.8rem;
+            height: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.92rem;
+            font-weight: 800;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .persona-focus-card--goals .persona-panel-badge {
+            background: #10b981;
+            box-shadow: 0 8px 18px rgba(16, 185, 129, 0.25);
+        }
+
+        .persona-focus-card--pain .persona-panel-badge {
+            background: #ff4d5a;
+            box-shadow: 0 8px 18px rgba(255, 77, 90, 0.22);
+        }
+
+        .persona-bullet-stack {
+            display: grid;
+            gap: 0.7rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .persona-bullet-stack li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.82);
+            padding: 0.7rem 0.85rem;
+            color: #0f766e;
+            font-size: 0.98rem;
+            font-weight: 700;
+            line-height: 1.36;
+        }
+
+        .persona-bullet-stack li::before {
+            content: "+";
+            width: 1.15rem;
+            height: 1.15rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            background: #10b981;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .persona-bullet-stack--alert li {
+            color: #b91c1c;
+        }
+
+        .persona-bullet-stack--alert li::before {
+            content: "!";
+            background: #ff4d5a;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--muted);
+            transition: color 0.25s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.5rem;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            background: linear-gradient(90deg, var(--teal), var(--amber));
+            transition: transform 0.25s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.is-active {
+            color: var(--ink);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.is-active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-pill {
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .nav-pill:hover,
+        .nav-pill.is-active {
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+            transform: translateX(-130%);
+            transition: transform 0.7s ease;
+        }
+
+        .cta-button:hover::before {
+            transform: translateX(130%);
+        }
+
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.3), transparent 45%);
+            pointer-events: none;
+        }
+
+        .timeline-wrap {
+            position: relative;
+        }
+
+        .timeline-wrap::before {
+            content: "";
+            position: absolute;
+            left: 1.65rem;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(132, 92, 255, 0.20), rgba(76, 105, 255, 0.22), rgba(107, 141, 255, 0.18));
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-card {
+            position: relative;
+            border-radius: var(--radius-xl);
+        }
+
+        .timeline-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(145deg, rgba(132, 92, 255, 0.08), rgba(76, 105, 255, 0.08), rgba(107, 141, 255, 0.05));
+            pointer-events: none;
+        }
+
+        .step-marker {
+            position: relative;
+            box-shadow: 0 16px 35px rgba(20, 32, 42, 0.10);
+        }
+
+        .step-marker::after {
+            content: "";
+            position: absolute;
+            inset: 5px;
+            border-radius: 1rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+        }
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-2xl);
+        }
+
+        .team-card::after {
+            content: "";
+            position: absolute;
+            inset: auto -3rem -4rem auto;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(107, 141, 255, 0.18), transparent 72%);
+            pointer-events: none;
+        }
+
+        .team-avatar {
+            position: relative;
+            border-radius: 999px;
+            padding: 0.4rem;
+            background: linear-gradient(135deg, rgba(34, 26, 82, 0.22), rgba(132, 92, 255, 0.26), rgba(76, 105, 255, 0.24));
+            box-shadow: 0 16px 30px rgba(20, 32, 42, 0.12);
+        }
+
+        .quote-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-card::before {
+            content: "“";
+            position: absolute;
+            left: 1.25rem;
+            top: -2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 9rem;
+            color: rgba(20, 50, 74, 0.08);
+        }
+
+        .process-showcase-frame {
+            overflow: hidden;
+            border-radius: 1.8rem;
+            border: 1px solid rgba(20, 32, 42, 0.08);
+            background: #fff;
+            box-shadow: 0 18px 45px rgba(20, 32, 42, 0.08);
+        }
+
+        .process-showcase-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .crazy-eights-image {
+            transform: none;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 0;
+            z-index: 100;
+            background: linear-gradient(90deg, var(--teal), var(--amber), var(--coral));
+            box-shadow: 0 0 18px rgba(132, 92, 255, 0.42);
+        }
+
+        .mobile-dock {
+            box-shadow: 0 20px 50px rgba(16, 34, 46, 0.14);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .mobile-dock::-webkit-scrollbar {
+            display: none;
+        }
+
+        .text-coral-600 {
+            color: #6b8dff;
+        }
+
+        .bg-emerald-200 {
+            background-color: rgba(132, 92, 255, 0.34) !important;
+        }
+
+        .bg-amber-200 {
+            background-color: rgba(107, 141, 255, 0.34) !important;
+        }
+
+        .bg-orange-200 {
+            background-color: rgba(76, 105, 255, 0.28) !important;
+        }
+
+        .bg-teal-50,
+        .bg-cyan-50 {
+            background-color: rgba(76, 105, 255, 0.08) !important;
+        }
+
+        .bg-amber-50,
+        .bg-orange-50 {
+            background-color: rgba(132, 92, 255, 0.08) !important;
+        }
+
+        .bg-sky-50 {
+            background-color: rgba(107, 141, 255, 0.10) !important;
+        }
+
+        .bg-teal-100,
+        .bg-cyan-100 {
+            background-color: rgba(76, 105, 255, 0.14) !important;
+        }
+
+        .bg-amber-100,
+        .bg-orange-100 {
+            background-color: rgba(132, 92, 255, 0.14) !important;
+        }
+
+        .bg-sky-100 {
+            background-color: rgba(107, 141, 255, 0.16) !important;
+        }
+
+        .bg-teal-500 {
+            background-color: #4c69ff !important;
+        }
+
+        .bg-amber-400 {
+            background-color: #845cff !important;
+        }
+
+        .bg-sky-500 {
+            background-color: #6b8dff !important;
+        }
+
+        .border-teal-200,
+        .border-cyan-100,
+        .border-cyan-200 {
+            border-color: rgba(76, 105, 255, 0.22) !important;
+        }
+
+        .border-amber-200,
+        .border-orange-200 {
+            border-color: rgba(132, 92, 255, 0.22) !important;
+        }
+
+        .border-orange-100,
+        .border-sky-200 {
+            border-color: rgba(107, 141, 255, 0.20) !important;
+        }
+
+        .border-teal-300,
+        .border-amber-300,
+        .border-sky-300 {
+            border-color: rgba(107, 141, 255, 0.30) !important;
+        }
+
+        .text-teal-600,
+        .text-teal-700 {
+            color: #4c69ff !important;
+        }
+
+        .text-amber-600,
+        .text-amber-700,
+        .text-orange-600,
+        .text-orange-700,
+        .text-orange-500 {
+            color: #845cff !important;
+        }
+
+        .text-sky-600,
+        .text-sky-700,
+        .text-cyan-700 {
+            color: #6b8dff !important;
+        }
+
+        .from-teal-50 {
+            --tw-gradient-from: #eef1ff var(--tw-gradient-from-position) !important;
+            --tw-gradient-to: rgb(238 241 255 / 0) var(--tw-gradient-to-position) !important;
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+        }
+
+        .from-amber-50,
+        .from-orange-50 {
+            --tw-gradient-from: #f4efff var(--tw-gradient-from-position) !important;
+            --tw-gradient-to: rgb(244 239 255 / 0) var(--tw-gradient-to-position) !important;
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+        }
+
+        .from-sky-50,
+        .from-cyan-50 {
+            --tw-gradient-from: #eef4ff var(--tw-gradient-from-position) !important;
+            --tw-gradient-to: rgb(238 244 255 / 0) var(--tw-gradient-to-position) !important;
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+        }
+
+        .to-teal-100,
+        .to-cyan-100 {
+            --tw-gradient-to: #e4e9ff var(--tw-gradient-to-position) !important;
+        }
+
+        .to-amber-100,
+        .to-orange-100 {
+            --tw-gradient-to: #ebe3ff var(--tw-gradient-to-position) !important;
+        }
+
+        .to-sky-100 {
+            --tw-gradient-to: #e6ecff var(--tw-gradient-to-position) !important;
+        }
+
+        #site-nav.nav-compact {
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+        }
+
+        @media (max-width: 767px) {
+            .timeline-wrap::before {
+                left: 1.35rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+                gap: 3rem;
+            }
+
+            .campus-showcase {
+                grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+                align-items: center;
+            }
+
+            .campus-stat-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 768px) {
+            .stakeholder-viz-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .persona-board {
+                padding: 1.8rem;
+            }
+
+            .persona-stage-list,
+            .persona-dual-grid,
+            .needs-strip-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .persona-detail-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .persona-detail-grid--triple {
+                grid-template-columns: 1fr;
+            }
+
+            .persona-detail-card--landscape .persona-block-label {
+                margin-bottom: 0.55rem;
+            }
+
+            .persona-summary-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .persona-row-grid {
+                grid-template-columns: repeat(12, minmax(0, 1fr));
+                align-items: start;
+            }
+
+            .persona-span-4 {
+                grid-column: span 4;
+            }
+
+            .persona-span-8 {
+                grid-column: span 8;
+            }
+
+            .persona-span-12 {
+                grid-column: span 12;
+            }
+
+            .persona-stage-list {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .needs-strip-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .persona-dual-grid {
+                grid-template-columns: 0.95fr 1.05fr;
+            }
+
+            .persona-showcase-grid {
+                grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr) minmax(0, 1fr);
+                align-items: stretch;
+            }
+
+            .persona-profile-column {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
+            .persona-scenario-card {
+                grid-column: 2 / span 2;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .priority-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .persona-board-title {
+                font-size: 1.6rem;
+            }
+
+            .persona-photo-frame {
+                aspect-ratio: 16 / 10;
+            }
+
+            .persona-showcase {
+                padding: 1rem;
+            }
+
+            .persona-profile-column,
+            .persona-scenario-card,
+            .persona-focus-card {
+                padding: 1rem;
+            }
+
+            .persona-portrait-ring {
+                width: 8.8rem;
+            }
+
+            .persona-name {
+                font-size: 1.65rem;
+            }
+
+            .persona-bullet-stack li {
+                border-radius: 1rem;
+                font-size: 0.92rem;
+            }
+
+        }
+
+        body.toon-bounce-theme {
+            --bg: #f4ecff;
+            --bg-soft: #fbf7ff;
+            --surface: rgba(255, 253, 246, 0.88);
+            --surface-strong: rgba(255, 255, 255, 0.94);
+            --line: rgba(29, 29, 29, 0.14);
+            --ink: #1d1d1d;
+            --muted: #5d5078;
+            --navy: #1d1d1d;
+            --teal: #cdb7ff;
+            --amber: #8b5cf6;
+            --coral: #6d28d9;
+            --shadow: 0 14px 0 rgba(29, 29, 29, 0.12), 0 28px 48px rgba(29, 29, 29, 0.08);
+            background:
+                radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.52), transparent 22%),
+                radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.34), transparent 18%),
+                linear-gradient(180deg, #f7efff 0%, #eadcff 42%, #cfbcff 100%);
+        }
+
+        body.toon-bounce-theme::before {
+            background-image:
+                linear-gradient(rgba(29, 29, 29, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(29, 29, 29, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: none;
+            opacity: 0.5;
+        }
+
+        body.toon-bounce-theme::after {
+            background:
+                radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.48), transparent 24%),
+                radial-gradient(circle at 85% 24%, rgba(255, 255, 255, 0.24), transparent 18%);
+        }
+
+        body.toon-bounce-theme h1,
+        body.toon-bounce-theme h2,
+        body.toon-bounce-theme h3,
+        body.toon-bounce-theme .display-font,
+        body.toon-bounce-theme nav,
+        body.toon-bounce-theme .nav-pill,
+        body.toon-bounce-theme .cta-button {
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Noto Sans SC", sans-serif;
+        }
+
+        body.toon-bounce-theme .blob {
+            filter: blur(10px);
+            opacity: 0.55;
+        }
+
+        body.toon-bounce-theme .shell > .blob:nth-of-type(1) {
+            background: #d9c2ff;
+        }
+
+        body.toon-bounce-theme .shell > .blob:nth-of-type(2) {
+            background: #b794ff;
+        }
+
+        body.toon-bounce-theme .shell > .blob:nth-of-type(3) {
+            background: #e7dcff;
+        }
+
+        body.toon-bounce-theme .glass,
+        body.toon-bounce-theme .card,
+        body.toon-bounce-theme .campus-showcase,
+        body.toon-bounce-theme .process-showcase-frame,
+        body.toon-bounce-theme #site-nav,
+        body.toon-bounce-theme .mobile-dock,
+        body.toon-bounce-theme footer#contact > div {
+            background: rgba(255, 255, 255, 0.84);
+            border: 3px solid #1d1d1d;
+            box-shadow: var(--shadow);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        body.toon-bounce-theme .hero-panel,
+        body.toon-bounce-theme .hero-panel::before,
+        body.toon-bounce-theme .campus-showcase,
+        body.toon-bounce-theme .timeline-card,
+        body.toon-bounce-theme .team-card,
+        body.toon-bounce-theme .quote-card {
+            border-radius: 2rem;
+        }
+
+        body.toon-bounce-theme .hero-panel::before {
+            inset: 1rem;
+            border: 3px dashed rgba(29, 29, 29, 0.12);
+        }
+
+        body.toon-bounce-theme .hero-ring,
+        body.toon-bounce-theme .phone-orbit {
+            border: 3px dashed rgba(29, 29, 29, 0.14);
+        }
+
+        body.toon-bounce-theme .text-gradient {
+            background: none;
+            color: #7c3aed;
+            -webkit-text-fill-color: currentColor;
+            text-shadow: 4px 4px 0 #fff;
+            animation: none;
+        }
+
+        body.toon-bounce-theme .section-title {
+            letter-spacing: -0.05em;
+        }
+
+        body.toon-bounce-theme .section-title::after {
+            height: 8px;
+            width: 84px;
+            border: 2px solid #1d1d1d;
+            background: linear-gradient(90deg, #cdb7ff, #8b5cf6, #6d28d9);
+            box-shadow: 0 4px 0 rgba(29, 29, 29, 0.12);
+        }
+
+        body.toon-bounce-theme .eyebrow,
+        body.toon-bounce-theme .campus-kicker,
+        body.toon-bounce-theme .campus-badge,
+        body.toon-bounce-theme .phone-pill {
+            background: #fffdf6;
+            border: 3px solid #1d1d1d;
+            color: #1d1d1d;
+            font-weight: 800;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        body.toon-bounce-theme .campus-kicker,
+        body.toon-bounce-theme .phone-pill.top {
+            background: #d9c2ff;
+        }
+
+        body.toon-bounce-theme .phone-pill.bottom,
+        body.toon-bounce-theme .eyebrow {
+            background: #f7f1ff;
+        }
+
+        body.toon-bounce-theme .eyebrow-dot,
+        body.toon-bounce-theme .campus-badge-dot,
+        body.toon-bounce-theme .phone-pill .pulse {
+            background: #8b5cf6;
+            box-shadow: 0 0 0 5px rgba(139, 92, 246, 0.22);
+        }
+
+        body.toon-bounce-theme .nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.65rem 1rem;
+            border-radius: 999px;
+            color: #5a4740;
+            border: 3px solid transparent;
+            transition:
+                transform 0.22s ease,
+                background-color 0.22s ease,
+                border-color 0.22s ease,
+                color 0.22s ease,
+                box-shadow 0.22s ease;
+        }
+
+        body.toon-bounce-theme .nav-link::after {
+            display: none;
+        }
+
+        body.toon-bounce-theme .nav-link:hover,
+        body.toon-bounce-theme .nav-link.is-active,
+        body.toon-bounce-theme .nav-pill:hover,
+        body.toon-bounce-theme .nav-pill.is-active {
+            transform: translateY(-2px);
+            background: #d9c2ff;
+            border-color: #1d1d1d;
+            color: #1d1d1d;
+            box-shadow: 0 7px 0 rgba(29, 29, 29, 0.10);
+        }
+
+        body.toon-bounce-theme .nav-pill {
+            border: 3px solid transparent;
+        }
+
+        body.toon-bounce-theme .cta-button,
+        body.toon-bounce-theme #site-nav a[href="#contact"],
+        body.toon-bounce-theme footer#contact a {
+            background: linear-gradient(135deg, #9f67ff, #7c3aed);
+            color: #fff;
+            border: 3px solid #1d1d1d;
+            border-radius: 999px;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.12);
+        }
+
+        body.toon-bounce-theme #site-nav > div > a[href="#contact"] {
+            background: linear-gradient(135deg, #9f67ff, #7c3aed);
+            color: #fff;
+        }
+
+        body.toon-bounce-theme .cta-button:hover,
+        body.toon-bounce-theme #site-nav a[href="#contact"]:hover,
+        body.toon-bounce-theme footer#contact a:hover {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            transform: translateY(-3px) rotate(-1deg);
+        }
+
+        body.toon-bounce-theme .cta-button::before {
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0));
+        }
+
+        body.toon-bounce-theme .phone-frame {
+            background: #1d1d1d;
+            border: 4px solid #1d1d1d;
+            box-shadow: 0 18px 0 rgba(29, 29, 29, 0.16), 0 36px 60px rgba(29, 29, 29, 0.18);
+        }
+
+        body.toon-bounce-theme .phone-frame::before {
+            top: 0.7rem;
+            height: 1.1rem;
+            background: #fffdf6;
+            border: 3px solid #1d1d1d;
+        }
+
+        body.toon-bounce-theme .phone-screen {
+            background:
+                radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.5), transparent 22%),
+                linear-gradient(180deg, #f8f2ff 0%, #ebddff 52%, #ceb7ff 100%);
+            border: 3px solid #1d1d1d;
+        }
+
+        body.toon-bounce-theme .screen-status {
+            color: #5a4740;
+        }
+
+        body.toon-bounce-theme .screen-status .signal span {
+            background: rgba(29, 29, 29, 0.72);
+        }
+
+        body.toon-bounce-theme .map-layer::before {
+            background:
+                radial-gradient(circle at 18% 30%, rgba(139, 92, 246, 0.18), transparent 14%),
+                radial-gradient(circle at 76% 18%, rgba(205, 183, 255, 0.24), transparent 14%),
+                radial-gradient(circle at 70% 78%, rgba(109, 40, 217, 0.16), transparent 16%),
+                linear-gradient(rgba(29, 29, 29, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(29, 29, 29, 0.06) 1px, transparent 1px);
+            background-size: auto, auto, auto, 46px 46px, 46px 46px;
+        }
+
+        body.toon-bounce-theme .map-layer::after {
+            border: 3px solid rgba(29, 29, 29, 0.08);
+        }
+
+        body.toon-bounce-theme .map-road {
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: inset 0 0 0 2px rgba(29, 29, 29, 0.06);
+        }
+
+        body.toon-bounce-theme .map-pin {
+            border-color: #1d1d1d;
+            box-shadow: 0 8px 0 rgba(29, 29, 29, 0.10);
+        }
+
+        body.toon-bounce-theme .welcome-card {
+            background: rgba(255, 253, 246, 0.92);
+            border: 3px solid #1d1d1d;
+            color: #1d1d1d;
+            box-shadow: 0 12px 0 rgba(29, 29, 29, 0.10);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        body.toon-bounce-theme .welcome-card small,
+        body.toon-bounce-theme .welcome-card p {
+            color: #5a4740;
+        }
+
+        body.toon-bounce-theme .phone-nav {
+            background: rgba(255, 255, 255, 0.86);
+            border: 3px solid #1d1d1d;
+        }
+
+        body.toon-bounce-theme .nav-dot {
+            background: rgba(29, 29, 29, 0.14);
+        }
+
+        body.toon-bounce-theme .nav-dot.active {
+            background: linear-gradient(90deg, #cdb7ff, #8b5cf6, #6d28d9);
+        }
+
+        body.toon-bounce-theme .campus-visual,
+        body.toon-bounce-theme .process-showcase-frame {
+            border: 3px solid #1d1d1d;
+            box-shadow: 0 12px 0 rgba(29, 29, 29, 0.10);
+        }
+
+        body.toon-bounce-theme .campus-visual::after,
+        body.toon-bounce-theme .feature-card::before,
+        body.toon-bounce-theme .timeline-card::before {
+            background: none;
+        }
+
+        body.toon-bounce-theme .campus-stat,
+        body.toon-bounce-theme .priority-card,
+        body.toon-bounce-theme .persona-detail-card {
+            background: rgba(255, 255, 255, 0.82);
+            border: 3px solid #1d1d1d;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
+        }
+
+        body.toon-bounce-theme .persona-card-block {
+            border: 3px solid #1d1d1d;
+            box-shadow: 0 10px 0 rgba(29, 29, 29, 0.08);
+        }
+
+        body.toon-bounce-theme .persona-profile-note {
+            color: #5d5078;
+        }
+
+        body.toon-bounce-theme .hover-lift:hover {
+            transform: translateY(-8px) rotate(-0.4deg);
+            box-shadow: 0 14px 0 rgba(29, 29, 29, 0.12), 0 30px 48px rgba(29, 29, 29, 0.10);
+            border-color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme .quote-card::before {
+            color: rgba(29, 29, 29, 0.10);
+            font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Noto Sans SC", sans-serif;
+        }
+
+        body.toon-bounce-theme footer#contact > div {
+            background: #fffdf6;
+            color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme footer#contact h2,
+        body.toon-bounce-theme footer#contact p,
+        body.toon-bounce-theme footer#contact .text-white\/70,
+        body.toon-bounce-theme footer#contact .text-white\/35 {
+            color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme footer#contact a {
+            background: #fff;
+            color: #1d1d1d;
+        }
+
+        body.toon-bounce-theme footer#contact a:last-child {
+            background: #d9c2ff;
+        }
+
+        body.toon-bounce-theme #progress-bar {
+            height: 6px;
+            background: linear-gradient(90deg, #d9c2ff, #8b5cf6, #6d28d9);
+            box-shadow: 0 0 0 2px rgba(29, 29, 29, 0.06), 0 0 18px rgba(139, 92, 246, 0.35);
+        }
+    </style>
+</head>
+<body class="antialiased toon-bounce-theme">
+<div id="progress-bar"></div>
+
+<div class="shell min-h-screen">
+    <div class="blob top-24 -left-16 h-56 w-56 bg-emerald-200"></div>
+    <div class="blob top-40 right-8 h-72 w-72 bg-amber-200"></div>
+    <div class="blob bottom-40 left-1/2 h-64 w-64 -translate-x-1/2 bg-orange-200"></div>
+
+    <nav id="site-nav" class="fixed top-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 rounded-full glass px-4 py-3 transition-all duration-300 md:top-6 md:w-[calc(100%-3rem)] md:px-6">
+        <div class="flex items-center justify-between gap-4">
+            <a href="#top" class="display-font text-sm font-bold tracking-[0.22em] text-slate-700 md:text-base">X·EASYGO</a>
+            <div class="hidden items-center gap-4 text-[0.84rem] font-medium lg:gap-5 lg:text-[0.9rem] md:flex">
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#stakeholders" class="nav-link">Stakeholders</a>
+                <a href="#requirements" class="nav-link">Requirements</a>
+                <a href="#ideation" class="nav-link">Ideation</a>
+                <a href="#implementation" class="nav-link">Implementation</a>
+                <a href="#reflection" class="nav-link">Reflection</a>
+                <a href="#contact" class="rounded-full bg-slate-900 px-4 py-2.5 text-white transition hover:bg-[#31246b]">Contact</a>
+            </div>
+            <a href="#contact" class="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-300 hover:text-slate-900 md:hidden">Contact</a>
+        </div>
+    </nav>
+
+    <main id="top">
+        <section class="relative px-6 pb-20 pt-36 md:pt-44">
+            <div class="mx-auto max-w-6xl">
+                <div class="hero-panel glass" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="hero-ring right-[-4rem] top-[-4rem] h-48 w-48"></div>
+                    <div class="hero-ring bottom-[-5rem] left-[-4rem] h-56 w-56"></div>
+
+                    <div class="hero-grid">
+                        <div class="hero-copy text-center lg:text-left">
+                            <div class="eyebrow mb-6">
+                                <span class="eyebrow-dot"></span>
+                                Mobile Map Platform
+                            </div>
+
+                            <h1 class="mb-8 text-5xl font-extrabold tracking-[-0.06em] text-slate-900 sm:text-6xl md:text-7xl">
+                                X·Easy<span class="text-gradient">Go</span>
+                            </h1>
+
+                            <p class="hero-subcopy mx-auto mb-12 text-lg font-light leading-relaxed text-slate-600 md:text-xl lg:mx-0">
+                                An interactive journey bridging reality and digital storytelling through location-based AR technology.
+                            </p>
+
+                            <a href="#research" class="cta-button inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-900 px-8 py-4 text-base font-bold text-white shadow-lg shadow-slate-900/10 transition duration-300 hover:-translate-y-1 hover:border-teal-300 hover:bg-[#2a235f]">
+                                Explore Portfolio
+                            </a>
+                        </div>
+
+                        <div class="phone-stage" data-aos="zoom-in" data-aos-delay="120">
+                            <div class="phone-orbit orbit-a"></div>
+                            <div class="phone-orbit orbit-b"></div>
+
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <div class="screen-status">
+                                        <span>09:41</span>
+                                        <div class="signal">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="map-layer">
+                                        <div class="map-road road-a"></div>
+                                        <div class="map-road road-b"></div>
+                                        <div class="map-road road-c"></div>
+                                        <div class="map-route"></div>
+                                        <div class="map-pin pin-a"></div>
+                                        <div class="map-pin pin-b"></div>
+                                        <div class="map-pin pin-c"></div>
+                                    </div>
+
+                                    <div class="phone-pill top">
+                                        <span class="pulse"></span>
+                                        Smart Campus
+                                    </div>
+
+                                    <div class="phone-pill bottom">
+                                        <span class="pulse"></span>
+                                        Live Navigation
+                                    </div>
+
+                                    <div class="welcome-card">
+                                        <small>Location Based Tour</small>
+                                        <h3>Welcome To XJTLU</h3>
+                                        <p>Explore campus landmarks through a mobile map interface and immersive XR storytelling.</p>
+                                    </div>
+
+                                    <div class="phone-nav">
+                                        <div class="nav-dot active"></div>
+                                        <div class="nav-dot"></div>
+                                        <div class="nav-dot"></div>
+                                        <div class="nav-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campus-showcase" data-aos="fade-up" data-aos-delay="180">
+                    <div class="campus-visual">
+                        <img src="./Campusview.png" alt="Illustrated view of the XJTLU campus">
+                        <div class="campus-badge top-left">
+                            <span class="campus-badge-dot"></span>
+                            Campus Context
+                        </div>
+                        <div class="campus-badge bottom-right">
+                            <span class="campus-badge-dot"></span>
+                            Learning + Route + Story
+                        </div>
+                    </div>
+
+                    <div class="campus-copy">
+                        <div class="campus-kicker">Campus Snapshot</div>
+                        <h3 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">A campus experience shaped by place, movement, and discovery</h3>
+                        <p class="mt-5 leading-relaxed text-slate-600">
+                            The platform is designed around the real spatial character of XJTLU. Instead of treating the campus as a static background, X·EasyGo uses buildings, pathways, waterfront views, and learning spaces as interactive entry points for guidance and storytelling.
+                        </p>
+
+                        <div class="campus-stat-grid">
+                            <div class="campus-stat">
+                                <strong>Spatial storytelling</strong>
+                                <p class="text-sm leading-relaxed text-slate-600">Users learn through movement across meaningful campus landmarks rather than through static descriptions alone.</p>
+                            </div>
+                            <div class="campus-stat">
+                                <strong>Mobile-first navigation</strong>
+                                <p class="text-sm leading-relaxed text-slate-600">Campus routes, check-ins, and XR prompts are framed as an intuitive mobile journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="research" data-nav-anchor class="px-6 py-20 md:py-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">
+                                Research
+                            </h2>
+                        </div>
+
+                        <!-- The Why -->
+                        <div>
+                            <article class="card hover-lift rounded-[2rem] p-8 md:p-10" data-aos="fade-up">
+                                <div class="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-teal-700">
+                                    The Why
+                                </div>
+                                <h3 class="mb-5 text-2xl font-bold tracking-tight text-slate-900 md:text-[1.9rem]">
+                                    Why this project matters
+                                </h3>
+                                <p class="text-[0.95rem] leading-8 text-slate-600 md:text-base">
+                                    We chose this project because traditional campus tours often position visitors as passive listeners rather than active explorers. At XJTLU, this is an important problem because the university's student-centered philosophy cannot be fully understood through one-way explanation alone. It is better experienced through movement across classrooms, learning spaces, social areas, and campus culture. Existing tours can provide basic information, but they do not always help new students build a memorable connection with the university or help external visitors understand the educational thinking embedded in each space. This matters especially for educators, administrators, and ILEAD-related visitors, who may see the campus physically without fully grasping how XJTLU's environment supports collaboration, autonomy, and innovation.
+                                </p>
+                                <p class="mt-5 text-[0.95rem] leading-8 text-slate-600 md:text-base">
+                                    We therefore saw an opportunity to design a campus tour that is mobile, interactive, and spatial rather than purely descriptive. Our goal is not simply to tell people about XJTLU, but to let them discover it through route-based guidance, meaningful places, and lightweight interaction. By combining location-based navigation, gamified check-ins, XR elements, and AI-supported interaction, X·EasyGo can respond more flexibly to different user groups. In this way, the campus itself becomes part of the storytelling, helping users understand both where they are and why those spaces matter. It also makes the experience feel more personal, exploratory, and connected to the real rhythm of campus life.
+                                </p>
+                            </article>
+                        </div>
+
+                        <!-- Academic Research -->
+                        <div class="mt-16" data-aos="fade-up">
+                            <article class="hover-lift rounded-[2rem] border border-cyan-100 bg-gradient-to-br from-[#1d1848] via-[#2d2268] to-[#4c69ff] p-8 text-white shadow-[0_30px_80px_rgba(34,26,82,0.26)] md:p-10">
+                                <div class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-white/80">
+                                    The Gap
+                                </div>
+                                <h3 class="mb-5 text-2xl font-bold tracking-tight md:text-[1.9rem]">
+                                    What existing work does well and where it falls short
+                                </h3>
+                                <p class="text-[0.95rem] leading-8 text-white/80 md:text-base">
+                                    To identify opportunities for improvement, we reviewed four academic papers and four commercial products related to location-based AR, campus orientation, mobile navigation, and playful exploration. Together, they show valuable patterns for guidance, storytelling, and engagement, but they also reveal recurring gaps in user-specific content, interaction that is meaningfully tied to the tour itself, and opportunities for users to comment on and discuss the tour experience.
+                                </p>
+                            </article>
+
+                            <div class="mt-10 mb-8 flex items-center justify-between gap-4">
+                                <div>
+                                    <h3 class="text-3xl font-bold tracking-tight text-slate-900">Academic Papers</h3>
+                                    <p class="mt-2 text-slate-600">4 papers reviewed to understand educational value, feasibility, and design risks.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-teal-600">Paper 01</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Location-Based Augmented Reality in Education</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Kleftodimos & Evagelou (2025)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Explains how location-based AR connects learning content with real-world places.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Clearly explains the educational value of location-based AR.</li>
+                                            <li>• Describes triggering technologies such as GPS and indoor positioning.</li>
+                                            <li>• Provides practical examples from heritage and outdoor learning.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Lacks strong empirical evidence.</li>
+                                            <li>• Focuses more on technology than UX challenges.</li>
+                                            <li>• Many examples are closer to heritage learning than campus navigation.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-600">Paper 02</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Using a Location-Based AR Mobile App to Support New Students’ Orientation</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Taşyonar & Uzun (2025)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Directly studies AR-supported campus orientation for new students.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Highly relevant to campus orientation.</li>
+                                            <li>• Clearly explains implementation and system design.</li>
+                                            <li>• Includes real student testing and empirical evidence.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Did not outperform traditional guided orientation in knowledge learning.</li>
+                                            <li>• Reported technical and device compatibility issues.</li>
+                                            <li>• Small sample size limits generalisability.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-coral-600">Paper 03</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">A Game-based AR Navigation System for Makerspace Education</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Chen, Hwang & Lin (2023)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Shows how AR and gamification can support active exploration.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Combines AR with gamified missions and rewards.</li>
+                                            <li>• Provides a clear and structured interaction flow.</li>
+                                            <li>• Supports active learning through problem-solving tasks.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• May prioritise engagement over learning depth.</li>
+                                            <li>• Context is limited to a library makerspace.</li>
+                                            <li>• Interaction design may be too complex for general mobile users.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-600">Paper 04</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Location-based AR in Education: A Systematic Literature Review</h4>
+                                    <p class="mb-4 text-sm italic text-slate-500">Fonseca et al. (2025)</p>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Relevance:</span> Provides a broad overview of location-based AR in educational settings.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Reviews a wide range of educational use cases.</li>
+                                            <li>• Demonstrates strong potential for engagement and experiential learning.</li>
+                                            <li>• Identifies common trends such as field trips and outdoor learning.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Many studies still lack strong experimental evidence.</li>
+                                            <li>• Limited integration into formal education.</li>
+                                            <li>• Technical and usability challenges remain significant.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Commercial Benchmarks -->
+                        <div class="mt-16" data-aos="fade-up">
+                            <div class="mb-8">
+                                <h3 class="text-3xl font-bold tracking-tight text-slate-900">Commercial Products</h3>
+                                <p class="mt-2 text-slate-600">4 products reviewed to analyse navigation, storytelling, exploration, and interaction patterns.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-teal-600">Product 01</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Google Maps</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> A strong reference for map-based navigation and place information.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Strong navigation and map support.</li>
+                                            <li>• Familiar interface with low learning cost.</li>
+                                            <li>• Integrates place-related information effectively.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Designed for navigation rather than guided learning.</li>
+                                            <li>• Does not provide AR narration.</li>
+                                            <li>• Does not distinguish between different user roles.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-amber-600">Product 02</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">izi.TRAVEL</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> Useful for self-paced exploration and location-based storytelling.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Supports location-based audio guidance.</li>
+                                            <li>• Encourages self-paced exploration.</li>
+                                            <li>• Combines route structure with storytelling.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• More audio-focused than AR-focused.</li>
+                                            <li>• Has limited playful interaction.</li>
+                                            <li>• Weak support for differentiated user roles.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-orange-600">Product 03</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Pokémon GO</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> Demonstrates how location-linked interaction can motivate exploration.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Demonstrates strong location-based interaction.</li>
+                                            <li>• Creates a strong sense of exploration and engagement.</li>
+                                            <li>• Blends AR-style interaction with everyday movement.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Designed for entertainment rather than education.</li>
+                                            <li>• Lacks structured explanatory content.</li>
+                                            <li>• Does not support user-specific information delivery.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="card hover-lift rounded-[2rem] p-8">
+                                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-600">Product 04</p>
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Actionbound</h4>
+                                    <p class="mb-4 text-slate-600"><span class="font-bold text-slate-800">Why relevant:</span> A useful model for mission-based exploration and active participation.</p>
+                                    <div class="mb-4">
+                                        <p class="mb-2 font-bold text-slate-800">Strengths</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Supports task-based and route-based exploration.</li>
+                                            <li>• Encourages active participation.</li>
+                                            <li>• Flexible for educational content design.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2 font-bold text-slate-800">Limitations</p>
+                                        <ul class="space-y-2 text-sm text-slate-600">
+                                            <li>• Has limited AR emphasis.</li>
+                                            <li>• Depends heavily on creator setup quality.</li>
+                                            <li>• May feel more like a scavenger hunt than a guided AR tour.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Key Insights -->
+                        <div class="mt-16" data-aos="fade-up">
+                            <article class="card hover-lift rounded-[2rem] p-10 md:p-12">
+                                <div class="mb-4 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-orange-700">
+                                    Gap Summary
+                                </div>
+                                <h3 class="mb-8 text-3xl font-bold tracking-tight text-slate-900">
+                                    What existing work does well and what it still misses
+                                </h3>
+                                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                    <article class="rounded-[1.6rem] border border-teal-200 bg-gradient-to-br from-teal-50 to-white p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-slate-900">3 Things They Did Well</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• They show strong potential for combining route guidance with place-based information.</li>
+                                            <li>• They support self-paced exploration and can make users more active participants.</li>
+                                            <li>• They demonstrate that storytelling, AR, and playful interaction can increase engagement.</li>
+                                        </ul>
+                                    </article>
+                                    <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-slate-900">3 Things They Missed</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• They do not provide dedicated explanation content for different user identities such as students and visitors.</li>
+                                            <li>• They lack interactive experiences that are meaningfully integrated with the tour content itself.</li>
+                                            <li>• They offer little support for user comments, feedback, or discussion around the tour process.</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="stakeholders" data-nav-anchor class="px-6 py-20 md:py-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Stakeholders</h2>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="120">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Primary and Secondary Users</h3>
+                                <p class="mb-6 max-w-4xl text-slate-600">
+                                    The updated questionnaire is strongly student-led, so student behaviour is the clearest evidence base in the dataset. The visitor audience is still essential to the project and is defined through the campus-tour scenario, then grounded by survey signals around first-time guidance, visual orientation, and low-friction access.
+                                </p>
+
+                                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                    <article class="rounded-[1.6rem] border border-teal-200 bg-gradient-to-br from-teal-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Student Users</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">The strongest signal in the survey</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• 90.2% of respondents are Year 3 students, so everyday campus movement is the dominant behaviour pattern in the sample.</li>
+                                            <li>• Interest is high even though current service usage is low: 54.9% are very expectant and 76.47% are willing or very willing to use a guide in the future.</li>
+                                            <li>• Their top needs are stronger interactivity, richer explanation content, and fast mobile access that fits into fragmented routines.</li>
+                                        </ul>
+                                        <p class="mt-4 text-xs font-semibold text-teal-700">Design priority: useful first, then playful and immersive.</p>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-amber-700">Campus Visitors</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">A smaller data voice, but a core product audience</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• Visitors are not directly represented as heavily as students, so this segment is built from the project brief plus first-use signals in the questionnaire.</li>
+                                            <li>• 50.98% prefer 3D/VR panoramic tours when no human guide is available, which aligns closely with visitor orientation and discovery needs.</li>
+                                            <li>• 52.94% still want very fast loading and simple entry points, showing that immersive content only works if access remains low-friction.</li>
+                                        </ul>
+                                        <p class="mt-4 text-xs font-semibold text-amber-700">Design priority: reassurance, landmark recognition, and memorable first impressions.</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="160">
+                            <div class="card rounded-2xl p-8 md:p-10">
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">Distinct Personas</h3>
+                                <p class="mb-8 max-w-4xl text-slate-600">These two personas capture the clearest split in user needs: a freshman solving daily campus life, and a visitor reading the campus as a story about XJTLU.</p>
+
+                                <div class="persona-gallery">
+                                    <article class="persona-showcase persona-showcase--student">
+                                        <div class="persona-showcase-grid">
+                                            <aside class="persona-profile-column">
+                                                <div class="persona-portrait-wrap">
+                                                    <div class="persona-portrait-ring">
+                                                        <img src="./persona-student.jpg" alt="Student persona portrait">
+                                                    </div>
+                                                </div>
+                                                <div class="persona-identity-card">
+                                                    <h4 class="persona-name">Ethan Wu</h4>
+                                                    <div class="persona-meta-row">
+                                                        <span class="persona-meta-chip">19 years old</span>
+                                                        <span class="persona-meta-chip">Year 1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="persona-role-pill">New Student</div>
+                                                <div class="persona-quote-card">
+                                                    <span class="persona-quote-mark">"</span>
+                                                    <p>I need a campus guide that helps me survive daily life first, and understand the campus more naturally along the way.</p>
+                                                </div>
+                                            </aside>
+
+                                            <section class="persona-scenario-card">
+                                                <div class="persona-panel-kicker">
+                                                    <span class="persona-panel-icon">o</span>
+                                                    <span>Scenario</span>
+                                                </div>
+                                                <p>In the first two weeks of the semester, Ethan uses the mobile web app while walking between classes and service points. He wants to quickly find useful places such as study areas, service desks, and academic buildings, while also learning how the campus is organised. He prefers a guide that feels practical, lightweight, and motivating rather than a long formal introduction.</p>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--goals">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">+</span>
+                                                    <span>Goals &amp; Needs</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack">
+                                                    <li>Find important places for study, support, and daily campus life quickly</li>
+                                                    <li>Understand the practical functions of different buildings</li>
+                                                    <li>Learn practical information for studying, services, and campus routines</li>
+                                                    <li>Feel less confused when moving around campus for the first time</li>
+                                                </ul>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--pain">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">!</span>
+                                                    <span>Pain Points</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack persona-bullet-stack--alert">
+                                                    <li>The campus scale feels large and unfamiliar</li>
+                                                    <li>Building abbreviations are difficult to understand at first</li>
+                                                    <li>Existing maps do not explain what spaces are actually useful for</li>
+                                                    <li>It is hard to quickly connect places with real student needs</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                    </article>
+
+                                    <article class="persona-showcase persona-showcase--visitor">
+                                        <div class="persona-showcase-grid">
+                                            <aside class="persona-profile-column">
+                                                <div class="persona-portrait-wrap">
+                                                    <div class="persona-portrait-ring">
+                                                        <img src="./persona-visitor.jpg" alt="Visitor persona portrait">
+                                                    </div>
+                                                </div>
+                                                <div class="persona-identity-card">
+                                                    <h4 class="persona-name">Lina Zhao</h4>
+                                                    <div class="persona-meta-row">
+                                                        <span class="persona-meta-chip">39 years old</span>
+                                                        <span class="persona-meta-chip">Visitor</span>
+                                                    </div>
+                                                </div>
+                                                <div class="persona-role-pill">First-time Visitor</div>
+                                                <div class="persona-quote-card">
+                                                    <span class="persona-quote-mark">"</span>
+                                                    <p>I don't just want to know where the buildings are. I want to understand what makes this campus unique and why these places are worth visiting.</p>
+                                                </div>
+                                            </aside>
+
+                                            <section class="persona-scenario-card">
+                                                <div class="persona-panel-kicker">
+                                                    <span class="persona-panel-icon">o</span>
+                                                    <span>Scenario</span>
+                                                </div>
+                                                <p>During a short campus visit, Lina uses the mobile web app to explore the most representative places at XJTLU. She hopes the tour can be more than simple navigation, helping her quickly understand the university's atmosphere, academic character, and memorable landmarks through interactive features such as AR guidance and stamp collection.</p>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--goals">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">+</span>
+                                                    <span>Goals &amp; Needs</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack">
+                                                    <li>Discover the most iconic and meaningful places on campus efficiently</li>
+                                                    <li>Understand what different buildings represent, not just their names</li>
+                                                    <li>Experience the campus in a more engaging way than reading static signs</li>
+                                                    <li>Leave with a strong overall impression of XJTLU in a short amount of time</li>
+                                                </ul>
+                                            </section>
+
+                                            <section class="persona-focus-card persona-focus-card--pain">
+                                                <div class="persona-panel-heading">
+                                                    <span class="persona-panel-badge">!</span>
+                                                    <span>Pain Points</span>
+                                                </div>
+                                                <ul class="persona-bullet-stack persona-bullet-stack--alert">
+                                                    <li>Campus maps usually show locations, but not why places matter</li>
+                                                    <li>Traditional tours are often passive and easy to forget</li>
+                                                    <li>Building abbreviations and unfamiliar names are confusing</li>
+                                                    <li>Short visits make it hard to form a clear understanding of the campus</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-16 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-3xl font-bold tracking-tight text-slate-900">Stakeholder Analysis</h3>
+                        </div>
+
+                        <div class="stakeholder-viz-grid" data-aos="fade-up" data-aos-delay="80">
+                            <article class="card viz-card p-6">
+                                <span class="viz-kicker">Quick View 01</span>
+                                <h3 class="mb-5 text-2xl font-bold text-slate-900">Usage Status</h3>
+                                <div class="viz-layout">
+                                    <div class="donut-chart" style="background: conic-gradient(#94a3b8 0 82.35%, #14b8a6 82.35% 100%);">
+                                        <div class="donut-center">
+                                            <strong>17.65%</strong>
+                                            <span>used</span>
+                                        </div>
+                                    </div>
+                                    <ul class="viz-legend">
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-slate-400"></span>Not Used</span>
+                                            <span class="legend-value">82.35%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-teal-500"></span>Used</span>
+                                            <span class="legend-value">17.65%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="card viz-card p-6">
+                                <span class="viz-kicker">Quick View 02</span>
+                                <h3 class="mb-5 text-2xl font-bold text-slate-900">Expectation Level</h3>
+                                <div class="viz-layout">
+                                    <div class="donut-chart" style="background: conic-gradient(#14b8a6 0 54.9%, #fbbf24 54.9% 80.39%, #f87171 80.39% 100%);">
+                                        <div class="donut-center">
+                                            <strong>54.9%</strong>
+                                            <span>very eager</span>
+                                        </div>
+                                    </div>
+                                    <ul class="viz-legend">
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-teal-500"></span>Very Eager</span>
+                                            <span class="legend-value">54.9%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-amber-400"></span>General</span>
+                                            <span class="legend-value">25.49%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-red-400"></span>Low Expectation</span>
+                                            <span class="legend-value">19.61%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="card viz-card p-6">
+                                <span class="viz-kicker">Quick View 03</span>
+                                <h3 class="mb-5 text-2xl font-bold text-slate-900">Future Intention</h3>
+                                <div class="viz-layout">
+                                    <div class="donut-chart" style="background: conic-gradient(#14b8a6 0 76.47%, #fbbf24 76.47% 88.23%, #f87171 88.23% 100%);">
+                                        <div class="donut-center">
+                                            <strong>76.47%</strong>
+                                            <span>willing</span>
+                                        </div>
+                                    </div>
+                                    <ul class="viz-legend">
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-teal-500"></span>Willing + Very Willing</span>
+                                            <span class="legend-value">76.47%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-amber-400"></span>Uncertain</span>
+                                            <span class="legend-value">11.76%</span>
+                                        </li>
+                                        <li>
+                                            <span class="legend-left"><span class="legend-dot bg-red-400"></span>Unwilling + Very Unwilling</span>
+                                            <span class="legend-value">11.76%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Survey Snapshot</h3>
+                                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                    <article class="rounded-xl bg-gradient-to-br from-slate-50 to-white p-6">
+                                        <h4 class="mb-3 text-lg font-bold text-slate-900">Sample Snapshot</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• 51 valid responses were collected.</li>
+                                            <li>• 90.2% of respondents are Year 3 students, so the dataset mainly reflects current student routines.</li>
+                                        </ul>
+                                    </article>
+                                    <article class="rounded-xl bg-gradient-to-br from-teal-50 to-white p-6">
+                                        <h4 class="mb-3 text-lg font-bold text-slate-900">What the Data Suggests</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• Low use suggests weak exposure rather than low potential.</li>
+                                            <li>• Fast entry matters: users want useful guidance before richer features appear.</li>
+                                            <li>• Visitor needs should be read alongside the campus-tour scenario.</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="180">
+                            <div class="card rounded-2xl p-8">
+                                <h3 class="mb-6 text-2xl font-bold text-slate-900">Design Implications</h3>
+
+                                <div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-4">
+                                    <div class="rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 p-5">
+                                        <h4 class="mb-2 font-bold text-teal-700">Interactivity</h4>
+                                        <p class="text-2xl font-bold text-teal-600">74.51%</p>
+                                        <p class="text-sm text-slate-600">wanted more interaction</p>
+                                    </div>
+                                    <div class="rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 p-5">
+                                        <h4 class="mb-2 font-bold text-amber-700">Content Depth</h4>
+                                        <p class="text-2xl font-bold text-amber-600">64.71%</p>
+                                        <p class="text-sm text-slate-600">wanted deeper explanation</p>
+                                    </div>
+                                    <div class="rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 p-5">
+                                        <h4 class="mb-2 font-bold text-orange-700">No-Guide Mode</h4>
+                                        <p class="text-2xl font-bold text-orange-600">50.98%</p>
+                                        <p class="text-sm text-slate-600">preferred self-guided support</p>
+                                    </div>
+                                    <div class="rounded-xl bg-gradient-to-br from-sky-50 to-sky-100 p-5">
+                                        <h4 class="mb-2 font-bold text-sky-700">Fast Access</h4>
+                                        <p class="text-2xl font-bold text-sky-600">52.94%</p>
+                                        <p class="text-sm text-slate-600">preferred faster entry</p>
+                                    </div>
+                                </div>
+
+                                <p class="text-slate-600">Overall, the data points to a map-first guide that opens into richer content and light interaction only after orientation is clear.</p>
+                            </div>
+                        </div>
+
+                        <div id="requirements" data-nav-anchor class="mt-20 mb-16 text-center" data-aos="fade-up">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900">Requirements</h2>
+                            <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">These materials translate the stakeholder findings into the product problems X·EasyGo needs to solve.</p>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="120">
+                            <article class="card rounded-2xl p-8 md:p-10">
+                                <div class="mb-4 inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-700">User Journey Map</div>
+                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Current pain points before the proposed solution</h3>
+                                <p class="mb-8 max-w-4xl text-slate-600">The journey map shows where visitors and students lose clarity, confidence, or momentum before X·EasyGo is introduced.</p>
+                                <div class="overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                    <img src="./user-journey-map.jpg" alt="User journey map for visitor and student pain points" class="block w-full">
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="160">
+                            <div class="card rounded-2xl p-8 md:p-10">
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">Requirements List</h3>
+                                <p class="mb-8 max-w-4xl text-slate-600">These three qualities are the minimum requirements for X·EasyGo to feel useful, believable, and worth returning to.</p>
+
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+                                    <article class="rounded-[1.6rem] border border-teal-200 bg-gradient-to-br from-teal-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Requirement 01</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">Instant route clarity</h4>
+                                        <p class="text-sm leading-relaxed text-slate-600">The platform should show the next useful step immediately, using clear destination labels, route direction, and recognisable landmarks.</p>
+                                        <p class="mt-4 text-xs font-semibold text-teal-700">why it matters: both students and visitors need confidence before they will engage any deeper content.</p>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-700">Requirement 02</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">Layered content with low friction</h4>
+                                        <p class="text-sm leading-relaxed text-slate-600">Information should arrive in layers: fast guidance first, then optional XR, service, or AI-supported detail.</p>
+                                        <p class="mt-4 text-xs font-semibold text-sky-700">why it matters: users want richer content, but not at the cost of speed or readability.</p>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-orange-200 bg-gradient-to-br from-orange-50 to-white p-6">
+                                        <div class="mb-4 inline-flex rounded-full bg-orange-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-orange-700">Requirement 03</div>
+                                        <h4 class="mb-3 text-xl font-bold text-slate-900">Playful interaction tied to place</h4>
+                                        <p class="text-sm leading-relaxed text-slate-600">Check-ins, XR moments, and lightweight rewards should stay connected to real places and real learning value.</p>
+                                        <p class="mt-4 text-xs font-semibold text-orange-700">why it matters: engagement is strongest when interaction feels meaningful to the campus itself.</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-12" data-aos="fade-up" data-aos-delay="180">
+                            <div class="card rounded-2xl p-8 md:p-10">
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">Evidence of Life</h3>
+                                <p class="mb-8 max-w-4xl text-slate-600">We conducted short on-site interviews with student participants to understand what kinds of campus information feel most useful, memorable, and motivating in real use situations.</p>
+
+                                <div class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+                                    <figure class="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                        <img src="./interview-1.jpg" alt="Interview session with participant one" class="block h-full w-full object-cover">
+                                        <figcaption class="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">Interview 01: discussing first impressions, route clarity, and practical campus needs.</figcaption>
+                                    </figure>
+
+                                    <figure class="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                        <img src="./interview-2.jpg" alt="Interview session with participant two" class="block h-full w-full object-cover">
+                                        <figcaption class="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">Interview 02: exploring how users interpret buildings, services, and wayfinding cues.</figcaption>
+                                    </figure>
+
+                                    <figure class="overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(20,32,42,0.08)]">
+                                        <img src="./interview-3.jpg" alt="Interview session with participant three" class="block h-full w-full object-cover">
+                                        <figcaption class="border-t border-slate-100 px-5 py-4 text-sm text-slate-600">Interview 03: identifying what kind of interaction feels engaging without becoming distracting.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                                    <article class="rounded-[1.6rem] border border-slate-200 bg-white/80 p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-slate-900">What we observed on site</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• Participants wanted faster orientation before any deeper content appeared.</li>
+                                            <li>• Building names alone were not enough; users wanted function, context, and nearby relevance.</li>
+                                            <li>• Students described campus movement as short, task-driven, and time-sensitive.</li>
+                                            <li>• Interviewees responded more positively when interaction was tied to real places and real decisions.</li>
+                                        </ul>
+                                    </article>
+
+                                    <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
+                                        <h4 class="mb-4 text-xl font-bold text-slate-900">What this means for the design</h4>
+                                        <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                            <li>• Route guidance should stay immediate, simple, and landmark-led.</li>
+                                            <li>• Place information should explain both use and meaning, not just names.</li>
+                                            <li>• XR and playful moments should reinforce orientation, memory, and motivation.</li>
+                                            <li>• The system should support quick everyday use while still enabling richer campus storytelling.</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="ideation" data-nav-anchor class="px-6 pt-12 pb-10 md:pt-14 md:pb-12">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900 md:text-5xl" data-aos="fade-up">Ideation</h2>
+                        </div>
+
+                        <div class="timeline-wrap mb-14 space-y-8 md:space-y-10">
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white text-xl font-bold text-slate-900 ring-1 ring-slate-200">01</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Initial Concept</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">The project started from a simple question: how could campus tours feel more independent, interactive, and useful for both visitors and students?</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eefaf8] text-xl font-bold text-slate-900 ring-1 ring-slate-200">02</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Research</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">We reviewed XR, location-based interaction, and tour products to understand what could improve campus storytelling.</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff5ea] text-xl font-bold text-slate-900 ring-1 ring-slate-200">03</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Interaction Design</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">We tested how guidance, AR, and explanation content should appear without slowing users down.</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eef3ff] text-xl font-bold text-slate-900 ring-1 ring-slate-200">04</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Prototype Development</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">We built an early flow with map navigation, landmark content, AR entry points, and progress feedback.</p>
+                                </article>
+                            </div>
+
+                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
+                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff1eb] text-xl font-bold text-slate-900 ring-1 ring-slate-200">05</div>
+                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Testing and Refinement</h3>
+                                    <p class="text-lg leading-relaxed text-slate-600">Early feedback helped us refine trigger timing, guidance flow, and the balance between speed and immersion.</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
+                            <article class="card self-start rounded-2xl p-8 lg:col-span-2" data-aos="fade-up">
+                                <div class="mb-4 inline-flex rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-slate-700">The Crazy Eights</div>
+                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Eight rapid sketches exploring different UI directions</h3>
+                                <p class="mb-6 max-w-4xl text-slate-600">These sketches helped us test route-first onboarding, role selection, map browsing, landmark pages, AR entry, and progress feedback.</p>
+                                <div class="process-showcase-frame">
+                                    <img src="./crazy-eights.jpg" alt="Crazy Eights wireframes for X·EasyGo" class="process-showcase-image crazy-eights-image">
+                                </div>
+                                <p class="mt-5 max-w-4xl text-sm leading-relaxed text-slate-600">The main pattern that emerged was simple: keep navigation first, then add role-based content, AR moments, and progress feedback.</p>
+                            </article>
+
+                            <div class="grid gap-6">
+                                <article class="card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="80">
+                                    <div class="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-amber-700">Design Alternatives</div>
+                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">What direction we chose</h3>
+                                    <ul class="space-y-3 text-sm leading-relaxed text-slate-600">
+                                        <li>• Map-first entry for fast orientation and reduced friction.</li>
+                                        <li>• Role-based landmark pages so students and visitors read places differently.</li>
+                                        <li>• Layered interaction where AR, quizzes, and badges appear after core navigation is clear.</li>
+                                    </ul>
+                                    <p class="mt-5 text-sm leading-relaxed text-slate-600">We chose a route-first structure: guidance first, explanation second, interaction third.</p>
+                                </article>
+
+                                <article class="card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="140">
+                                    <div class="mb-4 inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-700">Low-Fi Prototype</div>
+                                    <h3 class="mb-4 text-[1.05rem] font-bold leading-snug text-slate-900 md:text-[1.12rem]">Clickable Figma prototype</h3>
+                                    <p class="mb-6 text-sm leading-relaxed text-slate-600">This low-fi prototype tests the flow from role selection to map browsing, landmark detail, AR guidance, and progress feedback.</p>
+                                    <a href="https://www.figma.com/proto/8mEHrkOpq9blwLMgyy4ZvO/Untitled?node-id=121-1594&t=4FlyJZxuDnfypnUv-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A2&starting-point-node-id=121%3A2&show-proto-sidebar=1" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white px-5 py-3 text-sm font-bold text-sky-700 transition hover:-translate-y-0.5 hover:border-sky-300 hover:bg-sky-50">Open Low-Fi Prototype</a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="implementation" data-nav-anchor class="px-6 pt-10 pb-20 md:pt-12 md:pb-24">
+                    <div class="mx-auto max-w-6xl">
+                        <div class="mb-16 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Implementation</h2>
+                        </div>
+
+                        <div class="mb-10 space-y-6">
+                            <article class="card rounded-2xl p-8" data-aos="fade-up">
+                                <div class="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-teal-700">High-Fi Prototype</div>
+                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Hosted product link</h3>
+                                <p class="mb-6 text-slate-600">This is the current web prototype showing the main product flow and visual direction.</p>
+                                <a href="https://wonder239239.github.io/Campus-Tour-Guide/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-teal-200 bg-white px-5 py-3 text-sm font-bold text-teal-700 transition hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-50">Open High-Fi Prototype</a>
+                            </article>
+
+                            <article class="card rounded-2xl p-8 md:p-10" data-aos="fade-up" data-aos-delay="80">
+                                <div class="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-amber-700">System Architecture</div>
+                                <h3 class="mb-4 text-2xl font-bold text-slate-900">How the system works</h3>
+                                <p class="mb-6 max-w-4xl text-slate-600">This workflow diagram shows how role selection, route guidance, landmark content, AR guidance, check-ins, and progress tracking connect inside the system.</p>
+                                <div class="process-showcase-frame">
+                                    <img src="./system-architecture.jpg" alt="System workflow diagram for X·EasyGo" class="process-showcase-image">
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-bold text-slate-900">Individual Contributions</h3>
+                            <p class="mt-3 max-w-3xl text-slate-600">Current contribution overview by member.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="0">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./LeiZhang.png" alt="Lei Zhang" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Lei Zhang</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-teal-600">Developer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">Year 3 Information and Computing Science student contributing to development and implementation work on X·EasyGo.</p>
+                            </article>
+
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./HanyanNiu.png" alt="Hanyan Niu" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Hanyan Niu</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-amber-600">Designer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">Year 3 Information and Computing Science student contributing to interface design and team collaboration on X·EasyGo.</p>
+                            </article>
+
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./YiduoGuo.png" alt="Yiduo Guo" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Yiduo Guo</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-sky-600">Developer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">Year 3 Information and Computing Science student contributing to prototype development and product implementation.</p>
+                            </article>
+
+                            <article class="team-card card hover-lift p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="team-avatar relative mx-auto mb-6 h-32 w-32">
+                                    <img src="./QiCao.png" alt="Qi Cao" class="h-full w-full rounded-full border-4 border-white object-cover bg-white">
+                                </div>
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">Qi Cao</h3>
+                                <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-orange-500">Developer</p>
+                                <p class="text-sm leading-relaxed text-slate-500">Year 3 Information and Computing Science student contributing to development support across the X·EasyGo prototype.</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="reflection" data-nav-anchor class="px-6 py-24 md:py-32">
+                    <div class="mx-auto max-w-5xl">
+                        <div class="mb-12 text-center">
+                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
+                        </div>
+
+                        <div class="mb-8 space-y-6">
+                            <article class="card rounded-2xl p-8" data-aos="fade-up">
+                                <div class="mb-4 inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-700">Usability Testing</div>
+                                <h3 class="mb-3 text-2xl font-bold text-slate-900">A/B testing with 10 participants</h3>
+                                <p class="mb-6 max-w-4xl text-slate-600">In the evaluation stage, we invited 10 participants to use and experience X·EasyGo. They were divided into two groups to compare two different approaches to stamp collection.</p>
+
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+                                    <div class="space-y-5">
+                                        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-1">
+                                            <article class="rounded-[1.6rem] border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6">
+                                                <h4 class="mb-3 text-xl font-bold text-slate-900">Prototype A</h4>
+                                                <p class="text-sm leading-relaxed text-slate-600">Users automatically receive a stamp when the location system detects that they are near a building.</p>
+                                            </article>
+
+                                            <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
+                                                <h4 class="mb-3 text-xl font-bold text-slate-900">Prototype B</h4>
+                                                <p class="text-sm leading-relaxed text-slate-600">Users must scan the signboard outside the building in order to obtain a stamp.</p>
+                                            </article>
+                                        </div>
+
+                                        <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                            <h4 class="mb-4 text-xl font-bold text-slate-900">Key findings</h4>
+                                            <ul class="space-y-3 text-sm leading-relaxed text-slate-600">
+                                                <li>• Prototype A was more efficient overall, with lower task completion time, lower error rate, and lower user effort.</li>
+                                                <li>• Prototype B produced stronger engagement and enjoyment, with engagement rising from 73 to 88 and enjoyment from 7.4 to 8.2.</li>
+                                                <li>• Prototype A performed better on practical speed measures, while Prototype B better matched the playful and memorable experience users expected.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+
+                                    <div class="space-y-5">
+                                        <figure class="process-showcase-frame self-start p-4 md:p-5 xl:ml-auto xl:max-w-[760px]">
+                                            <img src="./usability-performance-metrics.png" alt="Radar chart comparing Prototype A and Prototype B across usability performance metrics" class="process-showcase-image rounded-[1.2rem]">
+                                        </figure>
+
+                                        <article class="rounded-[1.6rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6">
+                                            <h4 class="mb-3 text-xl font-bold text-slate-900">Testing outcome</h4>
+                                            <p class="text-sm leading-relaxed text-slate-600">Although Prototype A reduced time, effort, and errors, Prototype B delivered the stronger overall experience. Because engagement and enjoyment were central to our design goals, Prototype B was selected as the final direction.</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card rounded-2xl p-8 md:p-10" data-aos="fade-up" data-aos-delay="80">
+                                <div class="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-amber-700">Iterative Refinement</div>
+                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Prototypes &amp; Iteration</h3>
+                                <p class="mb-6 max-w-4xl text-slate-600">This board shows how the wireframes evolved into the current web-based prototype with clearer hierarchy, flow, and module structure.</p>
+                                <div class="process-showcase-frame">
+                                    <img src="./prototypes-iteration.jpg" alt="Prototype iteration board comparing low-fidelity wireframes and refined interfaces" class="process-showcase-image">
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="quote-card glass rounded-[2.5rem] px-8 py-14 md:px-16 md:py-20">
+                            <div class="mb-4 inline-flex rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-slate-700">Final Reflection</div>
+                            <h3 class="mb-5 text-3xl font-bold tracking-tight text-slate-900" data-aos="fade-up">What the process taught us</h3>
+                            <p class="max-w-4xl text-base leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="80">
+                                This project became much clearer once we stopped thinking of it as a general XR tour and started treating it as a role-based campus guide. The research, personas, journey maps, interviews, prototyping, and A/B testing all pushed us toward one core idea: X·EasyGo has to solve orientation first, then add explanation, interaction, and memory in ways that feel meaningful to the place.
+                            </p>
+
+                            <div class="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">From analysis to user needs</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The questionnaire, stakeholder analysis, and user journey maps showed that students and visitors do not explore campus in the same way. Students care about practical support such as routes, study spaces, facilities, and service points, while visitors care more about landmark meaning, campus identity, and memorable interpretation. This led us to define three core requirements: instant route clarity, layered content with low friction, and playful interaction tied to place.</p>
+                                </article>
+
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Design, iteration, and evaluation</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The design process gradually moved from broad interface sketches to a map-first, role-based system. Our low-fi wireframes helped us test route entry, role selection, landmark pages, AR guidance, and progress feedback before moving into the high-fi prototype. The A/B test on stamp collection was especially important because it showed a real trade-off: Prototype A was more efficient, but Prototype B created more engagement and enjoyment, which better matched our project goals.</p>
+                                </article>
+
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Challenges we encountered</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The main challenge was balancing usefulness and immersion. If the experience became too playful or too descriptive too early, it stopped being helpful; if it stayed too functional, it lost the distinctive value of an XR campus guide. We also had to design for two user groups with different expectations, while keeping navigation simple and technically realistic. In future AI-supported versions, another important concern will be keeping place information accurate, avoiding misleading answers, and protecting user location or progress data responsibly.</p>
+                                </article>
+
+                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Future development</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The next development stage would expand X·EasyGo beyond a prototype into a fuller campus service. This includes adding more landmarks, study and service locations, improving route accuracy and QR interaction, and building stronger saved-progress functions. We would also like to develop role-based personalised routes, multilingual support, richer AR storytelling, and the comment or message-board features identified in our gap analysis so users can leave impressions, share useful tips, and build a more social touring experience.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer id="contact" class="px-6 pb-32 pt-10 md:pb-24">
+                    <div class="mx-auto max-w-5xl rounded-[2.5rem] border border-slate-200 bg-[#14202a] px-8 py-14 text-center text-white shadow-[0_30px_100px_rgba(20,32,42,0.24)] md:px-16 md:py-16">
+                        <h2 class="mb-12 text-4xl font-bold tracking-tight">Contact</h2>
+                        <div class="flex flex-col items-center justify-center gap-5 text-base font-medium text-white/70 md:flex-row md:gap-10">
+                            <a href="mailto:yourname@email.com" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-amber-300 hover:text-white">
+                                <span class="mr-2 text-xl">📧</span> yourname@email.com
+                            </a>
+                            <a href="https://github.com/yourusername" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-teal-300 hover:text-white">
+                                <span class="mr-2 text-xl">🔗</span> github.com/yourusername
+                            </a>
+                        </div>
+                        <p class="mt-16 text-sm italic text-white/35">© 2026 X·EasyGo Portfolio. Created for CPT208 Excellence.</p>
+                    </div>
+                </footer>
+        </main>
+
+    <div class="mobile-dock fixed bottom-4 left-1/2 z-50 flex w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 items-center justify-start gap-1 overflow-x-auto whitespace-nowrap rounded-full glass px-3 py-2 md:hidden">
+        <a href="#research" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Research</a>
+        <a href="#stakeholders" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Stakeholders</a>
+        <a href="#requirements" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Requirements</a>
+        <a href="#ideation" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Ideation</a>
+        <a href="#implementation" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Implementation</a>
+        <a href="#reflection" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Reflection</a>
+        <a href="#contact" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Contact</a>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 850,
+        once: true,
+        offset: 40
+    });
+
+    const progressBar = document.getElementById("progress-bar");
+    const nav = document.getElementById("site-nav");
+    const sections = document.querySelectorAll("[data-nav-anchor], footer[id]");
+    const navLinks = document.querySelectorAll(".nav-link, .nav-pill");
+
+    const syncProgress = () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        progressBar.style.width = scrolled + "%";
+        nav.classList.toggle("nav-compact", winScroll > 24);
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const id = entry.target.getAttribute("id");
+                navLinks.forEach((link) => {
+                    const isMatch = link.getAttribute("href") === "#" + id;
+                    link.classList.toggle("is-active", isMatch);
+                });
+            });
+        },
+        {
+            rootMargin: "-35% 0px -45% 0px",
+            threshold: 0.01
+        }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    window.addEventListener("scroll", syncProgress, { passive: true });
+    syncProgress();
+</script>
+</body>
+</html>
