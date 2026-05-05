@@ -158,6 +158,43 @@
             background: linear-gradient(90deg, var(--amber), var(--teal), var(--coral));
         }
 
+        .section-heading {
+            font-size: 2.25rem;
+            line-height: 1.04;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            color: var(--ink);
+        }
+
+        .block-heading {
+            font-size: 1.65rem;
+            line-height: 1.14;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--ink);
+        }
+
+        .subcard-heading {
+            font-size: 1.15rem;
+            line-height: 1.28;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        @media (min-width: 768px) {
+            .section-heading {
+                font-size: 3rem;
+            }
+
+            .block-heading {
+                font-size: 1.78rem;
+            }
+
+            .subcard-heading {
+                font-size: 1.22rem;
+            }
+        }
+
         .hero-panel {
             position: relative;
             border-radius: 2.5rem;
@@ -2365,7 +2402,6 @@
                 <a href="#research" class="nav-link">Research</a>
                 <a href="#stakeholders" class="nav-link">Stakeholders</a>
                 <a href="#requirements" class="nav-link">Requirements</a>
-                <a href="#ideation" class="nav-link">Ideation</a>
                 <a href="#implementation" class="nav-link">Implementation</a>
                 <a href="#reflection" class="nav-link">Reflection</a>
                 <a href="#contact" class="rounded-full bg-slate-900 px-4 py-2.5 text-white transition hover:bg-[#31246b]">Contact</a>
@@ -2491,7 +2527,7 @@
                 <section id="research" data-nav-anchor class="px-6 py-20 md:py-24">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
-                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">
+                            <h2 class="section-title section-heading" data-aos="fade-up">
                                 Research
                             </h2>
                         </div>
@@ -2763,7 +2799,7 @@
                 <section id="stakeholders" data-nav-anchor class="px-6 py-20 md:py-24">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
-                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Stakeholders</h2>
+                            <h2 class="section-title section-heading" data-aos="fade-up">Stakeholders</h2>
                         </div>
 
                         <div class="mb-12" data-aos="fade-up" data-aos-delay="120">
@@ -3062,7 +3098,7 @@
                         </div>
 
                         <div id="requirements" data-nav-anchor class="mt-20 mb-16 text-center" data-aos="fade-up">
-                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900">Requirements</h2>
+                            <h2 class="section-title section-heading">Requirements</h2>
                             <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">These materials translate the stakeholder findings into the product problems X·EasyGo needs to solve.</p>
                         </div>
 
@@ -3171,81 +3207,37 @@
                     </div>
                 </section>
 
-                <section id="ideation" data-nav-anchor class="px-6 pt-12 pb-10 md:pt-14 md:pb-12">
+                <section id="ideation" data-nav-anchor class="px-6 pt-10 pb-12 md:pt-12 md:pb-16">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
-                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900 md:text-5xl" data-aos="fade-up">Ideation</h2>
-                        </div>
-
-                        <div class="timeline-wrap mb-14 space-y-8 md:space-y-10">
-                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white text-xl font-bold text-slate-900 ring-1 ring-slate-200">01</div>
-                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Initial Concept</h3>
-                                    <p class="text-lg leading-relaxed text-slate-600">The project started from a simple question: how could campus tours feel more independent, interactive, and useful for both visitors and students?</p>
-                                </article>
-                            </div>
-
-                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eefaf8] text-xl font-bold text-slate-900 ring-1 ring-slate-200">02</div>
-                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Research</h3>
-                                    <p class="text-lg leading-relaxed text-slate-600">We reviewed XR, location-based interaction, and tour products to understand what could improve campus storytelling.</p>
-                                </article>
-                            </div>
-
-                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff5ea] text-xl font-bold text-slate-900 ring-1 ring-slate-200">03</div>
-                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Interaction Design</h3>
-                                    <p class="text-lg leading-relaxed text-slate-600">We tested how guidance, AR, and explanation content should appear without slowing users down.</p>
-                                </article>
-                            </div>
-
-                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#eef3ff] text-xl font-bold text-slate-900 ring-1 ring-slate-200">04</div>
-                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Prototype Development</h3>
-                                    <p class="text-lg leading-relaxed text-slate-600">We built an early flow with map navigation, landmark content, AR entry points, and progress feedback.</p>
-                                </article>
-                            </div>
-
-                            <div class="timeline-item flex gap-6 md:gap-10" data-aos="fade-up">
-                                <div class="step-marker z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white to-[#fff1eb] text-xl font-bold text-slate-900 ring-1 ring-slate-200">05</div>
-                                <article class="timeline-card card hover-lift w-full p-7 md:p-8">
-                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">Testing and Refinement</h3>
-                                    <p class="text-lg leading-relaxed text-slate-600">Early feedback helped us refine trigger timing, guidance flow, and the balance between speed and immersion.</p>
-                                </article>
-                            </div>
+                            <h2 class="section-title section-heading" data-aos="fade-up">Ideation</h2>
                         </div>
 
                         <div class="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
                             <article class="card self-start rounded-2xl p-8 lg:col-span-2" data-aos="fade-up">
                                 <div class="mb-4 inline-flex rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-slate-700">The Crazy Eights</div>
-                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Eight rapid sketches exploring different UI directions</h3>
-                                <p class="mb-6 max-w-4xl text-slate-600">These sketches helped us test route-first onboarding, role selection, map browsing, landmark pages, AR entry, and progress feedback.</p>
+                                <h3 class="mb-4 block-heading">Eight rapid sketches exploring different UI directions</h3>
                                 <div class="process-showcase-frame">
                                     <img src="./crazy-eights.jpg" alt="Crazy Eights wireframes for X·EasyGo" class="process-showcase-image crazy-eights-image">
                                 </div>
-                                <p class="mt-5 max-w-4xl text-sm leading-relaxed text-slate-600">The main pattern that emerged was simple: keep navigation first, then add role-based content, AR moments, and progress feedback.</p>
+                                <p class="mt-5 max-w-4xl text-sm leading-relaxed text-slate-600">The clearest pattern was simple: navigation first, then role-based content and light interaction.</p>
                             </article>
 
                             <div class="grid gap-6">
                                 <article class="card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="80">
                                     <div class="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-amber-700">Design Alternatives</div>
-                                    <h3 class="mb-4 text-2xl font-bold text-slate-900">What direction we chose</h3>
+                                    <h3 class="mb-4 block-heading">What direction we chose</h3>
                                     <ul class="space-y-3 text-sm leading-relaxed text-slate-600">
-                                        <li>• Map-first entry for fast orientation and reduced friction.</li>
-                                        <li>• Role-based landmark pages so students and visitors read places differently.</li>
-                                        <li>• Layered interaction where AR, quizzes, and badges appear after core navigation is clear.</li>
+                                        <li>• Map-first entry keeps orientation fast and low-friction.</li>
+                                        <li>• Role-based landmark pages let students and visitors read the same place differently.</li>
                                     </ul>
-                                    <p class="mt-5 text-sm leading-relaxed text-slate-600">We chose a route-first structure: guidance first, explanation second, interaction third.</p>
+                                    <p class="mt-5 text-sm leading-relaxed text-slate-600">We kept guidance first, then added explanation and playful layers.</p>
                                 </article>
 
                                 <article class="card rounded-2xl p-8" data-aos="fade-up" data-aos-delay="140">
                                     <div class="mb-4 inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-700">Low-Fi Prototype</div>
-                                    <h3 class="mb-4 text-[1.05rem] font-bold leading-snug text-slate-900 md:text-[1.12rem]">Clickable Figma prototype</h3>
-                                    <p class="mb-6 text-sm leading-relaxed text-slate-600">This low-fi prototype tests the flow from role selection to map browsing, landmark detail, AR guidance, and progress feedback.</p>
+                                    <h3 class="mb-4 subcard-heading">Figma low-fi prototype</h3>
+                                    <p class="mb-6 text-sm leading-relaxed text-slate-600">This prototype tests role selection, map browsing, landmark detail, AR entry, and progress feedback.</p>
                                     <a href="https://www.figma.com/proto/8mEHrkOpq9blwLMgyy4ZvO/Untitled?node-id=121-1594&t=4FlyJZxuDnfypnUv-1&scaling=min-zoom&content-scaling=fixed&page-id=33%3A2&starting-point-node-id=121%3A2&show-proto-sidebar=1" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white px-5 py-3 text-sm font-bold text-sky-700 transition hover:-translate-y-0.5 hover:border-sky-300 hover:bg-sky-50">Open Low-Fi Prototype</a>
                                 </article>
                             </div>
@@ -3256,21 +3248,21 @@
                 <section id="implementation" data-nav-anchor class="px-6 pt-10 pb-20 md:pt-12 md:pb-24">
                     <div class="mx-auto max-w-6xl">
                         <div class="mb-16 text-center">
-                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Implementation</h2>
+                            <h2 class="section-title section-heading" data-aos="fade-up">Implementation</h2>
                         </div>
 
                         <div class="mb-10 space-y-6">
                             <article class="card rounded-2xl p-8" data-aos="fade-up">
                                 <div class="mb-4 inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-teal-700">High-Fi Prototype</div>
-                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Hosted product link</h3>
-                                <p class="mb-6 text-slate-600">This is the current web prototype showing the main product flow and visual direction.</p>
+                                <h3 class="mb-4 block-heading">Live prototype</h3>
+                                <p class="mb-6 text-sm leading-relaxed text-slate-600">This is the current web prototype showing the main flow and visual direction.</p>
                                 <a href="https://wonder239239.github.io/Campus-Tour-Guide/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full border border-teal-200 bg-white px-5 py-3 text-sm font-bold text-teal-700 transition hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-50">Open High-Fi Prototype</a>
                             </article>
 
                             <article class="card rounded-2xl p-8 md:p-10" data-aos="fade-up" data-aos-delay="80">
                                 <div class="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-amber-700">System Architecture</div>
-                                <h3 class="mb-4 text-2xl font-bold text-slate-900">How the system works</h3>
-                                <p class="mb-6 max-w-4xl text-slate-600">This workflow diagram shows how role selection, route guidance, landmark content, AR guidance, check-ins, and progress tracking connect inside the system.</p>
+                                <h3 class="mb-4 block-heading">How the system works</h3>
+                                <p class="mb-6 max-w-4xl text-sm leading-relaxed text-slate-600">This workflow shows how role selection, route guidance, landmark content, AR guidance, check-ins, and progress tracking connect inside the system.</p>
                                 <div class="process-showcase-frame">
                                     <img src="./system-architecture.jpg" alt="System workflow diagram for X·EasyGo" class="process-showcase-image">
                                 </div>
@@ -3323,33 +3315,33 @@
                 </section>
 
                 <section id="reflection" data-nav-anchor class="px-6 py-24 md:py-32">
-                    <div class="mx-auto max-w-5xl">
+                    <div class="mx-auto max-w-6xl">
                         <div class="mb-12 text-center">
-                            <h2 class="section-title text-4xl font-bold tracking-tight text-slate-900" data-aos="fade-up">Reflection</h2>
+                            <h2 class="section-title section-heading" data-aos="fade-up">Reflection</h2>
                         </div>
 
                         <div class="mb-8 space-y-6">
                             <article class="card rounded-2xl p-8" data-aos="fade-up">
                                 <div class="mb-4 inline-flex rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sky-700">Usability Testing</div>
-                                <h3 class="mb-3 text-2xl font-bold text-slate-900">A/B testing with 10 participants</h3>
-                                <p class="mb-6 max-w-4xl text-slate-600">In the evaluation stage, we invited 10 participants to use and experience X·EasyGo. They were divided into two groups to compare two different approaches to stamp collection.</p>
+                                <h3 class="mb-3 block-heading">A/B testing with 10 participants</h3>
+                                <p class="mb-6 max-w-4xl text-sm leading-relaxed text-slate-600">In the evaluation stage, we invited 10 participants to compare two different approaches to stamp collection.</p>
 
                                 <div class="grid grid-cols-1 gap-6 xl:grid-cols-[0.92fr_1.08fr]">
                                     <div class="space-y-5">
                                         <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-1">
                                             <article class="rounded-[1.6rem] border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6">
-                                                <h4 class="mb-3 text-xl font-bold text-slate-900">Prototype A</h4>
+                                                <h4 class="mb-3 subcard-heading">Prototype A</h4>
                                                 <p class="text-sm leading-relaxed text-slate-600">Users automatically receive a stamp when the location system detects that they are near a building.</p>
                                             </article>
 
                                             <article class="rounded-[1.6rem] border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6">
-                                                <h4 class="mb-3 text-xl font-bold text-slate-900">Prototype B</h4>
+                                                <h4 class="mb-3 subcard-heading">Prototype B</h4>
                                                 <p class="text-sm leading-relaxed text-slate-600">Users must scan the signboard outside the building in order to obtain a stamp.</p>
                                             </article>
                                         </div>
 
                                         <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
-                                            <h4 class="mb-4 text-xl font-bold text-slate-900">Key findings</h4>
+                                            <h4 class="mb-4 subcard-heading">Key findings</h4>
                                             <ul class="space-y-3 text-sm leading-relaxed text-slate-600">
                                                 <li>• Prototype A was more efficient overall, with lower task completion time, lower error rate, and lower user effort.</li>
                                                 <li>• Prototype B produced stronger engagement and enjoyment, with engagement rising from 73 to 88 and enjoyment from 7.4 to 8.2.</li>
@@ -3364,7 +3356,7 @@
                                         </figure>
 
                                         <article class="rounded-[1.6rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6">
-                                            <h4 class="mb-3 text-xl font-bold text-slate-900">Testing outcome</h4>
+                                            <h4 class="mb-3 subcard-heading">Testing outcome</h4>
                                             <p class="text-sm leading-relaxed text-slate-600">Although Prototype A reduced time, effort, and errors, Prototype B delivered the stronger overall experience. Because engagement and enjoyment were central to our design goals, Prototype B was selected as the final direction.</p>
                                         </article>
                                     </div>
@@ -3373,8 +3365,8 @@
 
                             <article class="card rounded-2xl p-8 md:p-10" data-aos="fade-up" data-aos-delay="80">
                                 <div class="mb-4 inline-flex rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-amber-700">Iterative Refinement</div>
-                                <h3 class="mb-4 text-2xl font-bold text-slate-900">Prototypes &amp; Iteration</h3>
-                                <p class="mb-6 max-w-4xl text-slate-600">This board shows how the wireframes evolved into the current web-based prototype with clearer hierarchy, flow, and module structure.</p>
+                                <h3 class="mb-4 block-heading">Prototypes &amp; Iteration</h3>
+                                <p class="mb-6 max-w-4xl text-sm leading-relaxed text-slate-600">This board shows how the wireframes evolved into the current web prototype with clearer hierarchy, flow, and module structure.</p>
                                 <div class="process-showcase-frame">
                                     <img src="./prototypes-iteration.jpg" alt="Prototype iteration board comparing low-fidelity wireframes and refined interfaces" class="process-showcase-image">
                                 </div>
@@ -3383,30 +3375,30 @@
 
                         <div class="quote-card glass rounded-[2.5rem] px-8 py-14 md:px-16 md:py-20">
                             <div class="mb-4 inline-flex rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-slate-700">Final Reflection</div>
-                            <h3 class="mb-5 text-3xl font-bold tracking-tight text-slate-900" data-aos="fade-up">What the process taught us</h3>
-                            <p class="max-w-4xl text-base leading-relaxed text-slate-600" data-aos="fade-up" data-aos-delay="80">
+                            <h3 class="mb-5 block-heading md:text-[2rem]" data-aos="fade-up">What the process taught us</h3>
+                            <p class="max-w-4xl text-sm leading-relaxed text-slate-600 md:text-base" data-aos="fade-up" data-aos-delay="80">
                                 This project became much clearer once we stopped thinking of it as a general XR tour and started treating it as a role-based campus guide. The research, personas, journey maps, interviews, prototyping, and A/B testing all pushed us toward one core idea: X·EasyGo has to solve orientation first, then add explanation, interaction, and memory in ways that feel meaningful to the place.
                             </p>
 
                             <div class="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
-                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
-                                    <h4 class="mb-3 text-xl font-bold text-slate-900">From analysis to user needs</h4>
+                                <article class="h-full rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 subcard-heading">From analysis to user needs</h4>
                                     <p class="text-sm leading-relaxed text-slate-600">The questionnaire, stakeholder analysis, and user journey maps showed that students and visitors do not explore campus in the same way. Students care about practical support such as routes, study spaces, facilities, and service points, while visitors care more about landmark meaning, campus identity, and memorable interpretation. This led us to define three core requirements: instant route clarity, layered content with low friction, and playful interaction tied to place.</p>
                                 </article>
 
-                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
-                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Design, iteration, and evaluation</h4>
+                                <article class="h-full rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 subcard-heading">Design, iteration, and evaluation</h4>
                                     <p class="text-sm leading-relaxed text-slate-600">The design process gradually moved from broad interface sketches to a map-first, role-based system. Our low-fi wireframes helped us test route entry, role selection, landmark pages, AR guidance, and progress feedback before moving into the high-fi prototype. The A/B test on stamp collection was especially important because it showed a real trade-off: Prototype A was more efficient, but Prototype B created more engagement and enjoyment, which better matched our project goals.</p>
                                 </article>
 
-                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
-                                    <h4 class="mb-3 text-xl font-bold text-slate-900">AI use and ethical considerations</h4>
-                                    <p class="text-sm leading-relaxed text-slate-600">AI was used in a practical supporting role during development rather than as a substitute for user research. For example, vibe-coding style workflows helped us quickly turn interface ideas into front-end variations, compare layout options, and iterate faster on the web prototype. However, decisions about personas, journey pain points, testing interpretation, and final interaction choices still depended on our own analysis and evaluation. If AI-supported Q&amp;A is developed further in the product itself, an important ethical issue will be ensuring that answers remain accurate, clearly scoped to verified campus information, and do not invent misleading details about buildings, services, or routes.</p>
+                                <article class="h-full rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 subcard-heading">AI use and ethical considerations</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">AI supported rapid layout testing and front-end variation, but it did not replace our own research or evaluation. It also helped us compare multiple wording and interface presentation options more efficiently during prototyping. User needs, persona logic, and testing decisions still came from interviews, survey data, and team judgment. If AI-supported Q&amp;A is expanded later, it should stay limited to verified campus information and avoid invented route or service details.</p>
                                 </article>
 
-                                <article class="rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
-                                    <h4 class="mb-3 text-xl font-bold text-slate-900">Challenges, privacy, and future development</h4>
-                                    <p class="text-sm leading-relaxed text-slate-600">The main challenge was balancing usefulness and immersion. If the experience became too playful or too descriptive too early, it stopped being helpful; if it stayed too functional, it lost the distinctive value of an XR campus guide. Another future concern is privacy and compliant storage: if the system saves role, progress, location triggers, comments, or personalised recommendations, users should know what data is collected, why it is stored, and how long it is retained. Later versions of X·EasyGo could therefore expand landmarks, improve route accuracy and QR interaction, add multilingual and AR storytelling support, and introduce stronger comment, feedback, and saved-progress functions while keeping data use transparent, minimal, and appropriate to the campus context.</p>
+                                <article class="h-full rounded-[1.6rem] border border-slate-200 bg-white/85 p-6">
+                                    <h4 class="mb-3 subcard-heading">Challenges, privacy, and future development</h4>
+                                    <p class="text-sm leading-relaxed text-slate-600">The main challenge was balancing fast guidance with immersive storytelling. If the system later stores roles, progress, comments, or personalised suggestions, users should know what is collected, why it is stored, and how long it is retained. Future versions could expand landmarks, improve QR and route accuracy, add multilingual AR support, and strengthen feedback while keeping data use minimal and transparent.</p>
                                 </article>
                             </div>
                         </div>
@@ -3433,7 +3425,6 @@
         <a href="#research" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Research</a>
         <a href="#stakeholders" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Stakeholders</a>
         <a href="#requirements" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Requirements</a>
-        <a href="#ideation" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Ideation</a>
         <a href="#implementation" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Implementation</a>
         <a href="#reflection" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Reflection</a>
         <a href="#contact" class="nav-pill shrink-0 rounded-full px-3 py-2 text-xs font-semibold text-slate-600">Contact</a>
