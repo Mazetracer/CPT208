@@ -3985,29 +3985,43 @@
                                     <span class="micro-chip"><span class="micro-chip-icon">🧊</span>Meshy</span>
                                     <span class="micro-chip"><span class="micro-chip-icon">⌘</span>Codex</span>
                                 </div>
-                                <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                                    <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
-                                        <h5 class="mb-2 text-base font-bold text-slate-900">Workflow enhancements</h5>
-                                        <p class="text-sm leading-relaxed text-slate-600">Integrating AI tools gave us a substantial boost across writing, media production, 3D prototyping, and engineering. ChatGPT acted as a sounding board for section outlines and narrative styles, and also helped refine awkward phrasing and keep terminology consistent. Jimeng helped generate AI-assisted video clips for the product demo. Meshy accelerated our 3D pipeline by turning concepts into early 3D prototypes with automated textures, and Codex reduced boilerplate code while also supporting debugging during implementation.</p>
-                                    </article>
-                                    <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
-                                        <h5 class="mb-2 text-base font-bold text-slate-900">Key takeaways and best practices</h5>
-                                        <p class="text-sm leading-relaxed text-slate-600">Our biggest takeaway was that AI works best as a co-pilot, not an autopilot. It was useful for speed, but the outputs still needed close human supervision. AI-drafted writing often sounded professional while missing the nuance of our user research; visual and 3D outputs also needed cleanup, simplification, and revision. We also learned that effective AI use depends on prompt engineering and repeated comparison. Very few first attempts were usable without revision, so every AI-assisted paragraph, code block, visual, or 3D asset went through peer review before final use.</p>
-                                    </article>
-                                    <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
-                                        <h5 class="mb-2 text-base font-bold text-slate-900">Current limitations</h5>
-                                        <p class="text-sm leading-relaxed text-slate-600">The tools were helpful, but far from perfect. Generative visuals and 3D outputs sometimes produced strange artefacts or structurally incorrect results that had to be regenerated entirely. In the codebase, Codex occasionally suggested deprecated syntax or logically flawed snippets, so every line still required checking. Large language models also tended toward generic and mechanical wording, which meant we had to rewrite outputs to restore the team’s own voice and project-specific judgement.</p>
-                                    </article>
-                                    <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
-                                        <h5 class="mb-2 text-base font-bold text-slate-900">Framework for responsible AI application</h5>
-                                        <ul class="icon-list">
-                                            <li><span class="icon-badge">🛡</span><span><span class="font-semibold text-slate-900">Preserving originality:</span> AI was not used to define the core design strategy, synthesise user research, or draw evaluation conclusions. Those parts remained fully human-authored.</span></li>
-                                            <li><span class="icon-badge">🏷</span><span><span class="font-semibold text-slate-900">Transparent attribution:</span> AI-generated assets were clearly labeled, such as video outputs from Jimeng or 3D assets supported by Meshy.</span></li>
-                                            <li><span class="icon-badge">🗂</span><span><span class="font-semibold text-slate-900">Comprehensive logging:</span> the AI platforms used in the project were explicitly listed in the project’s AI tools reference index.</span></li>
-                                            <li><span class="icon-badge">🧾</span><span><span class="font-semibold text-slate-900">Traceable commits:</span> repository commits with substantial AI assistance were marked with prefixes such as <span class="font-mono text-[0.82rem] text-slate-800">[AI-Assisted]</span> or <span class="font-mono text-[0.82rem] text-slate-800">[Codex-Draft]</span>.</span></li>
-                                            <li><span class="icon-badge">👀</span><span><span class="font-semibold text-slate-900">Human accountability:</span> all AI contributions were reviewed, edited, and approved by the team before they were integrated into the project.</span></li>
-                                        </ul>
-                                    </article>
+                                <div class="grid grid-cols-1 items-start gap-5 lg:grid-cols-2">
+                                    <div class="grid gap-5">
+                                        <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
+                                            <h5 class="mb-2 text-base font-bold text-slate-900">Workflow enhancements</h5>
+                                            <p class="text-sm leading-relaxed text-slate-600">Integrating AI tools gave us a substantial boost across writing, media production, 3D prototyping, and engineering. ChatGPT acted as a sounding board for section outlines and narrative styles, and also helped refine awkward phrasing and keep terminology consistent. Jimeng helped generate AI-assisted video clips for the product demo. Meshy accelerated our 3D pipeline by turning concepts into early 3D prototypes with automated textures, and Codex reduced boilerplate code while also supporting debugging during implementation.</p>
+                                        </article>
+                                        <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
+                                            <h5 class="mb-2 text-base font-bold text-slate-900">Current limitations</h5>
+                                            <p class="text-sm leading-relaxed text-slate-600">The tools were helpful, but far from perfect. Generative visuals and 3D outputs sometimes produced strange artefacts or structurally incorrect results that had to be regenerated entirely. In the codebase, Codex occasionally suggested deprecated syntax or logically flawed snippets, so every line still required checking. Large language models also tended toward generic and mechanical wording, which meant we had to rewrite outputs to restore the team’s own voice and project-specific judgement.</p>
+                                        </article>
+                                        <article class="rounded-[1.4rem] border border-violet-200 bg-violet-50/70 p-5">
+                                            <h5 class="mb-3 text-base font-bold text-slate-900">Tools we used</h5>
+                                            <ul class="space-y-2 text-sm leading-relaxed text-slate-600">
+                                                <li><span class="font-semibold text-slate-900">Figma:</span> For graphic design, prototyping and visualization creation.</li>
+                                                <li><span class="font-semibold text-slate-900">Web Speech:</span> For generating voice explanation.</li>
+                                                <li><span class="font-semibold text-slate-900">Feishu:</span> For project planning and arrangement.</li>
+                                                <li><span class="font-semibold text-slate-900">GitHub:</span> For collaborative development.</li>
+                                            </ul>
+                                        </article>
+                                    </div>
+
+                                    <div class="grid gap-5">
+                                        <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
+                                            <h5 class="mb-2 text-base font-bold text-slate-900">Key takeaways and best practices</h5>
+                                            <p class="text-sm leading-relaxed text-slate-600">Our biggest takeaway was that AI works best as a co-pilot, not an autopilot. It was useful for speed, but the outputs still needed close human supervision. AI-drafted writing often sounded professional while missing the nuance of our user research; visual and 3D outputs also needed cleanup, simplification, and revision. We also learned that effective AI use depends on prompt engineering and repeated comparison. Very few first attempts were usable without revision, so every AI-assisted paragraph, code block, visual, or 3D asset went through peer review before final use.</p>
+                                        </article>
+                                        <article class="rounded-[1.4rem] border border-slate-200 bg-slate-50/80 p-5">
+                                            <h5 class="mb-2 text-base font-bold text-slate-900">Framework for responsible AI application</h5>
+                                            <ul class="icon-list">
+                                                <li><span class="icon-badge">🛡</span><span><span class="font-semibold text-slate-900">Preserving originality:</span> AI was not used to define the core design strategy, synthesise user research, or draw evaluation conclusions. Those parts remained fully human-authored.</span></li>
+                                                <li><span class="icon-badge">🏷</span><span><span class="font-semibold text-slate-900">Transparent attribution:</span> AI-generated assets were clearly labeled, such as video outputs from Jimeng or 3D assets supported by Meshy.</span></li>
+                                                <li><span class="icon-badge">🗂</span><span><span class="font-semibold text-slate-900">Comprehensive logging:</span> the AI platforms used in the project were explicitly listed in the project’s AI tools reference index.</span></li>
+                                                <li><span class="icon-badge">🧾</span><span><span class="font-semibold text-slate-900">Traceable commits:</span> repository commits with substantial AI assistance were marked with prefixes such as <span class="font-mono text-[0.82rem] text-slate-800">[AI-Assisted]</span> or <span class="font-mono text-[0.82rem] text-slate-800">[Codex-Draft]</span>.</span></li>
+                                                <li><span class="icon-badge">👀</span><span><span class="font-semibold text-slate-900">Human accountability:</span> all AI contributions were reviewed, edited, and approved by the team before they were integrated into the project.</span></li>
+                                            </ul>
+                                        </article>
+                                    </div>
                                 </div>
                                 <article class="mt-5 rounded-[1.4rem] border border-violet-200 bg-violet-50/70 p-5">
                                     <h5 class="mb-3 text-base font-bold text-slate-900">AI references</h5>
@@ -4025,13 +4039,13 @@
 
                 <footer id="contact" class="px-6 pb-32 pt-10 md:pb-24">
                     <div class="mx-auto page-frame rounded-[2.5rem] border border-slate-200 bg-[#14202a] px-8 py-14 text-center text-white shadow-[0_30px_100px_rgba(20,32,42,0.24)] md:px-16 md:py-16">
-                        <h2 class="mb-12 text-4xl font-bold tracking-tight">Contact</h2>
+                        <h2 class="mb-12 text-4xl font-bold tracking-tight">Contact Me</h2>
                         <div class="flex flex-col items-center justify-center gap-5 text-base font-medium text-white/70 md:flex-row md:gap-10">
-                            <a href="mailto:yourname@email.com" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-amber-300 hover:text-white">
-                                <span class="mr-2 text-xl">📧</span> yourname@email.com
+                            <a href="mailto:mazetracer3@gmail.com" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-amber-300 hover:text-white">
+                                <span class="mr-2 text-xl">📧</span> mazetracer3@gmail.com
                             </a>
-                            <a href="https://github.com/yourusername" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-teal-300 hover:text-white">
-                                <span class="mr-2 text-xl">🔗</span> github.com/yourusername
+                            <a href="https://github.com/Mazetracer/CPT208" target="_blank" rel="noreferrer" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 transition hover:-translate-y-1 hover:border-teal-300 hover:text-white">
+                                <span class="mr-2 text-xl">🔗</span> github.com/Mazetracer/CPT208
                             </a>
                         </div>
                         <p class="mt-16 text-sm italic text-white/35">© 2026 X·EasyGo Portfolio. Created for CPT208 Excellence.</p>
